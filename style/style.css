@@ -28,6 +28,37 @@ body {
   width: 20%;
 }
 
+.selector {
+  position: relative;
+}
 .selector-list {
   list-style-type: none;
+  width: 100%;
 }
+
+.selector-list-content {
+  /* border: 1px solid red; */
+  text-align: center;
+  width: auto;
+}
+.selector-list-content:hover {
+  background-color: #eeeeef;
+}
+
+.select-list-div {
+  background-color: white;
+  width: 150%;
+  padding: 5px;
+  border: 1px solid red;
+  visibility: hidden;
+  position: absolute;
+  top: 200%;
+  right: 10%;
+  transition: 0.3s all ease-in-out;
+}
+
+.selector:hover .select-list-div {
+  top: 100%;
+  visibility: visible;
+}
+/* ====================================================== */

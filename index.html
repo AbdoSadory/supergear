@@ -50,7 +50,7 @@
               ><span class="followers-number"> 100K Followers</span></a
             >
           </div>
-          <div class="sale col-auto">
+          <div class="sale col-auto d-sm-none d-md-block">
             <span class="hot bg-red text-white rounded-pill px-2">Hot</span>
             <i class="fa-regular fa-hand-peace"></i>
             <span class="sale-comment"
@@ -59,30 +59,57 @@
           </div>
           <div class="language col d-flex justify-content-end">
             <!-- CounrtyFlag -->
-            <div class="selector m-0 p-0">
+            <div class="selector m-0 p-0 me-4 d-sm-none d-md-block">
               <div class="countryFlag m-0 p-0">
                 <img src="assets/flags/en-us.png" alt="en-us" class="flag" />
                 <span class="countryFlag-name">English</span>
                 <i class="fas fa-arrow-down"></i>
               </div>
 
-              <ul class="selector-list m-0 p-3 align-self-center">
-                <li class="selector-list-item align-self-center">
-                  <img src="assets/flags/de.png" alt="en-us" class="flag" />
-                  <span class="countryFlag-name">German</span>
-                </li>
-                <li class="selector-list-item">
-                  <img src="assets/flags/fr.png" alt="en-us" class="flag" />
-                  <span class="countryFlag-name">Franch</span>
-                </li>
-              </ul>
+              <div class="select-list-div">
+                <ul class="selector-list m-0 p-2">
+                  <li class="selector-list-item mb-2">
+                    <div class="selector-list-content">
+                      <img src="assets/flags/de.png" alt="en-us" class="flag" />
+                      <span class="countryFlag-name">German</span>
+                    </div>
+                  </li>
+                  <li class="selector-list-item">
+                    <div class="selector-list-content">
+                      <img src="assets/flags/fr.png" alt="en-us" class="flag" />
+                      <span class="countryFlag-name">Franch</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <!-- CountryName -->
+            <div class="selector m-0 p-0 d-sm-none d-md-block">
+              <div class="countryFlag m-0 p-0">
+                <span class="countryFlag-name">USD</span>
+                <i class="fas fa-arrow-down"></i>
+              </div>
+
+              <div class="select-list-div">
+                <ul class="selector-list m-0 p-2">
+                  <li class="selector-list-item mb-2">
+                    <div class="selector-list-content">
+                      <span class="countryFlag-name">EUR</span>
+                    </div>
+                  </li>
+                  <li class="selector-list-item">
+                    <div class="selector-list-content">
+                      <span class="countryFlag-name">GBP</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
+      <!-- ======================================================================== -->
       <!-- Search -->
       <div class="header-search">
         <a href="#" class="navbar-brand">

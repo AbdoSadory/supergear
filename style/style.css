@@ -62,3 +62,31 @@ body {
   visibility: visible;
 }
 /* ====================================================== */
+.search-nav-contianer {
+  width: 100%;
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.offcanvas-tog {
+  font-size: 15px;
+}
+
+/* ===================================== */
+.nav-bar-container {
+  width: 100%;
+}
+
+.nav-bar-container nav {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.nav-bar-container .ul-container {
+  width: 80%;
+}
+.nav-bar-container ul {
+  width: 100%;
+}

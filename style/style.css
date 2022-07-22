@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: aqua;
+  font-family: sans-serif;
+}
+
+.grayHover:hover {
+  color: gray !important;
+  transition: 0.35s;
+}
+
+.bg-red {
+  background-color: #e02b2b;
+}
+
+.font-15px {
+  font-size: 15px;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.flag {
+  width: 20%;
+}
+
+.selector-list {
+  list-style-type: none;
+}

@@ -111,57 +111,192 @@
       </div>
       <!-- ======================================================================== -->
       <!-- Search -->
-      <div class="search-nav-contianer">
-        <div class="header-search row">
-          <div
-            class="navbar navbar-light btn-offcanvas-div m-0 p-1 bg-white col-1"
+      <div class="search-nav-contianer row p-0 py-4 m-0">
+        <!-- Search Offcanvas left-->
+        <div class="header-search-left p-0 m-0 col">
+          <button
+            class="offcanvas-icon p-0 d-xl-none d-xxl-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
           >
-            <div class="container-fluid m-0 justify-content-evenly">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                Colored with scrolling
+              </h5>
               <button
-                class="offcanvas-tog"
                 type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBackdrop"
-                aria-controls="offcanvasWithBackdrop"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
-            <div
-              class="offcanvas offcanvas-start"
-              tabindex="-1"
-              id="offcanvasWithBackdrop"
-              aria-labelledby="offcanvasWithBackdropLabel"
-            >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">
-                  Offcanvas with backdrop
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close text-reset"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <p>.....</p>
-              </div>
+            <div class="offcanvas-body">
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
             </div>
           </div>
           <!-- Logo -->
-          <div class="logo-container col">
-            <a href="#" class="navbar-brand">
-              <img src="assets/brand/dark-logo.png" alt="logo" />
-            </a>
-          </div>
-          <!-- Search Offcanvas -->
-          <div class="searchBar-container col"></div>
-          <!-- login offcanvas -->
-          <div class="login-container col"></div>
+          <a href="#" class="navbar-brand">
+            <img src="assets/brand/dark-logo.png" alt="logo" />
+          </a>
         </div>
+        <!-- Search Offcanvas mid-->
+        <div class="header-search-mid p-0 m-0 col">
+          <div
+            class="searchBar-container border rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-start"
+          >
+            <!-- selector -->
+            <div class="searchBar-select-div col-md-6 col-lg-5 p-0">
+              <select
+                class="form-select m-0 p-0"
+                name="product_cat"
+                id="product_cat"
+                aria-label="Default select example"
+              >
+                <option value="0" selected>All Categories</option>
+                <option value="tv-audio">TV & Audio</option>
+                <option value="mp3-players">
+                  &nbsp;&nbsp;&nbsp;MP3 Players
+                </option>
+                <option value="microphones">
+                  &nbsp;&nbsp;&nbsp;Microphones
+                </option>
+                <option value="bluetooth-speakers">
+                  &nbsp;&nbsp;&nbsp;Bluetooth Speakers
+                </option>
+                <option value="cell-phone">Cell Phone</option>
+                <option value="smartphones">
+                  &nbsp;&nbsp;&nbsp;Smartphones
+                </option>
+                <option value="waterproof-phones">
+                  &nbsp;&nbsp;&nbsp;Waterproof Phones
+                </option>
+                <option value="dual-sim-phones">
+                  &nbsp;&nbsp;&nbsp;Dual Sim Phones
+                </option>
+                <option value="featured-phones">
+                  &nbsp;&nbsp;&nbsp;Featured Phones
+                </option>
+                <option value="refurbished-phones">
+                  &nbsp;&nbsp;&nbsp;Refurbished Phones
+                </option>
+                <option value="power-tools">Power Tools</option>
+                <option value="tv-box">TV Box</option>
+                <option value="headphones">Headphones</option>
+                <option value="fitness-headphones">
+                  &nbsp;&nbsp;&nbsp;Fitness Headphones
+                </option>
+                <option value="on-ears-over-ears">
+                  &nbsp;&nbsp;&nbsp;On &#8211; ears Over &#8211; ears
+                </option>
+                <option value="headphone-accessories">
+                  &nbsp;&nbsp;&nbsp;Headphone Accessories
+                </option>
+                <option value="microphones-headphones">
+                  &nbsp;&nbsp;&nbsp;Microphones
+                </option>
+                <option value="smart-electronics">Smart Electronics</option>
+                <option value="smart-watches">
+                  &nbsp;&nbsp;&nbsp;Smart Watches
+                </option>
+                <option value="sport-watches">
+                  &nbsp;&nbsp;&nbsp;Sport Watches
+                </option>
+                <option value="smart-watch-phone">
+                  &nbsp;&nbsp;&nbsp;Smart Watch Phone
+                </option>
+                <option value="smart-wristband">
+                  &nbsp;&nbsp;&nbsp;Smart Wristband
+                </option>
+                <option value="smart-health-watch">
+                  &nbsp;&nbsp;&nbsp;Smart Health Watch
+                </option>
+                <option value="consumer-electronics">
+                  Consumer Electronics
+                </option>
+                <option value="robot-clean">
+                  &nbsp;&nbsp;&nbsp;Robot Clean
+                </option>
+                <option value="game-video">
+                  &nbsp;&nbsp;&nbsp;Game &amp; Video
+                </option>
+                <option value="cameras-photos">
+                  &nbsp;&nbsp;&nbsp;Cameras &amp; Photos
+                </option>
+                <option value="security-protection">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security &amp; Protection
+                </option>
+                <option value="computers-tablets">Computers, Tablets</option>
+                <option value="computers-laptop">
+                  &nbsp;&nbsp;&nbsp;Computers &amp; Laptop
+                </option>
+                <option value="tablets">&nbsp;&nbsp;&nbsp;Tablets</option>
+                <option value="office-electrionics">
+                  &nbsp;&nbsp;&nbsp;Office Electrionics
+                </option>
+                <option value="computer-components">
+                  &nbsp;&nbsp;&nbsp;Computer Components
+                </option>
+              </select>
+            </div>
+            <!-- seperator -->
+            <div class="seperator"></div>
+            <!-- Searchoffcanvas -->
+            <div class="searchBar-bar-div col-md-6 w-90">
+              <div
+                class="offcanvas-icon p-0 d-flex justify-content-between"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+              >
+                <span>Search Product</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div
+                class="offcanvas offcanvas-top"
+                data-bs-scroll="true"
+                data-bs-backdrop="false"
+                tabindex="-1"
+                id="offcanvasTop"
+                aria-labelledby="offcanvasTopLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasTopLabel">
+                    Colored with scrolling
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>
+                    Try scrolling the rest of the page to see this option in
+                    action.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- login offcanvas right-->
+        <div class="header-search-right login-container p-0 m-0 col"></div>
       </div>
     </header>
     <!-- Nav Collapse Div -->

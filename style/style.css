@@ -6,7 +6,13 @@ body {
   background-color: aqua;
   font-family: sans-serif;
 }
-
+.seperator {
+  width: 0.5%;
+  background-color: #eee;
+}
+a{
+  color: black !important;
+}
 .grayHover:hover {
   color: gray !important;
   transition: 0.35s;
@@ -61,20 +67,32 @@ body {
   top: 100%;
   visibility: visible;
 }
-/* ====================================================== */
+/* ======================SearchBar======================== */
 .search-nav-contianer {
   width: 100%;
+}
+
+.offcanvas-icon {
+  border: none;
+  padding: 0px 2% !important;
+  background-color: transparent;
+}
+.offcanvas-icon i {
+  font-size: 15px;
 }
 
 .navbar-brand img {
   width: 150px;
 }
 
-.offcanvas-tog {
-  font-size: 15px;
+.searchBar-container {
+  box-sizing: border-box !important;
+  width: 100%;
 }
-
-/* ===================================== */
+.form-select {
+  border: none;
+}
+/* ================Navbar===================== */
 .nav-bar-container {
   width: 100%;
 }

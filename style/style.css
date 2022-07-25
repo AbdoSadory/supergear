@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box !important;
 }
 body {
   background-color: aqua;
@@ -10,7 +11,7 @@ body {
   width: 0.5%;
   background-color: #eee;
 }
-a{
+a {
   color: black !important;
 }
 .grayHover:hover {
@@ -92,6 +93,23 @@ a{
 .form-select {
   border: none;
 }
+
+.header-search-right i {
+  font-size: 20px;
+  /* margin-left: 25px; */
+  position: relative;
+}
+.header-search-right i:hover {
+  color: #eee;
+  transition: 0.3s all ease-in-out;
+}
+.header-search-right i div {
+  font-size: 10px;
+  padding: 6px 9px;
+  position: absolute;
+  bottom: 60%;
+  left: 60%;
+}
 /* ================Navbar===================== */
 .nav-bar-container {
   width: 100%;
@@ -102,7 +120,7 @@ a{
   width: 80%;
   margin: auto;
 }
-.nav-bar-container .ul-container {
+.nav-bar-container .nav-ul-container {
   width: 80%;
 }
 .nav-bar-container ul {

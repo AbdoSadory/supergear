@@ -29,9 +29,9 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header container bg-white">
+    <header class="header container-xl bg-white">
       <!-- SocialMedia Sale -->
-      <div class="d-none d-sm-block">
+      <div class="d-none d-md-block">
         <!-- Why I create additional div ?  -->
         <div class="header-socialMedia row font-15px py-2 align-items-center">
           <div
@@ -111,11 +111,11 @@
       </div>
       <!-- ======================================================================== -->
       <!-- Search -->
-      <div class="search-nav-contianer row p-0 py-4 m-0">
+      <div class="search-nav-contianer row p-0 py-2 py-md-4 m-0">
         <!-- Search Offcanvas left-->
-        <div class="header-search-left p-0 m-0 col">
+        <div class="header-search-left p-0 m-0 col d-flex align-self-center">
           <button
-            class="offcanvas-icon p-0 d-xl-none d-xxl-none"
+            class="offcanvas-icon p-0 me-3 d-block d-md-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"
@@ -154,9 +154,11 @@
           </a>
         </div>
         <!-- Search Offcanvas mid-->
-        <div class="header-search-mid p-0 m-0 col">
+        <div
+          class="header-search-mid p-0 m-0 col-5 d-none d-md-block d-flex align-self-center"
+        >
           <div
-            class="searchBar-container border rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-start"
+            class="searchBar-container border rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-between"
           >
             <!-- selector -->
             <div class="searchBar-select-div col-md-6 col-lg-5 p-0">
@@ -255,9 +257,9 @@
             <!-- seperator -->
             <div class="seperator"></div>
             <!-- Searchoffcanvas -->
-            <div class="searchBar-bar-div col-md-6 w-90">
+            <div class="searchBar-bar-div col-md-6">
               <div
-                class="offcanvas-icon p-0 d-flex justify-content-between"
+                class="offcanvas-icon p-0 d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasTop"
@@ -268,7 +270,7 @@
               </div>
               <div
                 class="offcanvas offcanvas-top"
-                data-bs-scroll="true"
+                data-bs-scroll="false"
                 data-bs-backdrop="false"
                 tabindex="-1"
                 id="offcanvasTop"
@@ -296,39 +298,91 @@
           </div>
         </div>
         <!-- login offcanvas right-->
-        <div class="header-search-right login-container p-0 m-0 col"></div>
+        <div
+          class="header-search-right login-container p-0 m-0 col d-flex justify-content-end align-items-center"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass offcanvas-icon d-sm-block d-md-none ms-md-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          ></i>
+          <!-- ====logIn=== -->
+          <i class="fa-solid fa-user d-none d-sm-none d-md-block ms-md-3"> </i>
+          <!-- ======= -->
+          <i class="fa-solid fa-star d-none d-sm-none d-md-block ms-md-3">
+            <div class="bg-red text-light rounded-circle">0</div>
+          </i>
+          <!-- ====== -->
+          <i
+            class="fa-solid fa-bag-shopping offcanvas-icon ms-md-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <div class="bg-red text-light rounded-circle">0</div>
+          </i>
+          <!-- ===offcanvas-end=== -->
+          <div
+            class="offcanvas offcanvas-end"
+            data-bs-scroll="false"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                Colored with scrolling
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Nav Collapse Div -->
-    <div class="nav-bar-container bg-dark">
+    <div class="nav-bar-container bg-dark text-uppercase fw-bold">
       <nav class="navbar navbar-expand-xl">
         <div
-          class="collapse navbar-collapse ul-container m-0 p-0 justify-content-evenly"
+          class="collapse navbar-collapse nav-ul-container m-0 p-0 justify-content-evenly"
           id="navbarNav"
         >
           <ul class="navbar-nav row">
             <li class="nav-item col">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active text-light" aria-current="page" href="#"
                 >categories</a
               >
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">home</a>
+              <a class="nav-link text-light" href="#">home</a>
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">shop</a>
+              <a class="nav-link text-light" href="#">shop</a>
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">cart</a>
+              <a class="nav-link text-light" href="#">cart</a>
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">checkout</a>
+              <a class="nav-link text-light" href="#">checkout</a>
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">my account</a>
+              <a class="nav-link text-light" href="#">my account</a>
             </li>
             <li class="nav-item col">
-              <a class="nav-link" href="#">blog</a>
+              <a class="nav-link text-light" href="#">blog</a>
             </li>
           </ul>
         </div>

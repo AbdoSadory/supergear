@@ -56,18 +56,23 @@ a {
   background-color: white;
   width: 150%;
   padding: 5px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   visibility: hidden;
   position: absolute;
   top: 200%;
   right: 10%;
   transition: 0.3s all ease-in-out;
+  z-index: 1;
 }
 
 .selector:hover .select-list-div {
   top: 100%;
   visibility: visible;
 }
+
+/* ======================Left offcanvasBar======================== */
+/* .offcanvas-start .list-group-item {
+} */
 /* ======================SearchBar======================== */
 .search-nav-contianer {
   width: 100%;
@@ -107,8 +112,8 @@ a {
   font-size: 10px;
   padding: 6px 9px;
   position: absolute;
-  bottom: 60%;
-  left: 60%;
+  bottom: 75%;
+  left: 45%;
 }
 .hoverBox {
   position: absolute;
@@ -116,7 +121,7 @@ a {
   right: -45%;
   width: auto;
   visibility: hidden;
-  transition: 0.3s all ease-in;
+  transition: 0.2s all ease-in;
 }
 
 .hoverBox span {
@@ -142,4 +147,53 @@ a {
 }
 .nav-bar-container ul {
   width: 100%;
+}
+
+/* ================Slider===================== */
+.owl-carousel {
+  position: relative;
+  width: 95%;
+}
+/* .owl-nav {
+  overflow: hidden;
+  height: 0px;
+} */
+.owl-theme .owl-dots {
+  display: none;
+}
+
+.owl-carousel .nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+.owl-nav {
+  margin: 0 !important;
+}
+.owl-prev {
+  position: absolute;
+  top: 23%;
+  right: 100%;
+  outline: none;
+}
+.owl-next {
+  position: absolute;
+  top: 23%;
+  left: 100%;
+  outline: none;
+}
+.slider-header-container {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.item-header {
+  font-size: 10px !important;
 }

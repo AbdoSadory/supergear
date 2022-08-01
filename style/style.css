@@ -4,7 +4,7 @@
   box-sizing: border-box !important;
 }
 body {
-  background-color: aqua;
+  /* background-color: aqua; */
   font-family: sans-serif;
 }
 .seperator {
@@ -29,6 +29,10 @@ a {
 
 .width-auto {
   width: auto;
+}
+
+.w-30 {
+  width: 30%;
 }
 
 .flag {
@@ -196,4 +200,104 @@ a {
 
 .item-header {
   font-size: 10px !important;
+}
+/* =============Main========================== */
+/* =============Main-Section1========================== */
+.main-section1 {
+  height: 550px;
+  background-image: url(../assets/section2/10046.jpg);
+  padding: 150px 100px;
+}
+
+.main-section1-container {
+  padding: 0 10%;
+  color: #eee;
+}
+
+.main-section1-container h1 {
+  font-size: 50px;
+}
+.main-section1-container p {
+  font-size: 18px;
+}
+
+.section1-shopNow {
+  transition: 0.2s all;
+  border: none;
+  outline: none;
+  background-color: white;
+  width: 150px;
+  padding: 13px 10px !important;
+}
+.section1-shopNow:hover {
+  outline: 5px solid white;
+}
+/* =============Main-Section2========================== */
+.main-section2 div {
+  height: 250px;
+}
+.section2-left {
+  background-color: #edd7c6;
+  position: relative;
+}
+.section2-left-overlay {
+  background-image: url(../assets/section2/10047.jpg);
+  background-size: cover;
+  background-position: center center;
+  transition: 0.35s all ease-in-out;
+}
+.section2-left:hover .section2-left-overlay {
+  transform: scale(1.12);
+}
+.section2-content {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+.section2-left p {
+  transition: 2s all ease-in-out;
+}
+.section2-left:hover p {
+  text-decoration: underline;
+}
+
+.section2-mid {
+  background-color: #99c5e3;
+  position: relative;
+}
+.section2-mid-overlay {
+  background-image: url(../assets/section2/10048.jpg);
+  background-size: cover;
+  background-position: center center;
+  transition: 0.35s all ease-in-out;
+}
+
+.section2-mid:hover .section2-mid-overlay {
+  transform: scale(1.12);
+}
+.section2-mid p {
+  transition: 2s all ease-in-out;
+}
+.section2-mid:hover p {
+  text-decoration: underline;
+}
+.section2-right {
+  background-color: #000000;
+  position: relative;
+}
+.section2-right-overlay {
+  background-image: url(../assets/section2/10049.jpg);
+  background-size: cover;
+  background-position: center center;
+  transition: 0.35s all ease-in-out;
+}
+
+.section2-right:hover .section2-right-overlay {
+  transform: scale(1.12);
+}
+.section2-right p {
+  transition: 2s all ease-in-out;
+}
+.section2-right:hover p {
+  text-decoration: underline;
 }

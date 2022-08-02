@@ -30,7 +30,9 @@ a {
 .width-auto {
   width: auto;
 }
-
+.w-15 {
+  width: 15%;
+}
 .w-30 {
   width: 30%;
 }
@@ -300,4 +302,15 @@ a {
 }
 .section2-right:hover p {
   text-decoration: underline;
+}
+
+/* ==================Main-Section3 ============ */
+.section3-content-item {
+  background-color: #f2f2f2;
+}
+.section3-content-item img {
+  transition: 0.35s all ease-in-out;
+}
+.section3-content-item:hover img {
+  transform: scale(1.2);
 }

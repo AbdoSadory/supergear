@@ -11,9 +11,9 @@ body {
   width: 0.5%;
   background-color: #eee;
 }
-a {
+/* a {
   color: black !important;
-}
+} */
 .grayHover:hover {
   color: gray !important;
   transition: 0.35s;
@@ -26,7 +26,9 @@ a {
 .font-15px {
   font-size: 15px;
 }
-
+.text-gray {
+  color: gray;
+}
 .width-auto {
   width: auto;
 }
@@ -313,4 +315,154 @@ a {
 }
 .section3-content-item:hover img {
   transform: scale(1.2);
+}
+
+/* ==================Main-Section4 ============ */
+
+.section4-left-slider .swiper {
+  margin: auto;
+}
+
+.section4-left-slider .swiper-slide {
+  width: 100% !important;
+  text-align: center;
+
+  font-size: 18px;
+  background: #fff;
+  background-size: cover;
+  background-position: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.section4-left-slider .swiper-slide img {
+  /* display: block; */
+  width: 70%;
+  height: 50%;
+  /* object-fit: cover; */
+}
+
+/* .mySwiper2 {
+  width: 80%;
+} */
+
+.section4-left-slider .mySwiper {
+  /* width: 20%; */
+  /* height: 20%; */
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.section4-left-slider .mySwiper .swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.section4-left-slider .mySwiper .swiper-slide {
+  border: 2px solid black;
+  /* width: auto !important; */
+  opacity: 0.2;
+  transition: 0.35s all ease-in-out;
+}
+.section4-left-slider .mySwiper .swiper-slide:hover {
+  opacity: 1;
+}
+.section4-left-slider .mySwiper .swiper-slide:hover img {
+  width: 65%;
+}
+.section4-left-slider .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.section4-left-slider .swiper-button-next,
+.section4-left-slider .swiper-button-prev {
+  visibility: hidden;
+  transition: 0.35s all ease-in-out;
+}
+
+.section4-left-slider .mySwiper2:hover .swiper-button-next {
+  visibility: visible;
+  right: 20%;
+}
+.section4-left-slider .mySwiper2:hover .swiper-button-prev {
+  visibility: visible;
+  left: 20%;
+}
+
+.section4-left-slider .swiper-button-next::after,
+.section4-left-slider .swiper-button-prev::after {
+  content: "";
+}
+
+.section4-left-slider .swiper-details-container a:hover {
+  color: #000000;
+  transition: 0.35s all ease-in-out;
+}
+
+.section4-left-slider .swiper-details-container h3:hover {
+  color: #000000;
+  transition: 0.35s all ease-in-out;
+}
+.rating {
+  letter-spacing: -3px;
+}
+.outStock {
+  color: green;
+}
+.section4-right-slider .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section4-right-slider .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* ==================Main-Section5 ============ */
+.section5-content-container div {
+  height: 250px;
+}
+.section5-left {
+  background-color: #edd7c6;
+  position: relative;
+}
+.section5-left-overlay {
+  background-image: url(../assets/section2/10047.jpg);
+  background-size: cover;
+  background-position: center center;
+  transition: 0.35s all ease-in-out;
+}
+.section5-left:hover .section5-left-overlay {
+  transform: scale(1.12);
+}
+
+.section5-content {
+  position: absolute;
+  top: 0%;
+  left: 10%;
 }

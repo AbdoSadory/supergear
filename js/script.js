@@ -1,6 +1,6 @@
 $(".owl-carousel").owlCarousel({
   loop: true,
-  autoplay: false,
+  autoplay: true,
   autoplayTimeout: 1500,
   margin: 10,
   nav: true,
@@ -44,11 +44,11 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper = new Swiper(".mySwiper3", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   grid: {
     rows: 2,
   },
-  spaceBetween: 30,
+  spaceBetween: 15,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

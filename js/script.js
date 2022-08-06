@@ -44,13 +44,16 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper = new Swiper(".mySwiper3", {
+  autoplay: true,
   slidesPerView: 1,
   grid: {
     rows: 2,
   },
-  spaceBetween: 15,
+  spaceBetween: 30,
+  observer: true,
+  observeParents: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
   },
 });

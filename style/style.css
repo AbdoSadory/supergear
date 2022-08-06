@@ -237,7 +237,7 @@ body {
   padding: 13px 10px !important;
 }
 .section1-shopNow:hover {
-  outline: 5px solid white;
+  outline: 5px auto white;
 }
 /* =============Main-Section2========================== */
 .main-section2 div {
@@ -322,12 +322,9 @@ body {
 
 /* ==================Main-Section4 ============ */
 .main-section4 {
-  /* height: 400px; */
-  margin-bottom: 100px !important;
+  height: 480px !important;
+  margin-bottom: 10px !important;
 }
-/* .section4-content-container {
-  height: 100%;
-} */
 
 .section4-left-slider {
   height: 100%;
@@ -365,10 +362,6 @@ body {
   height: 50%;
   /* object-fit: cover; */
 }
-
-/* .mySwiper2 {
-  width: 80%;
-} */
 
 .section4-left-slider .mySwiper {
   /* width: 20%; */
@@ -430,8 +423,11 @@ body {
 .outStock {
   color: green;
 }
-.section4-right-slider {
-  height: 100%;
+/* .section4-right-slider {
+  height: 336px !important;
+} */
+.swiper-container {
+  height: 50%;
 }
 .section4-right-slider .swiper {
   width: 100%;
@@ -446,7 +442,7 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  height: calc((100% - 60px) / 2) !important;
+  height: calc((100% - 30px) / 2) !important;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,6 +457,7 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+
 .section4-right-slider .mySwiper3 .swiper-pagination-bullet {
   background-color: #000 !important;
   margin: 0px 10px !important;
@@ -515,14 +512,19 @@ body {
 }
 /* ==================Main-Section5 ============ */
 .section5-content-container div {
-  height: 250px;
+  height: 300px;
 }
 .section5-left {
   background-color: #edd7c6;
   position: relative;
+  width: 40%;
+}
+.section5-right {
+  width: 60%;
+  background-color: #000;
 }
 .section5-left-overlay {
-  background-image: url(../assets/section2/10047.jpg);
+  background-image: url(../assets/10050.jpg);
   background-size: cover;
   background-position: center center;
   transition: 0.35s all ease-in-out;
@@ -535,4 +537,14 @@ body {
   position: absolute;
   top: 0%;
   left: 10%;
+}
+
+.section5-shopNow {
+  transition: 0.2s all;
+  border: none !important;
+  width: 150px;
+  padding: 13px 10px !important;
+}
+.section5-left:hover .section5-shopNow {
+  outline: 5px auto #212529;
 }

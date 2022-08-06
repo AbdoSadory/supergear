@@ -2,6 +2,16 @@
   .section3-content-item {
     width: 48%;
   }
+  .main-section4 {
+    height: 970px !important;
+    margin-bottom: 10px !important;
+  }
+}
+@media (min-width: 425px) {
+  .main-section4 {
+    height: 1170px !important;
+    margin-bottom: 10px !important;
+  }
 }
 @media (min-width: 768px) {
   .main-section2 div {
@@ -10,11 +20,19 @@
   .section3-content-item {
     width: 33%;
   }
+  .main-section4 {
+    height: 870px !important;
+    margin-bottom: 10px !important;
+  }
 }
 
 @media (min-width: 1024px) {
   .section3-content-item {
     width: 15%;
+  }
+  .main-section4 {
+    height: 480px !important;
+    margin-bottom: 10px !important;
   }
 }
 

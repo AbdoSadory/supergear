@@ -511,32 +511,31 @@ body {
   background-image: url(../assets/section4/10035.jpg);
 }
 /* ==================Main-Section5 ============ */
-.section5-content-container div {
-  height: 300px;
-}
+
 .section5-left {
-  background-color: #edd7c6;
-  position: relative;
+  overflow: hidden;
   width: 40%;
 }
-.section5-right {
-  width: 60%;
-  background-color: #000;
+.section5-left-content {
+  position: relative;
 }
 .section5-left-overlay {
-  background-image: url(../assets/10050.jpg);
-  background-size: cover;
-  background-position: center center;
+  width: 100% !important;
   transition: 0.35s all ease-in-out;
 }
+.section5-left-overlay img {
+  width: 110%;
+}
+
 .section5-left:hover .section5-left-overlay {
   transform: scale(1.12);
 }
 
 .section5-content {
   position: absolute;
-  top: 0%;
-  left: 10%;
+  top: 10px;
+  left: 15px;
+  height: 100%;
 }
 
 .section5-shopNow {
@@ -545,6 +544,44 @@ body {
   width: 150px;
   padding: 13px 10px !important;
 }
+
 .section5-left:hover .section5-shopNow {
   outline: 5px auto #212529;
+}
+
+.section5-right {
+  width: 60%;
+}
+
+.section5-right-content {
+  width: 100%;
+  height: 100%;
+}
+
+.section5-right-item {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  background-color: #f2f2f2;
+}
+.section5-right-item .overlay img {
+  width: 100%;
+  object-fit: cover !important;
+}
+
+.section5-right-item .overlay {
+  background-color: #f2f2f2;
+  transition: 0.35s all ease-in-out;
+}
+
+.section5-right-item:hover .overlay {
+  transform: scale(1.1);
+}
+
+.section5-right-item-content {
+  width: 50% !important;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
 }

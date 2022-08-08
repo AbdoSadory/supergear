@@ -586,7 +586,7 @@ body {
   left: 0px;
 }
 
-/* Main-Section6 */
+/* ================== Main-Section6 ================== */
 
 .section6-slider .swiper {
   width: 100%;
@@ -676,4 +676,92 @@ body {
 }
 .section6-card:hover .readMore {
   visibility: visible;
+}
+
+/* ================= Main-Section7 =============*/
+
+.section7-left {
+  overflow: hidden;
+  width: 40%;
+}
+.section7-left-content {
+  position: relative;
+}
+.section7-left-overlay {
+  width: 100% !important;
+  transition: 0.35s all ease-in-out;
+}
+.section7-left-overlay img {
+  width: 110%;
+}
+
+.section7-left:hover .section7-left-overlay {
+  transform: scale(1.12);
+}
+
+.section7-content {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 100%;
+}
+
+.section7-shopNow {
+  transition: 0.2s all;
+  border: none !important;
+  width: 150px;
+  padding: 13px 10px !important;
+}
+
+.section7-left:hover .section7-shopNow {
+  outline: 5px auto #212529;
+}
+
+.section7-right {
+  width: 60%;
+}
+
+.section7-right-content {
+  width: 100%;
+  height: 100%;
+}
+
+.section7-right-item {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  background-color: #f2f2f2;
+}
+.section7-right-item .overlay img {
+  width: 100%;
+  object-fit: cover !important;
+}
+
+.section7-right-item .overlay {
+  background-color: #f2f2f2;
+  transition: 0.35s all ease-in-out;
+}
+
+.section7-right-item:hover .overlay {
+  transform: scale(1.1);
+}
+
+.section7-right-item-content {
+  width: 50% !important;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+/* ================= Main-Section8 =============*/
+.section8-content-container a {
+  border: 1px solid #f0f0f0;
+  transition: 0.35s all ease-in-out;
+}
+
+.section8-content-container a:hover {
+  outline: 2px auto black;
+  background-color: black !important;
+  color: white !important;
 }

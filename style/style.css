@@ -800,8 +800,84 @@ body {
 .section9-content-container a {
   display: inline-block;
   background-color: transparent !important;
+  transition: 0.25s all ease-in-out;
 }
 .section9-content-container a:hover {
   color: white !important;
   background-color: #dc3545 !important;
 }
+
+/* ================= Main-Section10 =============*/
+.section10-brand-container {
+  border-color: #666666;
+}
+/* .section10-brand-container .section10-brand {
+  background-image: url(../assets/section10/brand-mi.png);
+  height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #e02b2b;
+}
+
+.section10-brand-container:hover .section10-brand {
+} */
+
+.section10-brand-container img {
+  color: #eee;
+}
+
+/* ================= Main-Section11 =============*/
+.section11-slider .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.section11-slider .swiper-slide {
+  /* text-align: center; */
+  /* font-size: 18px; */
+  /* background: #fff; */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  /* -webkit-align-items: center;
+  align-items: center; */
+}
+
+.section11-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s all ease-in-out;
+}
+.swiper-slide:hover .section11-card-img img {
+  transform: scale(1.2);
+}
+.section11-card-content h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.section11-card-content a {
+  transition: 0.25s all ease-in-out;
+}
+.section11-card-content .title a:hover {
+  color: #666666 !important;
+}
+
+.section11-card-content .type a:hover {
+  color: #000 !important;
+}
+
+/* ================= Main-Section12 =============*/

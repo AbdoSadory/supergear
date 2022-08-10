@@ -881,3 +881,9 @@ body {
 }
 
 /* ================= Main-Section12 =============*/
+.section12-item-icon {
+  width: 20%;
+}
+.section12-item-content {
+  width: 78%;
+}

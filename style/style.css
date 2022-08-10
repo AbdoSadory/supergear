@@ -887,3 +887,27 @@ body {
 .section12-item-content {
   width: 78%;
 }
+
+/* ================= Footer-Section13 =============*/
+.footer-list-container .card a {
+  transition: 0.2s all ease-in-out;
+}
+.footer-list-container .card a:hover {
+  color: #000;
+}
+.card-email-input .email-input {
+  width: 90%;
+}
+.card-email-input .email-input:focus {
+  outline: none !important;
+}
+.newsletter-icons i {
+  transition: 0.2s all ease-in-out;
+}
+.newsletter-icons i:hover {
+  color: #666666;
+}
+
+.footer-rights-container {
+  border-color: #666666;
+}

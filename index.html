@@ -113,23 +113,195 @@
             data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1"
+          <div class="offcanvas offcanvas-start " data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1"
             id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-body">
+            <div class="offcanvas-body w-100">
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <div class="cate-container d-flex justify-content-between align-items-center">
-                    <a href="#">categories</a>
-                    <i class="fa-solid fa-angle-down"></i>
+              <!-- 1 -->
+              <div class="row justify-content-between w-100 m-0 mt-4 mb-4 p-0">
+                <div class="col-10 px-2">
+                  <a href="#" class=" text-decoration-none text-dark">
+                    <h3 class="headlineNav w-100 text-capitalize fs-6">categories</h3>
+                  </a>
+                </div>
+                <div class="col-2">
+                  <button type="button" class="text-dark fw-bold border-0 bg-white  text-uppercase"
+                    data-bs-toggle="collapse" data-bs-target="#categoriesList" aria-expanded="false"
+                    aria-controls="categoriesList">
+                    <!-- <i class="fa-solid fa-arrow-right "></i> -->
+                    <i class="fa-solid fa-angle-down fs-3 text-dark fs-6"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="collapse " id="categoriesList">
+                <!-- 1 -->
+                <div class="card card-body p-0 m-0 border-0">
+                  <h3 class="text-capitalize fs-6 fw-bold">consumer electronics</h3>
+                  <ul class="list-unstyled">
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">cleaning appliances</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">camera & photo</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">security protection</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smart watches</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">game & video</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 2 -->
+                <div class="card card-body p-0 m-0 mt-5 border-0">
+                  <h3 class="text-capitalize fs-6 fw-bold">music audio</h3>
+                  <ul class="list-unstyled">
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">fitness headphones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">bluetooth speakers</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">on-Ear over-Ear</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">microphones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">accessories</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 3 -->
+                <div class="card card-body p-0 m-0 mt-5 border-0">
+                  <h3 class="text-capitalize fs-6 fw-bold">cell phones</h3>
+                  <ul class="list-unstyled">
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smartphones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">waterproof phones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">dual sim phones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">featured phones</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">refurbished phones</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 4 -->
+                <div class="card card-body p-0 m-0 mt-5 border-0">
+                  <h3 class="text-capitalize fs-6 fw-bold">computers, tablets</h3>
+                  <ul class="list-unstyled">
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">office electrionics</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">laptops</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">tablets PCs</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">computer components</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 5 -->
+                <div class="card card-body p-0 m-0 mt-5 border-0">
+                  <h3 class="text-capitalize fs-6 fw-bold">smart electronics</h3>
+                  <ul class="list-unstyled">
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smart health watch</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smart watch phone</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smart wristband</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">sport watches</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="#" class="text-decoration-none text-capitalize text-gray ">smart watches</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 6 -->
+                <div class="card left-offcanvas-img-card card-body w-100 p-0 m-0 my-5 px-2 ">
+                  <div class="left-offcanvas-img-container w-100 m-0 p-0">
+                    <a href="#" class="left-offcanvas-img-link w-100 m-0 p-0 text-dark text-decoration-none ">
+                      <div class=" left-offcanvas-img-overlay m-0 p-0 overflow-hidden">
+                        <img src="assets/navbar/10054.jpeg" alt="deals">
+                      </div>
+                      <div class="left-offcanvas-img-content w-50 p-0  d-flex flex-column justify-content-between ">
+                        <div>
+                          <h3 class="text-capitalize fs-3 fw-bolder">Xiaomi Pad 5</h3>
+                          <span class="text-capitalize fs-6 fw-bold">The new tech gift you are wishing for right
+                            here.</span>
+                        </div>
+                        <div
+                          class="left-offcanvas-img-shopNow my-4 rounded-pill text-uppercase fw-bold p-3 text-center bg-white">
+                          <a href="#" class="text-decoration-none font-15px text-dark " target="_blank">shop now</a>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                </li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
-              </ul>
+                </div>
+
+              </div>
+              <!-- 2 -->
+              <div class="w-100 px-2 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                  <h3 class="headlineNav w-100 text-capitalize fs-6">home</h3>
+                </a>
+              </div>
+              <!-- 3 -->
+              <div class="w-100 px-2 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                  <h3 class="headlineNav w-100 text-capitalize fs-6">shop</h3>
+                </a>
+              </div>
+              <!-- 4 -->
+              <div class="w-100 px-2 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                  <h3 class="headlineNav w-100 text-capitalize fs-6">cart</h3>
+                </a>
+              </div>
+              <!-- 5 -->
+              <div class="w-100 px-2 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                  <h3 class="headlineNav w-100 text-capitalize fs-6">my account</h3>
+                </a>
+              </div>
+              <!-- 6 -->
+              <div class="w-100 px-2 mb-5">
+                <a href="#" class="text-decoration-none text-dark">
+                  <h3 class="headlineNav w-100 text-capitalize fs-6">blog</h3>
+                </a>
+              </div>
+              <!-- 7 - My Account -->
+              <div class="w-100 px-2 my-4">
+                <h3 class="headlineNav w-100 text-capitalize fs-6">my account</h3>
+                <div class="w-100 my-2">
+                  <a href="#" class="btn btn-dark py-2 px-3 text-uppercase rounded-pill w-100">log in</a>
+                </div>
+                <div class="w-100 my-2">
+                  <a href="#"
+                    class="btn btn-light py-2 px-3 text-uppercase border-2 border-dark rounded-pill w-100">register</a>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Logo -->

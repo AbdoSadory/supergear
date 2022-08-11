@@ -282,16 +282,117 @@
             <!-- header -->
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                Colored with scrolling
+                Search our store
               </h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             </div>
             <!-- body -->
             <div class="offcanvas-body">
-              <p>
-                it's from search
-              </p>
+              <div class="searchbar-container border rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-between">
+                <!-- selector -->
+                <div class="searchBar-select-div col-md-6 col-lg-5 p-0">
+                  <select class="form-select m-0 p-0" name="product_cat" id="product_cat"
+                    aria-label="Default select example">
+                    <option value="0" selected>All Categories</option>
+                    <option value="tv-audio">TV & Audio</option>
+                    <option value="mp3-players">
+                      &nbsp;&nbsp;&nbsp;MP3 Players
+                    </option>
+                    <option value="microphones">
+                      &nbsp;&nbsp;&nbsp;Microphones
+                    </option>
+                    <option value="bluetooth-speakers">
+                      &nbsp;&nbsp;&nbsp;Bluetooth Speakers
+                    </option>
+                    <option value="cell-phone">Cell Phone</option>
+                    <option value="smartphones">
+                      &nbsp;&nbsp;&nbsp;Smartphones
+                    </option>
+                    <option value="waterproof-phones">
+                      &nbsp;&nbsp;&nbsp;Waterproof Phones
+                    </option>
+                    <option value="dual-sim-phones">
+                      &nbsp;&nbsp;&nbsp;Dual Sim Phones
+                    </option>
+                    <option value="featured-phones">
+                      &nbsp;&nbsp;&nbsp;Featured Phones
+                    </option>
+                    <option value="refurbished-phones">
+                      &nbsp;&nbsp;&nbsp;Refurbished Phones
+                    </option>
+                    <option value="power-tools">Power Tools</option>
+                    <option value="tv-box">TV Box</option>
+                    <option value="headphones">Headphones</option>
+                    <option value="fitness-headphones">
+                      &nbsp;&nbsp;&nbsp;Fitness Headphones
+                    </option>
+                    <option value="on-ears-over-ears">
+                      &nbsp;&nbsp;&nbsp;On &#8211; ears Over &#8211; ears
+                    </option>
+                    <option value="headphone-accessories">
+                      &nbsp;&nbsp;&nbsp;Headphone Accessories
+                    </option>
+                    <option value="microphones-headphones">
+                      &nbsp;&nbsp;&nbsp;Microphones
+                    </option>
+                    <option value="smart-electronics">Smart Electronics</option>
+                    <option value="smart-watches">
+                      &nbsp;&nbsp;&nbsp;Smart Watches
+                    </option>
+                    <option value="sport-watches">
+                      &nbsp;&nbsp;&nbsp;Sport Watches
+                    </option>
+                    <option value="smart-watch-phone">
+                      &nbsp;&nbsp;&nbsp;Smart Watch Phone
+                    </option>
+                    <option value="smart-wristband">
+                      &nbsp;&nbsp;&nbsp;Smart Wristband
+                    </option>
+                    <option value="smart-health-watch">
+                      &nbsp;&nbsp;&nbsp;Smart Health Watch
+                    </option>
+                    <option value="consumer-electronics">
+                      Consumer Electronics
+                    </option>
+                    <option value="robot-clean">
+                      &nbsp;&nbsp;&nbsp;Robot Clean
+                    </option>
+                    <option value="game-video">
+                      &nbsp;&nbsp;&nbsp;Game &amp; Video
+                    </option>
+                    <option value="cameras-photos">
+                      &nbsp;&nbsp;&nbsp;Cameras &amp; Photos
+                    </option>
+                    <option value="security-protection">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security &amp; Protection
+                    </option>
+                    <option value="computers-tablets">Computers, Tablets</option>
+                    <option value="computers-laptop">
+                      &nbsp;&nbsp;&nbsp;Computers &amp; Laptop
+                    </option>
+                    <option value="tablets">&nbsp;&nbsp;&nbsp;Tablets</option>
+                    <option value="office-electrionics">
+                      &nbsp;&nbsp;&nbsp;Office Electrionics
+                    </option>
+                    <option value="computer-components">
+                      &nbsp;&nbsp;&nbsp;Computer Components
+                    </option>
+                  </select>
+                </div>
+                <!-- seperator -->
+                <div class="seperator"></div>
+                <div class="searchField col-md-6 col-lg-5 p-0">
+                  <input type="text" class="search-input border-0  " name="searchWords" placeholder="Search" required>
+                  <button type="submit" class="border-0 bg-white"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </div>
+              <div>
+                <span class="text-gray text-capitalize">popular searches</span>
+                <a href="#" class="text-dark text-capitalize">headphone</a>,
+                <a href="#" class="text-dark text-capitalize">tablet</a>,
+                <a href="#" class="text-dark text-capitalize">mobile</a>
+              </div>
             </div>
           </div>
           <!-- ====logIn=== -->
@@ -321,17 +422,27 @@
             id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
             <!-- header -->
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                Colored with scrolling
+              <h5 class="offcanvas-title text-capitalize fw-bold fs-4" id="offcanvasRightLabel">
+                shopping cart
               </h5>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             </div>
             <!-- body -->
-            <div class="offcanvas-body">
-              <p>
-                it's from Cart
+            <div class="offcanvas-body text-center">
+              <p class="text-dark fw-bold font-15px">🔥 These products are limited, checkout within 00m 00s</p>
+              <p class="text-dark fw-bold font-15px">Buy $200.00 more to enjoy <span class="fw-bolder">FREE
+                  Shipping</span></p>
+              <div class="yellow-star w-100"></div>
+              <div class="offcanvas-right-img w-75 m-auto p-0">
+                <img src="assets/navbar/empty-cart.png" class="w-100" alt="empty">
+              </div>
+              <p class="fw-bold fs-6">
+                Your cart is currently empty.
               </p>
+              <p class="text-gray fw-bold font-15px">
+                You may check out all the available products and buy some in the shop. </p>
+              <a href="#" class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to shop</a>
             </div>
           </div>
         </div>
@@ -493,7 +604,7 @@
       </div>
     </section>
     <!-- main Document -->
-    <main class="container-xl border border-danger">
+    <main class="container-xl border border-danger p-0">
       <!-- Main-section1 -->
       <section class="main-section1 container-fluid m-0">
         <div class="main-section1-container ">
@@ -506,7 +617,7 @@
         </div>
       </section>
       <!-- Main-section2 -->
-      <section class="main-section2 m-0 my-5 p-0 row justify-content-between">
+      <section class="main-section2 container-fluid m-0 my-5 p-0 row justify-content-between">
         <div class="section2-left    m-0 p-0 overflow-hidden rounded-3">
           <a href="#" class="section2-left-link text-dark">
             <div class="section2-left-overlay w-100 m-0 p-0"></div>
@@ -539,7 +650,7 @@
         </div>
       </section>
       <!-- Main-section3 -->
-      <section class="main-section3 m-0 mt-5 p-0 w-100">
+      <section class="main-section3 container-fluid m-0 mt-5 p-0 w-100">
         <div
           class="section3-header-container m-0 mb-4 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">popular categories</h3>
@@ -645,7 +756,7 @@
         </div>
       </section>
       <!-- Main-section4 -->
-      <section class="main-section4 m-0 mt-5 p-0 w-100">
+      <section class="main-section4 container-fluid m-0 mt-5 p-0 w-100">
         <div
           class="section4-header-container m-0 mb-4 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">today&apos;s best deals</h3>
@@ -866,7 +977,7 @@
         </div>
       </section>
       <!-- Main-section5 -->
-      <section class="main-section5 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section5 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div
           class="section5-header-container m-0 mb-4 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">consumer electronics</h3>
@@ -973,7 +1084,7 @@
         </div>
       </section>
       <!-- Main-section6 -->
-      <section class="main-section6 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section6 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div
           class="section6-header-container m-0 mb-4 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">top 20 best seller</h3>
@@ -1339,7 +1450,7 @@
         </div>
       </section>
       <!-- Main-section7 -->
-      <section class="main-section7 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section7 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div
           class="section7-header-container m-0 mb-4 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">Music, Audio, Video</h3>
@@ -1452,7 +1563,7 @@
         </div>
       </section>
       <!-- Main-section8 -->
-      <section class="main-section8 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section8 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div class="section8-header-container m-0 mb-4 p-2 w-100  align-items-center border-bottom border-dark">
           <h3 class="text-capitalize fw-bold">Popular Search</h3>
         </div>
@@ -1474,7 +1585,7 @@
         </div>
       </section>
       <!-- Main-section9 -->
-      <section class="main-section9 m-0 mt-3 p-0 py-4 w-100 overflow-hidden ">
+      <section class="main-section9 container-fluid m-0 mt-3 p-0 py-4 w-100 overflow-hidden ">
         <div class="section9-imgs w-100">
           <img src="assets/section9/10045.png" class="section9-left-img" alt="cap">
           <img src="assets/section9/10044.png" class="section9-right-img" alt="glasses">
@@ -1489,7 +1600,7 @@
         </div>
       </section>
       <!-- Main-section10 -->
-      <section class="main-section10 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section10 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div
           class="section10-header-container  m-0 mb-1 p-2 w-100 d-flex flex-wrap justify-content-between align-items-center">
           <h3 class="text-capitalize fw-bold fs-5">brands we distribute</h3>
@@ -1553,7 +1664,7 @@
         </div>
       </section>
       <!-- Main-section11 -->
-      <section class="main-section11 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section11 container-fluid m-0 mt-3 p-0 py-4 w-100">
         <div class="section11-header-container  m-0 mb-1 p-2 w-100 text-center ">
           <h3 class="text-capitalize fw-bolder fs-1">Our Blog Posts</h3>
         </div>
@@ -1762,7 +1873,7 @@
         </div>
       </section>
       <!-- Main-section12 -->
-      <section class="main-section12 m-0 mt-3 p-0 py-4 w-100">
+      <section class="main-section12  m-0 mt-3 p-0 py-4 w-100">
         <div class="section12-content-container w-100 m-0 p-0 row justify-content-between">
           <!-- 1 -->
           <div
@@ -1812,11 +1923,8 @@
       </section>
     </main>
     <!-- Footer-section13 -->
-    <!-- 1- div for each list with col m-0 p-0 
-  2- make the button like header
-    -->
-    <footer class="main-footer container-fluid border mt-3  p-0">
-      <section class="footer-lists-container container-xl border border-danger p-0 pb-5 ">
+    <footer class="main-footer container-fluid  mt-3  p-0">
+      <section class="footer-lists-container container-xl p-0 pb-5 ">
         <div class="footer-lists-div row justify-content-between w-100">
           <!-- 1 -->
           <div class="footer-list-container col-sm-12 col-md-3">

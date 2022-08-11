@@ -133,6 +133,7 @@ body {
   width: auto;
   visibility: hidden;
   transition: 0.2s all ease-in;
+  z-index: -1;
 }
 
 .hoverBox span {
@@ -142,6 +143,27 @@ body {
 .header-search-right i:hover .hoverBox {
   top: 120%;
   visibility: visible;
+  z-index: 1;
+}
+.yellow-star {
+  position: relative;
+  height: 2%;
+  background-color: #eee;
+}
+.yellow-star::before {
+  content: "\f50c";
+  font-family: "Font Awesome\ 5 Brands";
+  font-size: 25px;
+  color: #ffbc11;
+  position: absolute;
+  top: -150%;
+  left: 0px;
+}
+.search-input {
+  width: 70%;
+}
+.search-input:focus {
+  outline: none !important;
 }
 /* ================Navbar===================== */
 .nav-bar-container {
@@ -909,5 +931,5 @@ body {
 }
 
 .footer-rights-container {
-  border-color: #666666;
+  border-color: #666666 !important;
 }

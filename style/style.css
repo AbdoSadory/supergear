@@ -177,10 +177,11 @@ body {
 }
 .searchoffcanvas-top-right-container i:hover .search-hoverBox {
   top: 120%;
+
   visibility: visible;
 }
 .searchoffcanvas-top-right-container i .search-counter {
-  font-size: 10px;
+  font-size: 11px;
   padding: 6px 9px;
   position: absolute;
   bottom: 75%;

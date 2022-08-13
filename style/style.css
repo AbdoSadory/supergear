@@ -159,10 +159,41 @@ body {
   top: -150%;
   left: 0px;
 }
+.searchoffcanvas-top-right-container i {
+  position: relative;
+}
+
+.search-hoverBox {
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  width: auto;
+  visibility: hidden;
+  transition: 0.2s all ease-in;
+}
+
+.search-hoverBox span {
+  font-size: 10px !important;
+}
+.searchoffcanvas-top-right-container i:hover .search-hoverBox {
+  top: 120%;
+  visibility: visible;
+}
+.searchoffcanvas-top-right-container i .search-counter {
+  font-size: 10px;
+  padding: 6px 9px;
+  position: absolute;
+  bottom: 75%;
+  left: 45%;
+}
+.search-input-top {
+  width: 89%;
+}
 .search-input {
   width: 70%;
 }
-.search-input:focus {
+.search-input:focus,
+.search-input-top:focus {
   outline: none !important;
 }
 .headlineNav {

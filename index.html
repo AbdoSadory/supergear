@@ -411,30 +411,150 @@
                 <span>Search Product</span>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
-              <div class="offcanvas offcanvas-top" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1"
+              <div class="offcanvas offcanvas-top" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1"
                 id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <!-- header-->
+                <!-- Searchoffcanvas-top header-->
                 <div class="offcanvas-header d-flex flex-row-reverse">
-                  <!-- <h5 class="offcanvas-title" id="offcanvasTopLabel">
-                    Colored with scrolling
-                  </h5> -->
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
                 </div>
-                <!-- body -->
-                <div class="offcanvas-body row p-0 px-2 m-0">
-                  <div class="col-3 ">
-                    <div class="w-75 m-auto">
+                <!--Searchoffcanvas-top body -->
+                <div
+                  class="offcanvas-body searchoffcanvas-top-container container-xl m-auto row  justify-content-between overflow-hidden align-items-center p-0 px-2 m-0">
+                  <div class="searchoffcanvas-top-left-container col-3 ">
+                    <div class="w-50 m-auto">
                       <img src="assets/brand/dark-logo.png" alt="logo" class="w-100 text-center" />
                     </div>
                   </div>
-                  <div class="col-6">
-                    Try scrolling the rest of the divage to see this odivtion in
-                    action.
+                  <div class="searchoffcanvas-top-mid-container col-6 text-center">
+                    <div
+                      class="searchbar-container-top border rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-between">
+                      <!-- selector -->
+                      <div class="searchBar-select-div-top col-md-5 col-lg-4 p-0">
+                        <select class="form-select m-0 p-0" name="product_cat" id="product_cat"
+                          aria-label="Default select example">
+                          <option value="0" selected>All Categories</option>
+                          <option value="tv-audio">TV & Audio</option>
+                          <option value="mp3-players">
+                            &nbsp;&nbsp;&nbsp;MP3 Players
+                          </option>
+                          <option value="microphones">
+                            &nbsp;&nbsp;&nbsp;Microphones
+                          </option>
+                          <option value="bluetooth-speakers">
+                            &nbsp;&nbsp;&nbsp;Bluetooth Speakers
+                          </option>
+                          <option value="cell-phone">Cell Phone</option>
+                          <option value="smartphones">
+                            &nbsp;&nbsp;&nbsp;Smartphones
+                          </option>
+                          <option value="waterproof-phones">
+                            &nbsp;&nbsp;&nbsp;Waterproof Phones
+                          </option>
+                          <option value="dual-sim-phones">
+                            &nbsp;&nbsp;&nbsp;Dual Sim Phones
+                          </option>
+                          <option value="featured-phones">
+                            &nbsp;&nbsp;&nbsp;Featured Phones
+                          </option>
+                          <option value="refurbished-phones">
+                            &nbsp;&nbsp;&nbsp;Refurbished Phones
+                          </option>
+                          <option value="power-tools">Power Tools</option>
+                          <option value="tv-box">TV Box</option>
+                          <option value="headphones">Headphones</option>
+                          <option value="fitness-headphones">
+                            &nbsp;&nbsp;&nbsp;Fitness Headphones
+                          </option>
+                          <option value="on-ears-over-ears">
+                            &nbsp;&nbsp;&nbsp;On &#8211; ears Over &#8211; ears
+                          </option>
+                          <option value="headphone-accessories">
+                            &nbsp;&nbsp;&nbsp;Headphone Accessories
+                          </option>
+                          <option value="microphones-headphones">
+                            &nbsp;&nbsp;&nbsp;Microphones
+                          </option>
+                          <option value="smart-electronics">Smart Electronics</option>
+                          <option value="smart-watches">
+                            &nbsp;&nbsp;&nbsp;Smart Watches
+                          </option>
+                          <option value="sport-watches">
+                            &nbsp;&nbsp;&nbsp;Sport Watches
+                          </option>
+                          <option value="smart-watch-phone">
+                            &nbsp;&nbsp;&nbsp;Smart Watch Phone
+                          </option>
+                          <option value="smart-wristband">
+                            &nbsp;&nbsp;&nbsp;Smart Wristband
+                          </option>
+                          <option value="smart-health-watch">
+                            &nbsp;&nbsp;&nbsp;Smart Health Watch
+                          </option>
+                          <option value="consumer-electronics">
+                            Consumer Electronics
+                          </option>
+                          <option value="robot-clean">
+                            &nbsp;&nbsp;&nbsp;Robot Clean
+                          </option>
+                          <option value="game-video">
+                            &nbsp;&nbsp;&nbsp;Game &amp; Video
+                          </option>
+                          <option value="cameras-photos">
+                            &nbsp;&nbsp;&nbsp;Cameras &amp; Photos
+                          </option>
+                          <option value="security-protection">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security &amp; Protection
+                          </option>
+                          <option value="computers-tablets">Computers, Tablets</option>
+                          <option value="computers-laptop">
+                            &nbsp;&nbsp;&nbsp;Computers &amp; Laptop
+                          </option>
+                          <option value="tablets">&nbsp;&nbsp;&nbsp;Tablets</option>
+                          <option value="office-electrionics">
+                            &nbsp;&nbsp;&nbsp;Office Electrionics
+                          </option>
+                          <option value="computer-components">
+                            &nbsp;&nbsp;&nbsp;Computer Components
+                          </option>
+                        </select>
+                      </div>
+                      <!-- seperator -->
+                      <div class="seperator"></div>
+                      <!-- search field -->
+                      <div class="searchField-top col-md-7 col-lg-8 p-0">
+                        <input type="text" class="search-input-top border-0  " name="searchWords" placeholder="Search"
+                          required>
+                        <button type="submit" class="border-0 bg-white"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="text-gray text-capitalize">popular searches</span>
+                      <a href="#" class="text-dark text-capitalize">headphone</a>,
+                      <a href="#" class="text-dark text-capitalize">tablet</a>,
+                      <a href="#" class="text-dark text-capitalize">mobile</a>
+                    </div>
                   </div>
-                  <div class="col-3">
-                    Try scrolling the rest of the divage to see this odivtion in
-                    action.
+                  <div class="searchoffcanvas-top-right-container col-3 d-flex justify-content-end align-items-center">
+                    <i class="fa-solid fa-user d-none d-sm-none d-md-block ms-md-3">
+                      <div class="search-hoverBox bg-dark text-center d-flex align-self-center p-2">
+                        <span class="text-light fs-6">login</span>
+                      </div>
+                    </i>
+                    <i class="fa-solid fa-star d-none d-sm-none d-md-block ms-md-3">
+                      <div class="search-counter bg-red text-light rounded-circle">0</div>
+                      <div class="search-hoverBox bg-dark text-center d-flex align-self-center p-2">
+                        <span class="text-light fs-6">wishlist</span>
+                      </div>
+                    </i>
+                    <i class="fa-solid fa-bag-shopping offcanvas-icon ms-md-3" type="button" data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">
+                      <div class="search-counter bg-red text-light rounded-circle">0</div>
+                      <div class="search-hoverBox bg-dark d-flex justify-content-center text-center p-2">
+                        <span class="text-light fs-6">cart</span>
+                      </div>
+                    </i>
                   </div>
                 </div>
               </div>
@@ -570,7 +690,6 @@
           <!-- ====logIn=== -->
           <i class="fa-solid fa-user d-none d-sm-none d-md-block ms-md-3">
             <div class="hoverBox bg-dark text-center d-flex align-self-center p-2">
-              <!-- <i class="fa-solid fa-caret-up hoverBox-arrow text-light"></i> -->
               <span class="text-light fs-6">login</span>
             </div>
           </i>

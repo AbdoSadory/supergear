@@ -784,6 +784,51 @@ body {
   top: 0px;
   left: 0px;
 }
+.popup {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  transition: 0.2s all ease-in-out;
+}
+.popup-icons div {
+  position: relative;
+}
+.popup-icons span {
+  visibility: hidden;
+  transition: 0.3s all ease-in-out;
+  transition-delay: 0.1s;
+  z-index: 1;
+}
+.popup-icons span::after {
+  content: "";
+  z-index: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #212529;
+  position: absolute;
+  top: 40%;
+  left: 68%;
+  transform: rotate(45deg);
+}
+.compare-container span::after {
+  left: 60%;
+}
+.view-container span::after {
+  left: 62%;
+}
+.section6-card-img:hover .popup {
+  left: -5%;
+}
+.popup-icons a i {
+  transition: 0.3s all ease-in-out;
+}
+.popup-icons a:hover i {
+  color: white !important;
+  background-color: #212529 !important;
+}
+.popup-icons a:hover span {
+  visibility: visible;
+}
 .main-img {
   opacity: 1;
   transition: 0.5s all ease-in-out !important;
@@ -802,6 +847,7 @@ body {
 .section6-card-img:hover .back-img {
   transform: scale(1.16);
 }
+
 .section6-card-content h3 {
   overflow: hidden;
   text-overflow: ellipsis;

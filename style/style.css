@@ -11,9 +11,26 @@ body {
   width: 0.5%;
   background-color: #eee;
 }
-/* a {
-  color: black !important;
-} */
+.btn-hover {
+  position: relative;
+}
+.btn-hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-hover:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 .grayHover:hover {
   color: gray !important;
   transition: 0.35s;
@@ -240,7 +257,22 @@ body {
 .nav-bar-container ul {
   width: 100%;
 }
-
+.nav-item-categories-content {
+  position: relative;
+}
+.nav-item-content-container {
+  background-color: #e02b2b;
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  visibility: hidden;
+  z-index: 2;
+}
+.nav-item-categories-content:hover .nav-item-content-container {
+  color: #e02b2b;
+  visibility: visible;
+  z-index: 2;
+}
 /* ================Slider===================== */
 .owl-carousel {
   position: relative;
@@ -342,12 +374,6 @@ body {
   top: 0%;
   left: 10%;
 }
-.section2-left p {
-  transition: 2s all ease-in-out;
-}
-.section2-left:hover p {
-  text-decoration: underline;
-}
 
 .section2-mid {
   background-color: #99c5e3;
@@ -363,12 +389,7 @@ body {
 .section2-mid:hover .section2-mid-overlay {
   transform: scale(1.12);
 }
-.section2-mid p {
-  transition: 2s all ease-in-out;
-}
-.section2-mid:hover p {
-  text-decoration: underline;
-}
+
 .section2-right {
   background-color: #000000;
   position: relative;
@@ -386,10 +407,59 @@ body {
 .section2-right p {
   transition: 2s all ease-in-out;
 }
-.section2-right:hover p {
+/* .section2-right:hover p {
   text-decoration: underline;
+} */
+.main-section2 p {
+  position: relative;
 }
 
+.main-section2 p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+.main-section2 .section2-mid p::after,
+.main-section2 .section2-right p::after {
+  background-color: white;
+}
+.main-section2 p:hover:after {
+  transform: scaleX(0);
+}
+/* .main-section2 p:not(:hover) {
+  transition-delay: 0.3s;
+  transform: scaleX(1);
+} */
+
+.main-section2 p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.main-section2 p:hover::before {
+  transform: scaleX(1);
+}
+
+.main-section2 .section2-mid p::before,
+.main-section2 .section2-right p::before {
+  background-color: white;
+}
 /* ==================Main-Section3 ============ */
 .section3-content-item {
   background-color: #f2f2f2;

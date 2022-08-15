@@ -243,9 +243,13 @@ body {
 }
 /* ================Navbar===================== */
 .nav-bar-container {
+  position: relative;
   width: 100%;
 }
-
+.nav-bar,
+.navbar-expand-xl {
+  position: static !important;
+}
 .nav-bar-container nav {
   text-align: center;
   width: 80%;
@@ -258,13 +262,14 @@ body {
   width: 100%;
 }
 .nav-item-categories-content {
-  position: relative;
+  position: static !important;
 }
 .nav-item-content-container {
-  background-color: #e02b2b;
+  background-color: white;
   position: absolute;
-  top: 100%;
-  width: 100vw;
+  top: 87%;
+  left: 0;
+  right: 0;
   visibility: hidden;
   z-index: 2;
 }
@@ -272,6 +277,50 @@ body {
   color: #e02b2b;
   visibility: visible;
   z-index: 2;
+}
+.nav-item-menu-list h3,
+.nav-item-menu-list ul {
+  text-align: left !important;
+}
+.nav-item-menu-list ul a {
+  transition: 0.35s all ease-in-out;
+}
+.nav-item-menu-list ul a:hover {
+  color: #000;
+}
+
+.nav-item-menu-list ul a::before {
+  background-color: #000;
+  height: 1px;
+}
+.right-menua-img-container {
+  position: relative;
+}
+.right-menua-img-overlay {
+  width: 100% !important;
+}
+.right-menua-img-overlay img {
+  transition: 0.35s all ease-in-out;
+  width: 110%;
+}
+
+.right-menua-img-container:hover .right-menua-img-overlay img {
+  transform: scale(1.12);
+}
+
+.right-menua-img-content {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 100%;
+}
+.right-menua-img-shopNow {
+  transition: 0.35s all linear;
+  border: none !important;
+  outline: none !important;
+}
+.right-menua-img-container:hover .right-menua-img-shopNow {
+  outline: 5px solid white !important;
 }
 /* ================Slider===================== */
 .owl-carousel {
@@ -785,6 +834,7 @@ body {
   left: 0px;
 }
 .popup {
+  visibility: hidden;
   position: absolute;
   top: 10%;
   left: 100%;

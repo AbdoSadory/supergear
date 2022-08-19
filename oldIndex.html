@@ -6,30 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supergear – The High Converting eCommerce WordPress Theme</title>
-    <link rel="icon" href="assets/images/tab_logo.png" />
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/tab_logo.png" />
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/style/fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/style/all.css" />
+    <link rel="stylesheet" href="style/fontawesome.min.css" />
+    <link rel="stylesheet" href="style/all.css" />
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="assets/style/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/style/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl.theme.default.min.css">
     <!-- Swiper Carousel -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <!-- Project Local CSS Style -->
-    <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/media.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/media.css">
   </head>
 
   <body>
@@ -37,6 +33,7 @@
     <header class="header container-xl bg-white">
       <!-- SocialMedia Sale -->
       <div class="d-none d-md-block">
+        <!-- Why I create additional div ?  -->
         <div class="header-socialMedia row font-15px py-2 align-items-center">
           <div class="followers col d-flex justify-content-start d-none d-lg-block">
             <a href="https://www.instagram.com/abdo_sadory/"
@@ -59,21 +56,22 @@
             <!-- CounrtyFlag -->
             <div class="selector m-0 p-0 me-4 d-sm-none d-md-block">
               <div class="countryFlag m-0 p-0">
-                <img src="assets/images/flags/en-us.png" alt="en-us" class="flag" />
+                <img src="assets/flags/en-us.png" alt="en-us" class="flag" />
                 <span class="countryFlag-name">English</span>
-                <i class="fa-solid fa-angle-down down-arrow-small-menu"></i>
+                <i class="fas fa-arrow-down"></i>
               </div>
-              <div class="select-list-div p-2">
+
+              <div class="select-list-div">
                 <ul class="selector-list m-0 p-2">
                   <li class="selector-list-item mb-2">
                     <div class="selector-list-content">
-                      <img src="assets/images/flags/de.png" alt="en-us" class="flag" />
+                      <img src="assets/flags/de.png" alt="en-us" class="flag" />
                       <span class="countryFlag-name">German</span>
                     </div>
                   </li>
                   <li class="selector-list-item">
                     <div class="selector-list-content">
-                      <img src="assets/images/flags/fr.png" alt="en-us" class="flag" />
+                      <img src="assets/flags/fr.png" alt="en-us" class="flag" />
                       <span class="countryFlag-name">Franch</span>
                     </div>
                   </li>
@@ -85,7 +83,7 @@
             <div class="selector m-0 p-0 d-sm-none d-md-block">
               <div class="countryFlag m-0 p-0">
                 <span class="countryFlag-name">USD</span>
-                <i class="fa-solid fa-angle-down down-arrow-small-menu"></i>
+                <i class="fas fa-arrow-down"></i>
               </div>
 
               <div class="select-list-div">
@@ -244,7 +242,7 @@
                   <div class="left-offcanvas-img-container w-100 m-0 p-0">
                     <a href="#" class="left-offcanvas-img-link w-100 m-0 p-0 text-dark text-decoration-none ">
                       <div class=" left-offcanvas-img-overlay m-0 p-0 overflow-hidden">
-                        <img src="assets/images/navbar/10054.jpeg" alt="deals">
+                        <img src="assets/navbar/10054.jpeg" alt="deals">
                       </div>
                       <div class="left-offcanvas-img-content w-50 p-0  d-flex flex-column justify-content-between ">
                         <div>
@@ -254,7 +252,7 @@
                         </div>
                         <div
                           class="left-offcanvas-img-shopNow my-4 rounded-pill text-uppercase fw-bold p-3 text-center bg-white">
-                          <a href="#" class="text-decoration-none font-15px text-dark" target="_blank">shop now</a>
+                          <a href="#" class="text-decoration-none font-15px text-dark " target="_blank">shop now</a>
                         </div>
                       </div>
                     </a>
@@ -307,7 +305,7 @@
           </div>
           <!-- Logo -->
           <a href="#" class="navbar-brand">
-            <img src="assets/images/brand/dark-logo.png" alt="logo" />
+            <img src="assets/brand/dark-logo.png" alt="logo" />
           </a>
         </div>
         <!-- Search Offcanvas mid-->
@@ -424,7 +422,7 @@
                   class="offcanvas-body searchoffcanvas-top-container container-xl m-auto row  justify-content-between overflow-hidden align-items-center p-0 px-2 m-0">
                   <div class="searchoffcanvas-top-left-container col-3 ">
                     <div class="w-50 m-auto">
-                      <img src="assets/images/brand/dark-logo.png" alt="logo" class="w-100 text-center" />
+                      <img src="assets/brand/dark-logo.png" alt="logo" class="w-100 text-center" />
                     </div>
                   </div>
                   <div class="searchoffcanvas-top-mid-container col-6 text-center">
@@ -727,7 +725,7 @@
                   Shipping</span></p>
               <div class="yellow-star w-100"></div>
               <div class="offcanvas-right-img w-75 m-auto p-0">
-                <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
+                <img src="assets/navbar/empty-cart.png" class="w-100" alt="empty">
               </div>
               <p class="fw-bold fs-6">
                 Your cart is currently empty.
@@ -870,7 +868,7 @@
                   <div class="right-menua-img-container w-100 m-auto p-0">
                     <a href="#" class="right-menua-img-link w-100 m-0 p-0 text-dark text-decoration-none ">
                       <div class=" right-menua-img-overlay m-0 p-0 overflow-hidden">
-                        <img src="assets/images/navbar/10054.jpeg" alt="deals">
+                        <img src="assets/navbar/10054.jpeg" alt="deals">
                       </div>
                       <div class="right-menua-img-content w-50 p-0  d-flex flex-column justify-content-start ">
                         <div>
@@ -916,7 +914,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-cameras-audio-85x85.jpg" alt="cameras & photos">
+              <img class="rounded-circle" src="assets/tools/cat-cameras-audio-85x85.jpg" alt="cameras & photos">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -926,7 +924,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-tv-box-85x85.jpg" alt="tv box">
+              <img class="rounded-circle" src="assets/tools/cat-tv-box-85x85.jpg" alt="tv box">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -936,7 +934,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-tv-audio-85x85.jpg" alt="tv & audio">
+              <img class="rounded-circle" src="assets/tools/cat-tv-audio-85x85.jpg" alt="tv & audio">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -946,7 +944,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-tablets-85x85.jpg" alt="tablets">
+              <img class="rounded-circle" src="assets/tools/cat-tablets-85x85.jpg" alt="tablets">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -956,7 +954,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-spot-watches-85x85.jpg" alt="sport Watches">
+              <img class="rounded-circle" src="assets/tools/cat-spot-watches-85x85.jpg" alt="sport Watches">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -966,7 +964,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-smart-watches-85x85.jpg" alt="smart watches">
+              <img class="rounded-circle" src="assets/tools/cat-smart-watches-85x85.jpg" alt="smart watches">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -976,7 +974,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-robot-clean-85x85.jpg" alt="robot clean">
+              <img class="rounded-circle" src="assets/tools/cat-robot-clean-85x85.jpg" alt="robot clean">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -986,7 +984,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-power-tools-85x85.jpg" alt="power tools">
+              <img class="rounded-circle" src="assets/tools/cat-power-tools-85x85.jpg" alt="power tools">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -996,7 +994,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-headphones-85x85.jpg" alt="headphones">
+              <img class="rounded-circle" src="assets/tools/cat-headphones-85x85.jpg" alt="headphones">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -1006,7 +1004,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-game-video-85x85.jpg" alt="game & video">
+              <img class="rounded-circle" src="assets/tools/cat-game-video-85x85.jpg" alt="game & video">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -1016,8 +1014,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-computers-laptop-85x85.jpg"
-                alt="computers & laptop">
+              <img class="rounded-circle" src="assets/tools/cat-computers-laptop-85x85.jpg" alt="computers & laptop">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -1027,7 +1024,7 @@
         <div class="item w-100 row d-flex justify-content-center align-items-center p-0 m-0">
           <div class="slider-img-container col-3 overflow-hidden m-0 p-0">
             <a href="#">
-              <img class="rounded-circle" src="assets/images/tools/cat-cell-phone-85x85.jpg" alt="cell phone">
+              <img class="rounded-circle" src="assets/tools/cat-cell-phone-85x85.jpg" alt="cell phone">
             </a>
           </div>
           <div class="slider-header-container col text-capitalize p-0 m-0 ">
@@ -1096,7 +1093,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10018.jpg" alt="tv-audio" class="p-0 m-0 w-100">
+                <img src="assets/section3/10018.jpg" alt="tv-audio" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0 m-0 text-capitalize fw-bold">tv & audio</h4>
             </a>
@@ -1104,7 +1101,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10006.jpg" alt="tv-box" class="p-0 m-0 w-100">
+                <img src="assets/section3/10006.jpg" alt="tv-box" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">tv box</h4>
             </a>
@@ -1112,7 +1109,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10019.jpg" alt="power-tools" class="p-0 m-0 w-100">
+                <img src="assets/section3/10019.jpg" alt="power-tools" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">power tools</h4>
             </a>
@@ -1120,7 +1117,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10020.jpg" alt="headphones" class="p-0 m-0 w-100">
+                <img src="assets/section3/10020.jpg" alt="headphones" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">headphones</h4>
             </a>
@@ -1128,7 +1125,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10021.jpg" alt="cellphone" class="p-0 m-0 w-100">
+                <img src="assets/section3/10021.jpg" alt="cellphone" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">cellphone</h4>
             </a>
@@ -1136,7 +1133,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10022.jpg" alt="smart-watches" class="p-0 m-0 w-100">
+                <img src="assets/section3/10022.jpg" alt="smart-watches" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">smart watches</h4>
             </a>
@@ -1144,7 +1141,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10023.jpg" alt="game-video" class="p-0 m-0 w-100">
+                <img src="assets/section3/10023.jpg" alt="game-video" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">game & video</h4>
             </a>
@@ -1152,7 +1149,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10015.jpg" alt="robot-clean" class="p-0 m-0 w-100">
+                <img src="assets/section3/10015.jpg" alt="robot-clean" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">robot clean</h4>
             </a>
@@ -1160,7 +1157,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10014.jpg" alt="sport-watches" class="p-0 m-0 w-100">
+                <img src="assets/section3/10014.jpg" alt="sport-watches" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">sport watches</h4>
             </a>
@@ -1168,7 +1165,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10024.jpg" alt="tablets" class="p-0 m-0 w-100">
+                <img src="assets/section3/10024.jpg" alt="tablets" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">tablets</h4>
             </a>
@@ -1176,7 +1173,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10016.jpg" alt="computers-laptop" class="p-0 m-0 w-100">
+                <img src="assets/section3/10016.jpg" alt="computers-laptop" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">computers & laptop</h4>
             </a>
@@ -1184,7 +1181,7 @@
           <div class="section3-content-item m-0 my-2 p-0 py-2  text-center overflow-hidden border  rounded-3">
             <a href="#" class="text-decoration-none text-dark">
               <div class="section3-content-item-img w-100 overflow-hidden ">
-                <img src="assets/images/section3/10017.jpg" alt="cameras-photos" class="p-0 m-0 w-100">
+                <img src="assets/section3/10017.jpg" alt="cameras-photos" class="p-0 m-0 w-100">
               </div>
               <h4 class="fs-6 p-0  m-0 text-capitalize fw-bold">cameras & photos</h4>
             </a>
@@ -1205,32 +1202,32 @@
               <div thumbsSlider="" class="swiper mySwiper col-2   ">
                 <div class="swiper-wrapper w-75 ">
                   <div class="swiper-slide rounded-3">
-                    <img src="assets/images/section4/10025.jpg" />
+                    <img src="assets/section4/10025.jpg" />
                   </div>
                   <div class="swiper-slide my-2 rounded-3">
-                    <img src="assets/images/section4/10026.jpg" />
+                    <img src="assets/section4/10026.jpg" />
                   </div>
                   <div class="swiper-slide mb-2 rounded-3">
-                    <img src="assets/images/section4/10027.jpg" />
+                    <img src="assets/section4/10027.jpg" />
                   </div>
                   <div class="swiper-slide rounded-3">
-                    <img src="assets/images/section4/10028.jpg" />
+                    <img src="assets/section4/10028.jpg" />
                   </div>
                 </div>
               </div>
               <div class="swiper mySwiper2 col">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide ">
-                    <img src="assets/images/section4/10025-2.jpg" />
+                    <img src="assets/section4/10025-2.jpg" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/images/section4/10026-2.jpg" />
+                    <img src="assets/section4/10026-2.jpg" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/images/section4/10027-2.jpg" />
+                    <img src="assets/section4/10027-2.jpg" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/images/section4/10028-2.jpg" />
+                    <img src="assets/section4/10028-2.jpg" />
                   </div>
                 </div>
                 <div class="swiper-button-next">
@@ -1425,7 +1422,7 @@
             <div class="section5-left-content w-100 m-0 p-0">
               <a href="#" class="section5-left-link w-100 m-0 p-0 text-dark text-decoration-none ">
                 <div class="section5-left-overlay  m-0 p-0">
-                  <img src="assets/images/section5/10050.jpg" alt="deals">
+                  <img src="assets/section5/10050.jpg" alt="deals">
                 </div>
                 <div class="section5-content w-50 p-0  d-flex flex-column justify-content-between ">
                   <div>
@@ -1446,7 +1443,7 @@
               <div class="section5-right-item section5-right-item1  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10038.jpg" alt="robot-clean">
+                    <img src="assets/section5/10038.jpg" alt="robot-clean">
                   </div>
                   <div
                     class="section5-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -1458,7 +1455,7 @@
               <div class="section5-right-item section5-right-item2  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10039.jpg" alt="cell-phone">
+                    <img src="assets/section5/10039.jpg" alt="cell-phone">
                   </div>
                   <div
                     class="section5-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -1470,7 +1467,7 @@
               <div class="section5-right-item section5-right-item3  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10040.jpg" alt="smart-watches">
+                    <img src="assets/section5/10040.jpg" alt="smart-watches">
                   </div>
                   <div
                     class="section5-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 overflow-wrap">
@@ -1482,7 +1479,7 @@
               <div class="section5-right-item section5-right-item4  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10041.jpg" alt="cameras-photos">
+                    <img src="assets/section5/10041.jpg" alt="cameras-photos">
                   </div>
                   <div
                     class="section5-right-item-content w-50 text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -1494,7 +1491,7 @@
               <div class="section5-right-item section5-right-item5  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10042.jpg" alt="security-protection">
+                    <img src="assets/section5/10042.jpg" alt="security-protection">
                   </div>
                   <div
                     class="section5-right-item-content w-50 text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -1506,7 +1503,7 @@
               <div class="section5-right-item section5-right-item6  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section5/10043.jpg" alt="game-video">
+                    <img src="assets/section5/10043.jpg" alt="game-video">
                   </div>
                   <div
                     class="section5-right-item-content  w-50 text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -1535,9 +1532,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img overflow-hidden">
                       <a href="#" class="text-decoration-none text-dark">
-                        <img src="assets/images/section6/10025.jpg" class="main-img"
+                        <img src="assets/section6/10025.jpg" class="main-img"
                           alt="Klipsch R-120SW Powerful Detailed Home Speaker Unit">
-                        <img src="assets/images/section6/10026.jpg" class="back-img "
+                        <img src="assets/section6/10026.jpg" class="back-img "
                           alt="Klipsch R-120SW Powerful Detailed Home Speaker">
                         <div
                           class="note text-uppercase fw-bold font-15px text-light bg-dark rounded-pill m-0 py-1 px-2">
@@ -1600,8 +1597,8 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10071.jpg" class="main-img" alt="MIJIA Robot Vacuum 1T">
-                        <img src="assets/images/section6/10072.jpg" class="back-img " alt="MIJIA Robot Vacuum 1T">
+                        <img src="assets/section6/10071.jpg" class="main-img" alt="MIJIA Robot Vacuum 1T">
+                        <img src="assets/section6/10072.jpg" class="back-img " alt="MIJIA Robot Vacuum 1T">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
                             <div class="add-to-wishlist-container m-0 my-2 p-0">
@@ -1659,9 +1656,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10073.jpg" class="main-img"
+                        <img src="assets/section6/10073.jpg" class="main-img"
                           alt="Teclast M40 10.1 inch Android 10.0 Tablet">
-                        <img src="assets/images/section6/10074.jpg" class="back-img "
+                        <img src="assets/section6/10074.jpg" class="back-img "
                           alt="Teclast M40 10.1 inch Android 10.0 Tablet">
                         <div
                           class="note text-uppercase fw-bold font-15px text-light bg-danger rounded-pill m-0 py-1 px-3">
@@ -1724,8 +1721,8 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10075-1.jpg" class="main-img" alt="UMIDIGI Power 3 6150mAh">
-                        <img src="assets/images/section6/10075.jpg" class="back-img " alt="UMIDIGI Power 3 6150mAh">
+                        <img src="assets/section6/10075-1.jpg" class="main-img" alt="UMIDIGI Power 3 6150mAh">
+                        <img src="assets/section6/10075.jpg" class="back-img " alt="UMIDIGI Power 3 6150mAh">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
                             <div class="add-to-wishlist-container m-0 my-2 p-0">
@@ -1782,8 +1779,8 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10076.jpg" class="main-img" alt="ZY418 Ultra-thin Sport MP3">
-                        <img src="assets/images/section6/10077.jpg" class="back-img " alt="ZY418 Ultra-thin Sport MP3">
+                        <img src="assets/section6/10076.jpg" class="main-img" alt="ZY418 Ultra-thin Sport MP3">
+                        <img src="assets/section6/10077.jpg" class="back-img " alt="ZY418 Ultra-thin Sport MP3">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
                             <div class="add-to-wishlist-container m-0 my-2 p-0">
@@ -1840,9 +1837,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10062.jpg" class="main-img"
+                        <img src="assets/section6/10062.jpg" class="main-img"
                           alt="Soundcore Flare Mini Bluetooth Speaker Outdoor Bluetooth Speaker IPX7 Waterproof">
-                        <img src="assets/images/section6/10063.jpg" class="back-img "
+                        <img src="assets/section6/10063.jpg" class="back-img "
                           alt="Soundcore Flare Mini Bluetooth Speaker Outdoor Bluetooth Speaker IPX7 Waterproof">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
@@ -1900,9 +1897,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10064.jpg" class="main-img"
+                        <img src="assets/section6/10064.jpg" class="main-img"
                           alt="DIDSeth Pan Tilt Security Light Camera Full HD 1080P Wireless Wi-Fi IP Camera Home Dome Surveillance Cameras">
-                        <img src="assets/images/section6/10065.jpg" class="back-img "
+                        <img src="assets/section6/10065.jpg" class="back-img "
                           alt="DIDSeth Pan Tilt Security Light Camera Full HD 1080P Wireless Wi-Fi IP Camera Home Dome Surveillance Cameras">
                         <div
                           class="note text-uppercase fw-bold font-15px text-light bg-danger rounded-pill m-0 py-1 px-3">
@@ -1965,9 +1962,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10061.jpg" class="main-img"
+                        <img src="assets/section6/10061.jpg" class="main-img"
                           alt="VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction Self-charging">
-                        <img src="assets/images/section6/10066.jpg" class="back-img "
+                        <img src="assets/section6/10066.jpg" class="back-img "
                           alt="VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction Self-charging">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
@@ -2025,9 +2022,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10067.jpg" class="main-img"
+                        <img src="assets/section6/10067.jpg" class="main-img"
                           alt="Teclast F7 Plus 14.1 inch Notebook Intel N4100 8GB RAM 256GB SSD Platinum 8GB+256GB">
-                        <img src="assets/images/section6/10068.jpg" class="back-img "
+                        <img src="assets/section6/10068.jpg" class="back-img "
                           alt="Teclast F7 Plus 14.1 inch Notebook Intel N4100 8GB RAM 256GB SSD Platinum 8GB+256GB">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
@@ -2085,9 +2082,9 @@
                   <div class="section6-card w-100 m-0 p-2 rounded-3">
                     <div class="section6-card-img border-none overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section6/10069.jpg" class="main-img"
+                        <img src="assets/section6/10069.jpg" class="main-img"
                           alt="Xiaomi Mi Watch Lite GPS Bluetooth 5.1 Smart Watch Sports Fitness Heart Rate Monitor 1.4 inch TFTLCD Screen 5 ATM Waterproof mi band">
-                        <img src="assets/images/section6/10070.jpg" class="back-img "
+                        <img src="assets/section6/10070.jpg" class="back-img "
                           alt="Xiaomi Mi Watch Lite GPS Bluetooth 5.1 Smart Watch Sports Fitness Heart Rate Monitor 1.4 inch TFTLCD Screen 5 ATM Waterproof mi band">
                         <div class="popup w-100 m-0 p-0">
                           <div class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
@@ -2159,7 +2156,7 @@
             <div class="section7-left-content w-100 m-0 p-0">
               <a href="#" class="section7-left-link w-100 m-0 p-0 text-dark text-decoration-none ">
                 <div class="section7-left-overlay  m-0 p-0">
-                  <img src="assets/images/section7/10098.jpg" alt="deals">
+                  <img src="assets/section7/10098.jpg" alt="deals">
                 </div>
                 <div class="section7-content w-50 p-0  d-flex flex-column justify-content-between ">
                   <div>
@@ -2181,7 +2178,7 @@
               <div class="section7-right-item section7-right-item1  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10078.jpg" alt="fitness-headphones">
+                    <img src="assets/section7/10078.jpg" alt="fitness-headphones">
                   </div>
                   <div
                     class="section7-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -2194,7 +2191,7 @@
               <div class="section7-right-item section7-right-item2  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10079.jpg" alt="mp3-players">
+                    <img src="assets/section7/10079.jpg" alt="mp3-players">
                   </div>
                   <div
                     class="section7-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -2207,7 +2204,7 @@
               <div class="section7-right-item section7-right-item3  rounded-3 overflow-hidden  me-2 mt-4 p-0 mt-md-0">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10080.jpg" alt="microphones">
+                    <img src="assets/section7/10080.jpg" alt="microphones">
                   </div>
                   <div
                     class="section7-right-item-content text-dark d-flex flex-column justify-content-around p-0 ps-1 overflow-wrap">
@@ -2220,7 +2217,7 @@
               <div class="section7-right-item section7-right-item4  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10081.jpg" alt="bluetooth-speakers">
+                    <img src="assets/section7/10081.jpg" alt="bluetooth-speakers">
                   </div>
                   <div
                     class="section7-right-item-content w-50 text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -2233,7 +2230,7 @@
               <div class="section7-right-item section7-right-item5  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10082.jpg" alt="on-ears-over-ears">
+                    <img src="assets/section7/10082.jpg" alt="on-ears-over-ears">
                   </div>
                   <div class=" section7-right-item-content w-50 text-dark d-flex flex-column justify-content-around p-0
                       ps-1 ">
@@ -2246,7 +2243,7 @@
               <div class="section7-right-item section7-right-item6  rounded-3 overflow-hidden  me-2 mt-4 p-0 ">
                 <a href="#" class="text-decoration-none">
                   <div class="overlay w-100">
-                    <img src="assets/images/section7/10083.jpg" alt="headphone-accessories">
+                    <img src="assets/section7/10083.jpg" alt="headphone-accessories">
                   </div>
                   <div
                     class="section7-right-item-content  w-50 text-dark d-flex flex-column justify-content-around p-0 ps-1 ">
@@ -2284,8 +2281,8 @@
       <!-- Main-section9 -->
       <section class="main-section9 container-fluid m-0 mt-3 p-0 py-4 w-100 overflow-hidden ">
         <div class="section9-imgs w-100">
-          <img src="assets/images/section9/10045.png" class="section9-left-img" alt="cap">
-          <img src="assets/images/section9/10044.png" class="section9-right-img" alt="glasses">
+          <img src="assets/section9/10045.png" class="section9-left-img" alt="cap">
+          <img src="assets/section9/10044.png" class="section9-right-img" alt="glasses">
         </div>
         <div class="section9-content-container w-100 text-center m-0 p-0 my-4">
           <h2 class="text-dark text-capitalize fw-bold m-0 p-0 ">sony headphone
@@ -2309,7 +2306,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3  text-center col-6 col-md-2 d-flex align-items-center">
             <a href="#">
               <div class="section10-brand m-0 p-0">
-                <img src="assets/images/section10/brand-mi.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/brand-mi.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2318,7 +2315,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3 text-center col-6 col-md-2 d-flex align-items-center">
             <a href="#">
               <div class="section10-brand m-0 p-0 ">
-                <img src="assets/images/section10/10084.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/10084.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2327,7 +2324,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3 text-center col-6 col-md-2 d-flex align-items-center">
             <a href="#">
               <div class="section10-brand m-0 p-0">
-                <img src="assets/images/section10/brand-marshall.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/brand-marshall.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2336,7 +2333,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3 text-center col-6 col-md-2 d-flex align-items-center">
             <a href="#">
               <div class="section10-brand m-0 p-0">
-                <img src="assets/images/section10/10085.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/10085.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2345,7 +2342,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3 text-center col-6 col-md-2 d-flex align-items-center">
             <a href="#">
               <div class="section10-brand m-0 p-0">
-                <img src="assets/images/section10/10086.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/10086.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2354,7 +2351,7 @@
             class="section10-brand-container border border-1  m-0 p-0 py-3 text-center col-6 col-md-2 d-flex align-items-center ">
             <a href="#">
               <div class="section10-brand m-0 p-0 ">
-                <img src="assets/images/section10/10087.png" class="w-50" alt="brand-mi">
+                <img src="assets/section10/10087.png" class="w-50" alt="brand-mi">
               </div>
             </a>
           </div>
@@ -2374,7 +2371,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10091.jpg" alt="Setup your Surround sound speaker">
+                        <img src="assets/section11/10091.jpg" alt="Setup your Surround sound speaker">
                       </a>
                     </div>
                     <div class="section11-card-content mt-3">
@@ -2392,7 +2389,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10092.jpg" alt="Hook up a receiver for your home theater">
+                        <img src="assets/section11/10092.jpg" alt="Hook up a receiver for your home theater">
                       </a>
                     </div>
                     <div class="section11-card-content mt-3">
@@ -2410,7 +2407,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10093.jpg" alt="Top most comfortable headphones">
+                        <img src="assets/section11/10093.jpg" alt="Top most comfortable headphones">
                       </a>
                     </div>
                     <div class="section11-card-content mt-3">
@@ -2428,7 +2425,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10094.jpg"
+                        <img src="assets/section11/10094.jpg"
                           alt="CUBOT X20 PRO: iPhone 11 rear camera design will be available for sale on SuperGear">
                       </a>
                     </div>
@@ -2448,7 +2445,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10095.jpg"
+                        <img src="assets/section11/10095.jpg"
                           alt="Get Great Discounts on Xiaomi Branded TWS Bluetooth Earbuds on SuperGear">
                       </a>
                     </div>
@@ -2468,7 +2465,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10096.jpg"
+                        <img src="assets/section11/10096.jpg"
                           alt="Get Teclast T30 tablet at an unexpected price at SuperGear">
                       </a>
                     </div>
@@ -2488,7 +2485,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10097.jpg"
+                        <img src="assets/section11/10097.jpg"
                           alt="Amazfit GTR Titanium Edition and Austrian Zircon Version will Officially go on Exclusive Global Sale">
                       </a>
                     </div>
@@ -2508,7 +2505,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10088.jpg"
+                        <img src="assets/section11/10088.jpg"
                           alt="Don’t miss out! Xiaomi Mi Note 10 exclusive global launch hit">
                       </a>
                     </div>
@@ -2528,7 +2525,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10089.jpg"
+                        <img src="assets/section11/10089.jpg"
                           alt="Do you want a stylish smartphone with a pop-up camera for budget price? Take the Elephone PX (2019)">
                       </a>
                     </div>
@@ -2548,7 +2545,7 @@
                   <div class="section11-card w-100 m-0 p-2 rounded-3">
                     <div class="section11-card-img overflow-hidden">
                       <a href="#">
-                        <img src="assets/images/section11/10090.jpg"
+                        <img src="assets/section11/10090.jpg"
                           alt="DJI Mavic Mini: the ultra-light consumer drone for beginner sale">
                       </a>
                     </div>
@@ -2734,25 +2731,25 @@
             rights reserved.
           </div>
           <div class="rights-container-img col-sm-12 col-md-3 ">
-            <img src="assets/images/footer/10056.png" alt="payments " class="w-100">
+            <img src="assets/footer/10056.png" alt="payments " class="w-100">
           </div>
         </div>
       </section>
     </footer>
     <!-- Bootstrap -->
-    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
-    <!-- <script src="assets/js/bootstrap.js"></script> -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="js/bootstrap.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
     <!-- owl carousal -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <!-- Swiper Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Project Local JS -->
-    <script src="assets/js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 
 </html>

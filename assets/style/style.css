@@ -103,17 +103,13 @@ body {
 /* .offcanvas-start .list-group-item {
 } */
 /* ======================SearchBar======================== */
-.search-nav-contianer {
-  width: 100%;
+.searchBar-select-div,
+.searchBar-select-div-top {
+  max-width: 125px;
 }
 
-.offcanvas-icon {
-  border: none;
-  padding: 0px 2% !important;
-  background-color: transparent;
-}
-.offcanvas-icon i {
-  font-size: 15px;
+.search-nav-contianer {
+  width: 100%;
 }
 
 .navbar-brand img {
@@ -127,23 +123,25 @@ body {
 .form-select {
   border: none;
 }
-
-.header-search-right i {
-  font-size: 20px;
-  /* margin-left: 25px; */
-  position: relative;
-}
-.header-search-right i:hover {
-  color: #eee;
+/* header-search-right */
+.header-search-right-icon svg path {
+  fill: black !important;
   transition: 0.3s all ease-in-out;
 }
-.header-search-right i .counter {
+.header-search-right-icon:hover svg path {
+  fill: #999 !important;
+}
+.header-search-right-icon {
+  position: relative;
+}
+.header-search-right-icon .counter {
   font-size: 10px;
-  padding: 6px 9px;
+  padding: 2px 7px;
   position: absolute;
   bottom: 75%;
   left: 45%;
 }
+
 .hoverBox {
   position: absolute;
   top: -50%;
@@ -151,18 +149,20 @@ body {
   width: auto;
   visibility: hidden;
   transition: 0.2s all ease-in;
-  z-index: -1;
+  box-shadow: 11px 9px 28px -10px rgb(0 0 0);
 }
 
 .hoverBox span {
-  font-size: 10px !important;
+  text-transform: capitalize;
+  font-size: 12px;
 }
 
-.header-search-right i:hover .hoverBox {
+.header-search-right-icon:hover .hoverBox {
   top: 120%;
   visibility: visible;
   z-index: 1;
 }
+
 .yellow-star {
   position: relative;
   height: 2%;
@@ -180,7 +180,9 @@ body {
 .searchoffcanvas-top-right-container i {
   position: relative;
 }
-
+.offcanvas-top {
+  height: 155px;
+}
 .search-hoverBox {
   position: absolute;
   top: 50%;

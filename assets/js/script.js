@@ -1,25 +1,30 @@
-$(".owl-carousel").owlCarousel({
+var swiper = new Swiper(".mySwiper0", {
+  slidesPerView: 6,
+  spaceBetween: 10,
   loop: true,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  margin: 10,
-  nav: true,
-  navText: [
-    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-    '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-  ],
-  responsive: {
-    0: {
-      items: 1,
-    },
-    425: {
-      items: 2,
+  loopFillGroupWithBlank: true,
+  autoplay: {
+    delay: 2000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
     },
     768: {
-      items: 3,
+      slidesPerView: 4,
+      spaceBetween: 10,
     },
-    1000: {
-      items: 6,
+    1024: {
+      slidesPerView: 5,
+    },
+    1440: {
+      slidesPerView: 6,
+      spaceBetween: 10,
     },
   },
 });
@@ -31,6 +36,7 @@ var swiper = new Swiper(".mySwiper", {
   freeMode: true,
   watchSlidesProgress: true,
 });
+
 var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
   spaceBetween: 10,

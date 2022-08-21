@@ -1,3 +1,15 @@
+@media (max-width: 768px) {
+  .main-section2 .section2-part {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .main-section2 .section2-part {
+    width: 319px;
+  }
+}
 @media (min-width: 320px) {
   .section3-content-item {
     width: 48%;
@@ -60,9 +72,6 @@
 }
 
 @media (min-width: 768px) {
-  .main-section2 div {
-    width: 30%;
-  }
   .section3-content-item {
     width: 33%;
   }

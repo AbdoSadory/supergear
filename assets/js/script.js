@@ -50,7 +50,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper = new Swiper(".mySwiper3", {
-  autoplay: true,
+  autoplay: false,
   slidesPerView: 1,
   grid: {
     rows: 2,

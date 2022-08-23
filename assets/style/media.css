@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main-section2 .section2-part {
     height: 190px;
     max-width: 100% !important;
@@ -22,12 +22,27 @@
     grid-template-columns: auto auto auto;
     grid-column-gap: 35px;
   }
+
+  .benefits-content-item:nth-child(2),
+  .benefits-content-item:nth-child(4) {
+    border-left: 3px solid #eee !important;
+  }
+  .footer-lists-div .collapse:not(.show) {
+    display: none;
+  }
+  .footer-lists-div button {
+    pointer-events: painted;
+  }
 }
 
 @media (max-width: 425px) {
   .popular-categories-content-container {
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
+  }
+
+  .popup {
+    visibility: hidden;
   }
 }
 

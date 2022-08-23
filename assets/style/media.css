@@ -5,6 +5,11 @@
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 39px;
   }
+  .consumer-electronics-right-content {
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 16px;
+  }
 }
 
 @media (max-width: 768px) {

@@ -50,7 +50,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper = new Swiper(".mySwiper3", {
-  autoplay: false,
+  autoplay: true,
   slidesPerView: 1,
   grid: {
     rows: 2,
@@ -60,7 +60,7 @@ var swiper = new Swiper(".mySwiper3", {
   observeParents: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: false,
+    clickable: true,
   },
 });
 

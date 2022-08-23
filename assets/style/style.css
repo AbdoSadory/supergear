@@ -538,14 +538,6 @@ body {
 }
 
 /* ==================Main-Section4 ============ */
-/* .main-section4 {
-  height: 480px !important;
-  margin-bottom: 10px !important;
-} */
-
-/* .today-best-deals-left-slider {
-  height: 100%;
-} */
 .today-best-deals-left-slider .swiper {
   margin: auto;
 }
@@ -580,8 +572,6 @@ body {
 }
 
 .today-best-deals-left-slider .mySwiper {
-  /* width: 20%; */
-  /* height: 20%; */
   box-sizing: border-box;
   padding: 10px 0;
 }
@@ -591,7 +581,6 @@ body {
 }
 .today-best-deals-left-slider .mySwiper .swiper-slide {
   border: 2px solid black;
-  /* width: auto !important; */
   opacity: 0.2;
   overflow: hidden !important;
   transition: 0.35s all ease-in-out;
@@ -643,9 +632,7 @@ body {
 .outStock {
   color: green;
 }
-/* .today-best-deals-right-slider {
-  height: 336px !important;
-} */
+
 .swiper-container {
   height: 341px !important;
 }
@@ -735,73 +722,80 @@ body {
 }
 /* ==================Main-Section5 ============ */
 
-.section5-left {
-  overflow: hidden;
-  width: 40%;
+/* .consumer-electronics-left {
+  max-width: 520px;
+} */
+.consumer-electronics-left {
+  height: 100% !important;
 }
-.section5-left-content {
+.consumer-electronics-left-content {
   position: relative;
+  height: 100% !important;
 }
-.section5-left-overlay {
+.consumer-electronics-left-overlay {
   width: 100% !important;
   transition: 0.35s all ease-in-out;
 }
-.section5-left-overlay img {
-  width: 110%;
+.consumer-electronics-left-overlay img {
+  /* width: 100%; */
+  object-fit: contain;
 }
 
-.section5-left:hover .section5-left-overlay {
+.consumer-electronics-left:hover .consumer-electronics-left-overlay {
   transform: scale(1.12);
 }
 
-.section5-content {
+.consumer-electronics-content {
   position: absolute;
   top: 10px;
   left: 15px;
   height: 100%;
 }
 
-.section5-shopNow {
+.consumer-electronics-shopNow {
   transition: 0.2s all;
   border: none !important;
   width: 150px;
   padding: 13px 10px !important;
 }
 
-.section5-left:hover .section5-shopNow {
+.consumer-electronics-left:hover .consumer-electronics-shopNow {
   outline: 5px auto #212529;
 }
 
-.section5-right {
+/* .consumer-electronics-right {
   width: 60%;
-}
+} */
 
-.section5-right-content {
+.consumer-electronics-right-content {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 16px;
 }
 
-.section5-right-item {
+.consumer-electronics-right-item {
   position: relative;
   overflow: hidden;
-  width: 30%;
   background-color: #f2f2f2;
 }
-.section5-right-item .overlay img {
+.consumer-electronics-right-item .overlay img {
   width: 100%;
-  object-fit: cover !important;
+  /* object-fit: cover !important; */
 }
 
-.section5-right-item .overlay {
+.consumer-electronics-right-item .overlay {
   background-color: #f2f2f2;
   transition: 0.35s all ease-in-out;
 }
 
-.section5-right-item:hover .overlay {
+.consumer-electronics-right-item:hover .overlay {
   transform: scale(1.1);
 }
 
-.section5-right-item-content {
+.consumer-electronics-right-item-content {
   width: 50% !important;
   height: 100%;
   position: absolute;

@@ -100,8 +100,10 @@ body {
   font-size: 10px;
 }
 /* ======================Left offcanvasBar======================== */
-/* .offcanvas-start .list-group-item {
-} */
+.menu-offcanvas-left-btn {
+  background-color: transparent;
+  border: none;
+}
 /* ======================SearchBar======================== */
 .searchBar-select-div,
 .searchBar-select-div-top {

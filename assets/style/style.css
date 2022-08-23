@@ -100,7 +100,8 @@ body {
   font-size: 10px;
 }
 /* ======================Left offcanvasBar======================== */
-.menu-offcanvas-left-btn {
+.menu-offcanvas-left-btn,
+.header-search-right-icon button {
   background-color: transparent;
   border: none;
 }

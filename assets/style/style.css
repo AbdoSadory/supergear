@@ -995,7 +995,6 @@ body {
   grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 16px;
-  width: 100%;
 }
 
 .MusicAudioVideo-right-item {

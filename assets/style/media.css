@@ -1,6 +1,4 @@
-@media (max-width: 1440px) {
-}
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .popular-categories-content-container {
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 39px;
@@ -9,6 +7,21 @@
     grid-template-columns: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 16px;
+  }
+  .consumer-electronics-left {
+    width: 100% !important;
+    height: 100%;
+    max-width: unset;
+  }
+  .MusicAudioVideo-right-content {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+  .MusicAudioVideo-left {
+    width: 100% !important;
+    height: 100%;
+    max-width: unset;
   }
 }
 

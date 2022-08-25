@@ -723,36 +723,31 @@ body {
   width: 30% !important;
   background-image: url(../images/section4/10035.jpg);
 }
-/* ==================Main-Section5 ============ */
+/* ==================Main-consumer-electronics ============ */
 
-/* .consumer-electronics-left {
-  max-width: 520px;
-} */
 .consumer-electronics-left {
-  height: 100% !important;
+  max-width: 520px;
 }
 .consumer-electronics-left-content {
   position: relative;
-  height: 100% !important;
+  height: 100%;
 }
 .consumer-electronics-left-overlay {
-  width: 100% !important;
+  height: 100%;
   transition: 0.35s all ease-in-out;
-}
-.consumer-electronics-left-overlay img {
-  /* width: 100%; */
-  object-fit: contain;
 }
 
 .consumer-electronics-left:hover .consumer-electronics-left-overlay {
   transform: scale(1.12);
 }
-
+.consumer-electronics-left-overlay img {
+  width: 100%;
+}
 .consumer-electronics-content {
+  height: 100%;
   position: absolute;
   top: 10px;
   left: 15px;
-  height: 100%;
 }
 
 .consumer-electronics-shopNow {
@@ -765,10 +760,6 @@ body {
 .consumer-electronics-left:hover .consumer-electronics-shopNow {
   outline: 5px auto #212529;
 }
-
-/* .consumer-electronics-right {
-  width: 60%;
-} */
 
 .consumer-electronics-right-content {
   width: 100%;
@@ -946,31 +937,29 @@ body {
 }
 
 /* ================= Main-Section7 =============*/
-
 .MusicAudioVideo-left {
-  overflow: hidden;
-  width: 40%;
+  max-width: 520px;
 }
 .MusicAudioVideo-left-content {
   position: relative;
+  height: 100%;
 }
 .MusicAudioVideo-left-overlay {
-  width: 100% !important;
+  height: 100%;
   transition: 0.35s all ease-in-out;
-}
-.MusicAudioVideo-left-overlay img {
-  width: 110%;
 }
 
 .MusicAudioVideo-left:hover .MusicAudioVideo-left-overlay {
   transform: scale(1.12);
 }
-
+.MusicAudioVideo-left-overlay img {
+  width: 100%;
+}
 .MusicAudioVideo-content {
+  height: 100%;
   position: absolute;
   top: 10px;
   left: 15px;
-  height: 100%;
 }
 
 .MusicAudioVideo-shopNow {
@@ -982,10 +971,6 @@ body {
 
 .MusicAudioVideo-left:hover .MusicAudioVideo-shopNow {
   outline: 5px auto #212529;
-}
-
-.MusicAudioVideo-right {
-  width: 60%;
 }
 
 .MusicAudioVideo-right-content {
@@ -1004,7 +989,7 @@ body {
 }
 .MusicAudioVideo-right-item .overlay img {
   width: 100%;
-  object-fit: cover !important;
+  /* object-fit: cover !important; */
 }
 
 .MusicAudioVideo-right-item .overlay {

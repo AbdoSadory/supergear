@@ -900,13 +900,14 @@ body {
   left: 1px;
   width: 99% !important;
   transition: 0.8s all ease-in-out !important;
-  z-index: -1;
+  opacity: 0;
 }
 .bestSeller-card-img:hover .main-img {
   opacity: 0 !important;
 }
 .bestSeller-card-img:hover .back-img {
   transform: scale(1.16);
+  opacity: 1;
 }
 
 .bestSeller-card-content h3 {
@@ -1177,5 +1178,5 @@ body {
   display: block;
 }
 .footer-lists-div button {
-  pointer-events: painted;
+  pointer-events: none;
 }

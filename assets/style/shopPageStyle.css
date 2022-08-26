@@ -23,6 +23,7 @@
   transform: rotate(-90deg) translate(-50%, 50%);
   transition: 0.2s all ease-in-out;
   display: none;
+  z-index: 999;
 }
 .filter-sideBtn:hover {
   color: white;
@@ -978,3 +979,114 @@
   background-color: #000;
 }
 /* =================================================== */
+.filterResult .filterResult-showingitemsNumbers p {
+  color: #666;
+}
+#defaultSorting {
+  border-color: transparent !important;
+  background-color: #f2f2f2 !important;
+  font-weight: 500;
+}
+.alignment {
+  width: 29px;
+  height: 29px;
+  background-color: #f2f2f2;
+  transition: 0.35s all ease-in-out;
+  position: relative;
+  border: none;
+}
+
+.alignment::before {
+  content: attr(data-tooltip);
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: white;
+  transition: 0.2s all ease-in-out;
+  visibility: hidden;
+  padding: 6px 8px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px 1px gray;
+  opacity: 0;
+}
+.alignment:hover::before {
+  bottom: 160%;
+  visibility: visible;
+  opacity: 1;
+}
+.alignment::after {
+  content: "";
+  position: absolute;
+  bottom: 90%;
+  left: 50%;
+  transform: translateX(-50%) rotate(44deg);
+  transition: 0.2s all ease-in-out;
+  visibility: hidden;
+  border: 5px solid #000;
+  opacity: 0;
+}
+.alignment:hover::after {
+  bottom: 141%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.result-card {
+  border: 2px solid transparent;
+  transition: 0.2s all ease-in-out;
+}
+.result-card:hover {
+  border-color: black;
+}
+.result-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.result-card-img {
+  position: relative;
+}
+
+.result-card-img:hover .popup {
+  left: -5%;
+}
+.result-card-img:hover .main-img {
+  opacity: 0 !important;
+}
+.result-card-img:hover .back-img {
+  transform: scale(1.16);
+  opacity: 1;
+}
+
+.result-card-content h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+.result-card .rating {
+  font-size: 12px;
+}
+.selectOption {
+  visibility: hidden;
+  transition: 0.2s all ease-in-out;
+  background-color: #f2f2f2;
+  border: none !important;
+  outline: none;
+}
+.selectOption:hover {
+  color: #f2f2f2;
+  background-color: #000;
+  outline: 3px auto #000;
+}
+.result-card:hover .selectOption {
+  visibility: visible;
+}

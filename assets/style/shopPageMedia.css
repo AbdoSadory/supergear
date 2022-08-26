@@ -1,0 +1,12 @@
+@media (max-width: 992px) {
+  .filter-sideBtn {
+    display: unset;
+  }
+  .filter {
+    display: none !important;
+  }
+  .filterResult {
+    width: 100%;
+    max-width: unset;
+  }
+}

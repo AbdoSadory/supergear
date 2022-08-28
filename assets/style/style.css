@@ -184,7 +184,11 @@ body {
   position: relative;
 }
 .offcanvas-top {
-  height: 155px;
+  height: 152px;
+}
+.top-offcanvas-close-btn {
+  font-size: 13px;
+  opacity: 1;
 }
 .search-hoverBox {
   position: absolute;
@@ -742,6 +746,8 @@ body {
 }
 .consumer-electronics-left-overlay img {
   width: 100%;
+  height: 100% !important;
+  object-fit: cover;
 }
 .consumer-electronics-content {
   height: 100%;

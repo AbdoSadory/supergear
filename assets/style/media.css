@@ -1,4 +1,24 @@
 @media (max-width: 1200px) {
+  .consumer-electronics-left {
+    max-width: unset;
+  }
+  .consumer-electronics-left-overlay {
+    max-height: 320px !important;
+  }
+  .consumer-electronics-right-item-content {
+    width: 100% !important;
+  }
+  .MusicAudioVideo-left {
+    max-width: unset;
+  }
+  .MusicAudioVideo-left-overlay {
+    max-height: 320px !important;
+  }
+  .MusicAudioVideo-right-item-content {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1199px) {
   .popular-categories-content-container {
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 39px;
@@ -8,10 +28,26 @@
     grid-column-gap: 20px;
     grid-row-gap: 16px;
   }
+  .consumer-electronics-right-item .overlay img,
+  .MusicAudioVideo-right-item .overlay img {
+    width: 70% !important;
+  }
+  .consumer-electronics-right-item,
+  .MusicAudioVideo-right-item {
+    max-height: 290px;
+  }
   .consumer-electronics-left {
     width: 100% !important;
     height: 100%;
     max-width: unset;
+  }
+  .consumer-electronics-left-overlay,
+  .MusicAudioVideo-left-overlay {
+    max-height: 320px !important;
+  }
+  .consumer-electronics-right-item-content h3,
+  .MusicAudioVideo-right-item-content h3 {
+    font-size: 2rem !important;
   }
   .MusicAudioVideo-right-content {
     grid-template-columns: auto auto;
@@ -35,7 +71,10 @@
     grid-template-columns: auto auto auto;
     grid-column-gap: 35px;
   }
-
+  .consumer-electronics-right-item-content h3,
+  .MusicAudioVideo-right-item-content h3 {
+    font-size: 1rem !important;
+  }
   .benefits-content-item:nth-child(2),
   .benefits-content-item:nth-child(4) {
     border-left: 3px solid #eee !important;
@@ -48,6 +87,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .consumer-electronics-right-item-content,
+  .MusicAudioVideo-right-item-content {
+    width: 50% !important;
+  }
+}
 @media (max-width: 425px) {
   .popular-categories-content-container {
     grid-template-columns: auto auto;
@@ -59,7 +104,5 @@
   }
 }
 
-@media (max-width: 375px) {
-}
 @media (max-width: 320px) {
 }

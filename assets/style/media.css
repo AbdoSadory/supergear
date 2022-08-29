@@ -85,6 +85,9 @@
   .footer-lists-div button {
     pointer-events: painted;
   }
+  .footer-down-arrow {
+    display: block !important;
+  }
 }
 
 @media (max-width: 550px) {

@@ -1164,7 +1164,10 @@ body {
   color: #000;
 }
 .card-email-input .email-input {
-  width: 88%;
+  width: calc(95% - 8%);
+}
+.card-email-input button {
+  width: 8%;
 }
 .card-email-input .email-input:focus {
   outline: none !important;

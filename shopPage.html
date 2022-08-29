@@ -83,12 +83,14 @@
                                     </ul>
                                 </div>
                             </div>
+
                             <!-- CountryName -->
                             <div class="selector m-0 p-0 d-sm-none d-md-block">
                                 <div class="countryFlag m-0 p-0">
                                     <span class="countryFlag-name">USD</span>
                                     <i class="fa-solid fa-angle-down down-arrow-small-menu"></i>
                                 </div>
+
                                 <div class="select-list-div">
                                     <ul class="selector-list m-0 p-2">
                                         <li class="selector-list-item mb-2">
@@ -122,6 +124,8 @@
                                     fill="black"></path>
                             </svg>
                         </button>
+
+
                         <div class="offcanvas offcanvas-start " data-bs-scroll="false" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasScrolling">
                             <div class="offcanvas-body w-100">
@@ -317,6 +321,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <!-- 2 -->
                                 <div class="w-100 px-2 mb-4">
@@ -471,23 +476,26 @@
                                     <span>Search Product</span>
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </div>
-                                <div class="offcanvas offcanvas-top" data-bs-scroll="false" data-bs-backdrop="true"
+                                <div class="offcanvas offcanvas-top " data-bs-scroll="false" data-bs-backdrop="true"
                                     tabindex="-1" id="offcanvasTop">
                                     <!-- Searchoffcanvas-top header-->
-                                    <div class="offcanvas-header d-flex flex-row-reverse">
-                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                            aria-label="Close"></button>
+                                    <div
+                                        class="offcanvas-header top-offcanvas-header d-flex flex-row-reverse py-1 px-2">
+                                        <button type="button" class="top-offcanvas-close-btn btn-close text-reset"
+                                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                     </div>
                                     <!--Searchoffcanvas-top body -->
                                     <div
-                                        class="offcanvas-body searchoffcanvas-top-container container-xl m-auto row  justify-content-between overflow-hidden align-items-center p-0 px-2 m-0">
-                                        <div class="searchoffcanvas-top-left-container col-3 ">
-                                            <div class="w-50 m-auto">
+                                        class="offcanvas-body searchoffcanvas-top-container container-xxl m-auto row  justify-content-between overflow-hidden align-items-start py-4 px-1 m-0">
+                                        <div
+                                            class="searchoffcanvas-top-left-container col-3 text-start align-self-center">
+                                            <div class="w-50">
                                                 <img src="assets/images/brand/dark-logo.png" alt="logo"
                                                     class="w-100 text-center" />
                                             </div>
                                         </div>
-                                        <div class="searchoffcanvas-top-mid-container col-6 text-center">
+                                        <div
+                                            class="searchoffcanvas-top-mid-container col-6 text-center align-self-center ">
                                             <div
                                                 class="searchbar-container-top border border-2 rounded-pill m-0 p-lg-2 p-md-0 d-flex justify-content-between">
                                                 <!-- selector -->
@@ -600,7 +608,7 @@
                                             </div>
                                         </div>
                                         <div
-                                            class="searchoffcanvas-top-right-container col-3 d-flex justify-content-end align-items-center">
+                                            class="searchoffcanvas-top-right-container col-3 d-flex justify-content-end align-self-center">
                                             <div class="header-search-right-icon mx-2 d-none d-sm-none d-md-block">
                                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -625,6 +633,7 @@
                                                     <span class="text-light fs-6">wishlist</span>
                                                 </div>
                                             </div>
+
                                             <!-- ===ShopBag=== -->
                                             <div class="header-search-right-icon mx-2">
                                                 <button type="button" data-bs-toggle="offcanvas"
@@ -864,8 +873,8 @@
             </div>
             <!-- Nav Collapse Div  -->
             <div class="nav-bar-container  text-uppercase fw-bold d-none d-xl-block">
-                <nav class="navbar navbar-expand-xl  p-0 py-1">
-                    <ul class="navbar-nav row">
+                <nav class="navbar navbar-expand-xl container-xl p-0 py-1">
+                    <ul class="navbar-nav row m-auto">
                         <li class="nav-item nav-item-categories-content col">
                             <a class="nav-link active text-light btn-hover" aria-current="page" href="#">categories <i
                                     class="fa-solid fa-angle-down"></i>
@@ -1080,8 +1089,8 @@
             </div>
         </header>
 
-        <main class="mainPage bg-white w-100">
-            <div class="container-xl m-auto p-0 m-0">
+        <main class="mainPage p-0 m-0 w-100">
+            <div class="container-xl m-auto py-0 px-3">
                 <section class="treeRoute w-100 m-0 my-3 p-0 ">
                     <h2 class="d-none">treeRoute</h2>
                     <ul class="list-unstyled text-capitalize fw-bold">
@@ -1850,7 +1859,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -1858,7 +1867,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -1919,7 +1928,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -1927,7 +1936,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -1993,7 +2002,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2001,7 +2010,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2063,7 +2072,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2071,7 +2080,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2133,7 +2142,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2141,7 +2150,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2201,7 +2210,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2209,7 +2218,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2273,7 +2282,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2281,7 +2290,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2345,7 +2354,7 @@
                                                                         class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="compare-container m-0 my-2 p-0">
+                                                            <div class="compare-container d-none m-0 my-2 p-0 ">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
@@ -2353,7 +2362,7 @@
                                                                         class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
                                                                 </a>
                                                             </div>
-                                                            <div class="view-container m-0 my-2 p-0">
+                                                            <div class="view-container d-none m-0 my-2 p-0">
                                                                 <a href="#" class="text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
@@ -2400,12 +2409,12 @@
                 </section>
             </div>
             <div class="container-fluid m-0 p-0">
-                <section class="main-benefits m-0 mt-3 p-0 py-4 ">
+                <section class="main-benefits  m-0 mt-3 p-0 py-4 ">
                     <div class="container-xl m-0 m-auto p-0">
                         <div class="benefits-content-container m-0 p-0 row justify-content-between">
                             <!-- 1 -->
-                            <div
-                                class="benefits-content-item p-0 col-sm-6 col-md-3 col-6 d-flex justify-content-between">
+                            <div class="benefits-content-item p-0 col-3 col-md-6 col-lg-3 ">
+
                                 <div class="benefits-item-icon text-center">
                                     <i class="fa-solid fa-house-chimney fs-1"></i>
                                 </div>
@@ -2416,8 +2425,7 @@
                                 </div>
                             </div>
                             <!-- 2 -->
-                            <div
-                                class="benefits-content-item p-0 col-sm-6 col-md-3 col-6 d-flex justify-content-between ">
+                            <div class="benefits-content-item p-0 col-3 col-md-6 col-lg-3 ">
                                 <div class="benefits-item-icon text-center">
                                     <i class="fa-solid fa-tag fs-1"></i>
                                 </div>
@@ -2428,8 +2436,7 @@
                                 </div>
                             </div>
                             <!-- 3 -->
-                            <div
-                                class="benefits-content-item p-0 col-sm-6 col-md-3 col-6 d-flex justify-content-between ">
+                            <div class="benefits-content-item p-0 col-3 col-md-6 col-lg-3 ">
                                 <div class="benefits-item-icon text-center">
                                     <i class="fa-solid fa-bookmark fs-1"></i>
                                 </div>
@@ -2440,8 +2447,7 @@
                                 </div>
                             </div>
                             <!-- 4 -->
-                            <div
-                                class="benefits-content-item p-0 col-sm-6 col-md-3 col-6 d-flex justify-content-between ">
+                            <div class="benefits-content-item p-0 col-3 col-md-6 col-lg-3 ">
                                 <div class="benefits-item-icon text-center">
                                     <i class="fa-regular fa-face-smile fs-1"></i>
                                 </div>

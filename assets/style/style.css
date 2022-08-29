@@ -1149,6 +1149,10 @@ body {
 .main-benefits {
   background-color: #f7f7f7;
 }
+.benefits-content-item {
+  display: flex;
+  justify-content: space-between;
+}
 .benefits-item-icon {
   width: 20%;
 }
@@ -1188,4 +1192,37 @@ body {
 }
 .footer-lists-div button {
   pointer-events: none;
+}
+/* ==============BottomNav============== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 -10px 12px rgb(0 0 0 / 12%);
+}
+.bottom-nav a svg {
+  fill: #000;
+  transition: 0.3s all ease-in-out;
+}
+.bottom-nav a:hover svg {
+  fill: #999;
+}
+
+.bottom-nav .col {
+  position: relative;
+}
+
+.bottom-nav .container-fluid .col:nth-child(3) a p::before,
+.bottom-nav .container-fluid .col:nth-child(4) a p::before {
+  z-index: 9999;
+  content: "0";
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 0px 5px;
+  position: absolute;
+  top: 8px;
+  left: 51%;
 }

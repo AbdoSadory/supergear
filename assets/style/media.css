@@ -14,6 +14,9 @@
   .MusicAudioVideo-left-overlay {
     max-height: 320px !important;
   }
+  .MusicAudioVideo-right {
+    padding-left: 0px !important;
+  }
   .MusicAudioVideo-right-item-content {
     width: 100% !important;
   }
@@ -49,6 +52,7 @@
   .MusicAudioVideo-right-item-content h3 {
     font-size: 2rem !important;
   }
+
   .MusicAudioVideo-right-content {
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
@@ -76,8 +80,25 @@
     font-size: 1rem !important;
   }
   .benefits-content-item:nth-child(2),
+  .benefits-content-item:nth-child(3),
   .benefits-content-item:nth-child(4) {
     border-left: 3px solid #eee !important;
+  }
+  .benefits-content-item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-item-icon {
+    width: unset;
+    margin-bottom: 10px;
+  }
+  .benefits-item-icon i {
+    font-size: 55px !important;
+  }
+  .benefits-item-content h3 {
+    font-size: 15px;
   }
   .footer-lists-div .collapse:not(.show) {
     display: none;
@@ -107,5 +128,15 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 361px) {
+  .benefits-content-item {
+    width: 50% !important;
+  }
+  .benefits-content-item:nth-child(1),
+  .benefits-content-item:nth-child(2) {
+    margin-bottom: 15px;
+  }
+  .benefits-content-item:nth-child(3) {
+    border-left: unset !important;
+  }
 }

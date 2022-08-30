@@ -1,5 +1,6 @@
 import productModel from "./dataModel/productModel.js";
 import products from "../data/products.json" assert { type: "json" };
+
 const shopProductsFromJSONFile = products;
 const productsNumber = shopProductsFromJSONFile.products.length;
 const shopCurrentResultsSpanTag = document.querySelector(
@@ -11,7 +12,11 @@ const shopAllResultsSpanTag = document.querySelector(
 const shopFilterProductResultsContainer = document.querySelector(
   ".filterResult-results-container"
 );
-shopAllResultsSpanTag.innerHTML = productsNumber;
+let numbersOfCardInFilterResultContainer = 0;
+const loadMoreButton = document.getElementById("load-more");
+const resultCardsLimit = productsNumber + 1;
+shopAllResultsSpanTag.innerHTML = resultCardsLimit;
+const resultCardsIncreaseByLoadMoreClick = 2;
 
 shopProductsFromJSONFile.products.forEach((ele) => {
   console.log(ele.id + " --- " + ele.title);
@@ -19,11 +24,14 @@ shopProductsFromJSONFile.products.forEach((ele) => {
 
 console.log(typeof new productModel());
 
-function getShopProductsResults(prodcutsFromJSONFile) {
+function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
   const shopProducts = prodcutsFromJSONFile;
+  //for render cards from json file
   for (let productIndex = 0; productIndex < 3; productIndex++) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
+    numbersOfCardInFilterResultContainer++;
+    console.log(numbersOfCardInFilterResultContainer);
     let productObject = new productModel(
       shopProducts[productIndex].frontImg,
       shopProducts[productIndex].backImg,
@@ -204,4 +212,45 @@ const shopProductCard = (productObject) => {
   shopFilterProductResultsContainer.appendChild(parentColDiv);
 };
 
-getShopProductsResults(shopProductsFromJSONFile.products);
+function renderMoreCards(prodcutsFromJSONFile) {
+  const shopProducts = prodcutsFromJSONFile;
+  let theRestProducts = productsNumber - numbersOfCardInFilterResultContainer;
+  console.log(
+    `theRestProducts is ${theRestProducts} and number of filter card is ${numbersOfCardInFilterResultContainer}`
+  );
+
+  for (let productIndex = 0; productIndex < 2; productIndex++) {
+    shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
+    theRestProducts = theRestProducts - 2;
+    console.log(numbersOfCardInFilterResultContainer);
+    let productObject = new productModel(
+      shopProducts[numbersOfCardInFilterResultContainer].frontImg,
+      shopProducts[numbersOfCardInFilterResultContainer].backImg,
+      shopProducts[numbersOfCardInFilterResultContainer].type,
+      shopProducts[numbersOfCardInFilterResultContainer].title,
+      shopProducts[numbersOfCardInFilterResultContainer].price,
+      shopProducts[numbersOfCardInFilterResultContainer].oldPrice,
+      shopProducts[numbersOfCardInFilterResultContainer].color,
+      shopProducts[numbersOfCardInFilterResultContainer].size,
+      shopProducts[numbersOfCardInFilterResultContainer].note
+    );
+    shopProductCard(productObject);
+    if (
+      numbersOfCardInFilterResultContainer == productsNumber ||
+      productsNumber - numbersOfCardInFilterResultContainer == 1
+    ) {
+      loadMoreButton.classList.add("d-none");
+      break;
+    }
+    numbersOfCardInFilterResultContainer++;
+  }
+}
+
+const loadMoreCards = () => {
+  if (numbersOfCardInFilterResultContainer < productsNumber) {
+    renderMoreCards(shopProductsFromJSONFile.products);
+  }
+};
+
+renderShopProductsResults(shopProductsFromJSONFile.products);
+loadMoreButton.addEventListener("click", loadMoreCards);

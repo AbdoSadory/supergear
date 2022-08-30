@@ -1090,3 +1090,12 @@
 .result-card:hover .selectOption {
   visibility: visible;
 }
+
+.load-more {
+  border-color: #212529;
+  transition: 0.2s all ease-in-out;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+.load-more:hover {
+  outline: 4px solid #212529;
+}

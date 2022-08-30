@@ -83,6 +83,43 @@
             "color":["blue","black","white","gold"],
             "size":null,
             "note":null
+        },
+        {
+            "id":8,
+            "frontImg":"images/section6/10025.jpg",
+            "backImg":"images/section6/10026.jpg",
+            "type":"bluetooth speakers",
+            "title":"Klipsch R-120SW Powerful Detailed Home Speaker – Unit",
+            "price":129.00,
+            "oldPrice":139.00,
+            "color":["pink","yellow","black","blue","orange"],
+            "size":"10 inch",
+            "note":"sold out"
+        },
+        {
+            "id":9,
+            "frontImg":"images/section6/10071.jpg",
+            "backImg":"images/section6/10072.jpg",
+            "type":"robot clean",
+            "title":"MIJIA Robot Vacuum 1T Sweeping Wet Mopping Cleaner For Home Dust Sterilize 3000PA Cyclone Suction WIFI APP Smart Planned",
+            "price":579.99,
+            "oldPrice":null,
+            "color":["pink","black","grass green","gold"],
+            "size":"13.5 inch",
+            "note":null
+        },
+        {
+            "id":10,
+            "frontImg":"images/section6/10073.jpg",
+            "backImg":"images/section6/10074.jpg",
+            "type":"tablets",
+            "title":"Teclast M40 10.1 inch Android 10.0 Tablet PC UNISOC T618 Octa Core 6GB RAM 128GB ROM 4G LTE Full HD",
+            "price":285.95,
+            "oldPrice":307.60,
+            "color":["flamingo pink","white","yellow","blue"],
+            "size":"10 inch",
+            "note":"-6%"
         }
     ]
 }
+

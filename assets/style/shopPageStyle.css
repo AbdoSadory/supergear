@@ -18,7 +18,7 @@
 /* ====================Shop Section============================= */
 .filter-sideBtn {
   position: fixed;
-  bottom: 50%;
+  bottom: 60%;
   left: -43px;
   transform: rotate(-90deg) translate(-50%, 50%);
   transition: 0.2s all ease-in-out;

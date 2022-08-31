@@ -17,7 +17,8 @@ const loadMoreButton = document.getElementById("load-more");
 const resultCardsLimit = productsNumber + 1;
 shopAllResultsSpanTag.innerHTML = resultCardsLimit;
 const resultCardsIncreaseByLoadMoreClick = 2;
-let wishlistBtns = document.querySelectorAll(".add-to-wishlist");
+let wishlistBtns = document.getElementsByClassName("add-to-wishlist");
+let wishlistBtn = document.querySelector(".add-to-wishlist");
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
@@ -120,6 +121,12 @@ const shopProductCard = (productObject) => {
   addToWishlistIconAnchor.href = "#";
   addToWishlistIconAnchor.innerHTML =
     '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
+  addToWishlistIconAnchor.addEventListener("click", () => {
+    console.log(
+      addToWishlistIconAnchor.parentElement.parentElement.parentElement
+        .parentElement.parentElement
+    );
+  });
 
   const compareDiv = document.createElement("div");
   compareDiv.classList.add("compare-container", "m-0", "my-2", "p-0");
@@ -215,7 +222,6 @@ const shopProductCard = (productObject) => {
 
 function renderMoreCards(prodcutsFromJSONFile) {
   const shopProducts = prodcutsFromJSONFile;
-
   for (let productIndex = 0; productIndex < 2; productIndex++) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
     // console.log(numbersOfCardInFilterResultContainer);
@@ -244,24 +250,34 @@ function renderMoreCards(prodcutsFromJSONFile) {
 }
 
 const loadMoreCards = () => {
+  // wishlistBtns = [];
   if (numbersOfCardInFilterResultContainer < productsNumber) {
     renderMoreCards(shopProductsFromJSONFile.products);
-    wishlistBtns = [];
-    wishlistBtns = document.querySelectorAll(".add-to-wishlist");
-    for (let btn of wishlistBtns) {
-      btn.addEventListener("click", (e) => {
-        console.log(
-          btn.parentElement.parentElement.parentElement.parentElement
-            .parentElement
-        );
-      });
-    }
+    console.log(`btns before getting ${wishlistBtns.length}`);
+    // wishlistBtns = document.getElementsByClassName("add-to-wishlist");
+    console.log(`btns after getting ${wishlistBtns.length}`);
+    console.log(`btns type of ${typeof wishlistBtns}`);
+    // addingEventListener(wishlistBtns);
   }
 };
-
+function addingEventListener(btns) {
+  for (let btn of btns) {
+    btn.addEventListener("click", (e) => {
+      console.log(
+        btn.parentElement.parentElement.parentElement.parentElement
+          .parentElement
+      );
+    });
+  }
+}
 const addToWishlist = (parentID) => {
   console.log(`${parentID} is added To Wishlist`);
 };
 const saveToLocalStorage = () => {};
+
 renderShopProductsResults(shopProductsFromJSONFile.products);
 loadMoreButton.addEventListener("click", loadMoreCards);
+// wishlistBtn.addEventListener("click", () => {
+//   console.log("hii");
+// });
+// console.log(wishlistBtn);

@@ -1099,3 +1099,40 @@
 .load-more:hover {
   outline: 4px solid #212529;
 }
+
+.addToWishlist-popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100002;
+  background: rgba(0, 0, 0, 0.5);
+}
+.addToWishlist-popup-msg-container {
+  width: 570px;
+  max-width: 570px;
+}
+
+.addToWishlist-popup-msg-content-card-cancel {
+  color: #666;
+  transition: 0.2s all ease-in-out;
+}
+.addToWishlist-popup-msg-content-card-cancel:hover {
+  color: red;
+}
+
+.addToWishlist-popup-msg-content-card-select,
+.addToWishlist-popup-msg-footer-openWishlist,
+.addToWishlist-popup-msg-footer-continueShopping {
+  transition: 0.2s all ease-in-out;
+}
+
+.addToWishlist-popup-msg-content-card-select:hover {
+  outline: 3px solid black;
+}
+
+.addToWishlist-popup-msg-footer-openWishlist:hover,
+.addToWishlist-popup-msg-footer-continueShopping:hover {
+  color: #666 !important;
+}

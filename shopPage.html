@@ -1850,7 +1850,8 @@
                                                         <div
                                                             class="popup-icons m-0 p-0 d-flex flex-column align-items-end">
                                                             <div class="add-to-wishlist-container m-0 my-2 p-0">
-                                                                <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <a href="#"
+                                                                    class="add-to-wishlist text-decoration-none m-0 p-0">
                                                                     <span
                                                                         class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
                                                                         to
@@ -1915,6 +1916,70 @@
                                     more</button>
                             </div>
                         </aside>
+                    </div>
+                    <!-- popUp wishlist-->
+                    <div class="addToWishlist-popup d-flex justify-content-center align-items-center d-none">
+                        <div class="addToWishlist-popup-msg-container">
+                            <div class="addToWishlist-popup-msg m-0 p-0 w-100">
+                                <div class="addToWishlist-popup-msg-header p-2 m-0 row justify-content-between bg-dark">
+                                    <h3 class="col-10 m-0 text-capitalize fs-5 text-light">wishlist <span
+                                            class="wishlist-product-number">1</span></h3>
+                                    <div class="col text-light text-end">
+                                        <i class="fa-solid fa-xmark fs-5"></i>
+                                    </div>
+                                </div>
+                                <div class="addToWishlist-popup-msg-content bg-white p-2 m-0">
+                                    <div class="addToWishlist-popup-msg-content-card w-100 m-0 my-3 p-0">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class=" col-1 text-dark ">
+                                                <i
+                                                    class="addToWishlist-popup-msg-content-card-cancel fa-solid fa-xmark fs-5"></i>
+                                            </div>
+                                            <div class="col-8 m-0 p-0">
+                                                <div class="w-100 row justify-content-between align-items-center">
+                                                    <div class="addToWishlist-popup-msg-content-card-img p-0 col-2">
+                                                        <img src="assets/images/json/3 (1).jpg" alt="blah"
+                                                            class="w-100">
+                                                    </div>
+                                                    <div class="addToWishlist-popup-msg-content-card-details col-10">
+                                                        <h3
+                                                            class="addToWishlist-popup-msg-content-card-header fs-5 m-0">
+                                                            title
+                                                            blah</h3>
+                                                        <p class="addToWishlist-popup-msg-content-card-price fs-6 m-0">
+                                                            price
+                                                            $blah</p>
+                                                        <p
+                                                            class="addToWishlist-popup-msg-content-card-currentDate fs-6 m-0">
+                                                            today DateTime</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 m-0 p-0">
+                                                <div class="w-100 m-0 p-0 text-center">
+                                                    <button type="button" id="select"
+                                                        class="addToWishlist-popup-msg-content-card-select btn btn-dark rounded-pill py-2 px-4 text-uppercase">select</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="addToWishlist-popup-msg-footer p-2 m-0 row justify-content-between bg-dark">
+                                    <div class="col-4">
+                                        <a href="wishlistPage.html"
+                                            class="addToWishlist-popup-msg-footer-openWishlist text-light fs-6 text-capitalize m-0 text-decoration-none">Open
+                                            wishlist page</a>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <a href="shopPage.html"
+                                            class="addToWishlist-popup-msg-footer-continueShopping text-light fs-6 text-capitalize m-0 text-decoration-none">
+                                            Continue shopping
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

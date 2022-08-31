@@ -27,6 +27,7 @@
         <!-- Project Local CSS Style -->
         <link rel="stylesheet" href="assets/style/style.css" />
         <link rel="stylesheet" href="assets/style/shopPageStyle.css" />
+        <link rel="stylesheet" href="assets/style/wishlistPage.css" />
         <link rel="stylesheet" href="assets/style/media.css">
         <link rel="stylesheet" href="assets/style/shopPageMedia.css">
     </head>
@@ -1090,7 +1091,7 @@
         </header>
         <!-- main -->
         <main class="wishlist-main-section p-0 m-0 w-100">
-            <div class="container-xl m-auto py-0 px-3">
+            <div class="container-xl m-auto py-0 px-3 border border-1 border-danger">
                 <section class="treeRoute w-100 m-0 my-3 p-0 ">
                     <h2 class="d-none">treeRoute</h2>
                     <ul class="list-unstyled text-capitalize fw-bold">
@@ -1102,8 +1103,78 @@
                         </li>
                     </ul>
                 </section>
-                <section class="wishlist-section m-0 my-3 p-0">
+                <section class="wishlist-section m-0 my-3 p-0 border border-1 border-danger">
                     <h1 class="text-dark fw-bold fs-1 text-center my-5 text-capitalize ">wishlist</h1>
+                    <div class="w-100 m-0 p-0 border border-1 border-danger">
+                        <div class="wishlist-content w-75 m-auto">
+                            <div class="wishlist-card w-100 m-0 my-3 p-0 border-bottom border-2 ">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class=" col-1 text-dark ">
+                                        <i class="wishlist-card-cancel fa-solid fa-xmark fs-5"></i>
+                                    </div>
+                                    <div class="col-8 m-0 p-0">
+                                        <div class="w-100 row justify-content-between align-items-center">
+                                            <div class="wishlist-card-img p-0 col-2">
+                                                <a href="#" class="text-decoration-none">
+                                                    <img src="assets/images/json/3 (1).jpg" alt="blah" class="w-100">
+                                                </a>
+                                            </div>
+                                            <div class="wishlist-card-details col-10">
+                                                <h3 class="wishlist-card-header fs-5 m-0 ">
+                                                    <a href="#" class="text-decoration-none ">title blah</a>
+                                                </h3>
+                                                <p class="wishlist-card-price fs-6 m-0">
+                                                    <a href="#" class="text-decoration-none ">price $blah</a>
+                                                </p>
+                                                <p class="wishlist-card-currentDate fs-6 m-0">
+                                                    today DateTime</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 m-0 p-0">
+                                        <div class="w-100 m-0 p-0 text-center">
+                                            <button type="button" id="selectOptions"
+                                                class="wishlist-card-select btn btn-dark rounded-pill py-2 px-4 text-uppercase">select
+                                                options</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-card w-100 m-0 my-3 p-0 border-bottom border-2 ">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class=" col-1 text-dark ">
+                                        <i class="wishlist-card-cancel fa-solid fa-xmark fs-5"></i>
+                                    </div>
+                                    <div class="col-8 m-0 p-0">
+                                        <div class="w-100 row justify-content-between align-items-center">
+                                            <div class="wishlist-card-img p-0 col-2">
+                                                <a href="#" class="text-decoration-none">
+                                                    <img src="assets/images/json/3 (1).jpg" alt="blah" class="w-100">
+                                                </a>
+                                            </div>
+                                            <div class="wishlist-card-details col-10">
+                                                <h3 class="wishlist-card-header fs-5 m-0 ">
+                                                    <a href="#" class="text-decoration-none ">title blah</a>
+                                                </h3>
+                                                <p class="wishlist-card-price fs-6 m-0">
+                                                    <a href="#" class="text-decoration-none ">price $blah</a>
+                                                </p>
+                                                <p class="wishlist-card-currentDate fs-6 m-0">
+                                                    today DateTime</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 m-0 p-0">
+                                        <div class="w-100 m-0 p-0 text-center">
+                                            <button type="button" id="selectOptions"
+                                                class="wishlist-card-select btn btn-dark rounded-pill py-2 px-4 text-uppercase">select
+                                                options</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
             <div class="container-fluid m-0 p-0">

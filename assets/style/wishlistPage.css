@@ -1,0 +1,25 @@
+.wishlist-card {
+  border-bottom-color: #666;
+}
+
+.wishlist-card-cancel {
+  color: #666;
+  transition: 0.2s all ease-in-out;
+}
+.wishlist-card-cancel:hover {
+  color: red;
+}
+
+.wishlist-card-select,
+.wishlist-card-details {
+  transition: 0.2s all ease-in-out;
+}
+.wishlist-card-details a {
+  color: #000;
+}
+.wishlist-card-details a:hover {
+  color: #666;
+}
+.wishlist-card-select:hover {
+  outline: 3px solid black;
+}

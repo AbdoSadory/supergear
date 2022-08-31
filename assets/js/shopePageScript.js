@@ -17,12 +17,7 @@ const loadMoreButton = document.getElementById("load-more");
 const resultCardsLimit = productsNumber + 1;
 shopAllResultsSpanTag.innerHTML = resultCardsLimit;
 const resultCardsIncreaseByLoadMoreClick = 2;
-
-shopProductsFromJSONFile.products.forEach((ele) => {
-  console.log(ele.id + " --- " + ele.title);
-});
-
-console.log(typeof new productModel());
+let wishlistBtns = document.querySelectorAll(".add-to-wishlist");
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
@@ -31,8 +26,8 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
   for (let productIndex = 0; productIndex < 3; productIndex++) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
     numbersOfCardInFilterResultContainer++;
-    console.log(numbersOfCardInFilterResultContainer);
     let productObject = new productModel(
+      shopProducts[productIndex].id,
       shopProducts[productIndex].frontImg,
       shopProducts[productIndex].backImg,
       shopProducts[productIndex].type,
@@ -59,6 +54,7 @@ const shopProductCard = (productObject) => {
     "p-2",
     "rounded-3"
   );
+  parentResultCardDiv.id = productObject.productModelID;
 
   const resultCardImgDiv = document.createElement("div");
   resultCardImgDiv.classList.add("result-card-img", "overflow-hidden");
@@ -115,7 +111,12 @@ const shopProductCard = (productObject) => {
     "p-0"
   );
   const addToWishlistIconAnchor = document.createElement("a");
-  addToWishlistIconAnchor.classList.add("text-decoration-none", "m-0", "p-0");
+  addToWishlistIconAnchor.classList.add(
+    "add-to-wishlist",
+    "text-decoration-none",
+    "m-0",
+    "p-0"
+  );
   addToWishlistIconAnchor.href = "#";
   addToWishlistIconAnchor.innerHTML =
     '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
@@ -214,16 +215,12 @@ const shopProductCard = (productObject) => {
 
 function renderMoreCards(prodcutsFromJSONFile) {
   const shopProducts = prodcutsFromJSONFile;
-  let theRestProducts = productsNumber - numbersOfCardInFilterResultContainer;
-  console.log(
-    `theRestProducts is ${theRestProducts} and number of filter card is ${numbersOfCardInFilterResultContainer}`
-  );
 
   for (let productIndex = 0; productIndex < 2; productIndex++) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
-    theRestProducts = theRestProducts - 2;
-    console.log(numbersOfCardInFilterResultContainer);
+    // console.log(numbersOfCardInFilterResultContainer);
     let productObject = new productModel(
+      shopProducts[numbersOfCardInFilterResultContainer].id,
       shopProducts[numbersOfCardInFilterResultContainer].frontImg,
       shopProducts[numbersOfCardInFilterResultContainer].backImg,
       shopProducts[numbersOfCardInFilterResultContainer].type,
@@ -249,8 +246,22 @@ function renderMoreCards(prodcutsFromJSONFile) {
 const loadMoreCards = () => {
   if (numbersOfCardInFilterResultContainer < productsNumber) {
     renderMoreCards(shopProductsFromJSONFile.products);
+    wishlistBtns = [];
+    wishlistBtns = document.querySelectorAll(".add-to-wishlist");
+    for (let btn of wishlistBtns) {
+      btn.addEventListener("click", (e) => {
+        console.log(
+          btn.parentElement.parentElement.parentElement.parentElement
+            .parentElement
+        );
+      });
+    }
   }
 };
 
+const addToWishlist = (parentID) => {
+  console.log(`${parentID} is added To Wishlist`);
+};
+const saveToLocalStorage = () => {};
 renderShopProductsResults(shopProductsFromJSONFile.products);
 loadMoreButton.addEventListener("click", loadMoreCards);

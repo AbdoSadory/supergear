@@ -1,5 +1,6 @@
 export default class ProductModel {
   constructor(
+    id,
     frontImage,
     backImage,
     type,
@@ -10,6 +11,7 @@ export default class ProductModel {
     size,
     note
   ) {
+    this.productModelID = id;
     this.productModelFrontImage = frontImage;
     this.productModelBackImage = backImage;
     this.productModelType = type;

@@ -18,7 +18,9 @@ const resultCardsLimit = productsNumber + 1;
 shopAllResultsSpanTag.innerHTML = resultCardsLimit;
 const resultCardsIncreaseByLoadMoreClick = 2;
 let wishlistElements = {};
+let wishlistElement = false;
 let emptyWishlist;
+const closePopUpMsg = document.getElementById("closePopUp");
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
@@ -126,15 +128,23 @@ const shopProductCard = (productObject) => {
   addToWishlistIconAnchor.addEventListener("click", () => {
     console.log(
       addToWishlistIconAnchor.parentElement.parentElement.parentElement
-        .parentElement.parentElement,
-      typeof productObject.productModelID
+        .parentElement.parentElement
     );
-    saveToLocalStorage(
-      productObject.productModelID,
-      productObject.productModelTitle,
-      productObject.productModelOldPrice,
-      productObject.productModelPrice
-    );
+    if (productObject.productModelID in wishlistElements) {
+      removeWishlistElementFromLocalStorage(productObject.productModelID);
+      addToWishlistIconAnchor.innerHTML =
+        '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle  text-dark"></i>';
+    } else {
+      renderWishlistPopUp();
+      saveToLocalStorage(
+        productObject.productModelID,
+        productObject.productModelTitle,
+        productObject.productModelOldPrice,
+        productObject.productModelPrice
+      );
+      addToWishlistIconAnchor.innerHTML =
+        '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>';
+    }
   });
 
   const compareDiv = document.createElement("div");
@@ -268,7 +278,7 @@ const loadMoreCards = () => {
   }
 };
 
-const addToWishlist = (parentID) => {
+const popUpProductCard = (parentID) => {
   console.log(`${parentID} is added To Wishlist`);
 };
 
@@ -296,13 +306,25 @@ const exportFromLocalStorage = () => {
     emptyWishlist = false;
     let storedUserWishlist = localStorage.getItem("User_Wishlist");
     wishlistElements = { ...JSON.parse(storedUserWishlist) };
-    console.log(storedUserWishlist, emptyWishlist, wishlistElements);
   } else {
     emptyWishlist = true;
     console.log(emptyWishlist);
   }
 };
 
+const removeWishlistElementFromLocalStorage = (elementID) => {
+  delete wishlistElements[elementID];
+  console.log(wishlistElements);
+  localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
+};
+
+function renderWishlistPopUp() {
+  const popup = document.getElementById("addToWishlist-popup");
+  popup.classList.toggle("d-none");
+}
+
 exportFromLocalStorage();
 renderShopProductsResults(shopProductsFromJSONFile.products);
 loadMoreButton.addEventListener("click", loadMoreCards);
+closePopUpMsg.addEventListener("click", renderWishlistPopUp);
+console.log(wishlistElements);

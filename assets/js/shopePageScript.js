@@ -1,6 +1,6 @@
 import productModel from "./dataModel/productModel.js";
 import products from "../data/products.json" assert { type: "json" };
-
+// Variables
 const shopProductsFromJSONFile = products;
 const productsNumber = shopProductsFromJSONFile.products.length;
 const shopCurrentResultsSpanTag = document.querySelector(
@@ -17,8 +17,8 @@ const loadMoreButton = document.getElementById("load-more");
 const resultCardsLimit = productsNumber + 1;
 shopAllResultsSpanTag.innerHTML = resultCardsLimit;
 const resultCardsIncreaseByLoadMoreClick = 2;
-let wishlistBtns = document.getElementsByClassName("add-to-wishlist");
-let wishlistBtn = document.querySelector(".add-to-wishlist");
+let wishlistElements = {};
+let emptyWishlist;
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
@@ -120,11 +120,20 @@ const shopProductCard = (productObject) => {
   );
   addToWishlistIconAnchor.href = "#";
   addToWishlistIconAnchor.innerHTML =
-    '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
+    productObject.productModelID in wishlistElements
+      ? '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>'
+      : '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
   addToWishlistIconAnchor.addEventListener("click", () => {
     console.log(
       addToWishlistIconAnchor.parentElement.parentElement.parentElement
-        .parentElement.parentElement
+        .parentElement.parentElement,
+      typeof productObject.productModelID
+    );
+    saveToLocalStorage(
+      productObject.productModelID,
+      productObject.productModelTitle,
+      productObject.productModelOldPrice,
+      productObject.productModelPrice
     );
   });
 
@@ -222,7 +231,11 @@ const shopProductCard = (productObject) => {
 
 function renderMoreCards(prodcutsFromJSONFile) {
   const shopProducts = prodcutsFromJSONFile;
-  for (let productIndex = 0; productIndex < 2; productIndex++) {
+  for (
+    let productIndex = 0;
+    productIndex < resultCardsIncreaseByLoadMoreClick;
+    productIndex++
+  ) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
     // console.log(numbersOfCardInFilterResultContainer);
     let productObject = new productModel(
@@ -250,34 +263,46 @@ function renderMoreCards(prodcutsFromJSONFile) {
 }
 
 const loadMoreCards = () => {
-  // wishlistBtns = [];
   if (numbersOfCardInFilterResultContainer < productsNumber) {
     renderMoreCards(shopProductsFromJSONFile.products);
-    console.log(`btns before getting ${wishlistBtns.length}`);
-    // wishlistBtns = document.getElementsByClassName("add-to-wishlist");
-    console.log(`btns after getting ${wishlistBtns.length}`);
-    console.log(`btns type of ${typeof wishlistBtns}`);
-    // addingEventListener(wishlistBtns);
   }
 };
-function addingEventListener(btns) {
-  for (let btn of btns) {
-    btn.addEventListener("click", (e) => {
-      console.log(
-        btn.parentElement.parentElement.parentElement.parentElement
-          .parentElement
-      );
-    });
-  }
-}
+
 const addToWishlist = (parentID) => {
   console.log(`${parentID} is added To Wishlist`);
 };
-const saveToLocalStorage = () => {};
 
+const saveToLocalStorage = (
+  wishlistElementID,
+  wishlistElementTitle,
+  wishlistElementOldPrice,
+  wishlistElementPrice
+) => {
+  if (!(wishlistElementID in wishlistElements)) {
+    let choosenElement = {
+      id: wishlistElementID,
+      title: wishlistElementTitle,
+      oldPrice: wishlistElementOldPrice,
+      price: wishlistElementPrice,
+    };
+    wishlistElements[`${wishlistElementID}`] = choosenElement;
+    console.log(wishlistElements);
+    localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
+  }
+};
+
+const exportFromLocalStorage = () => {
+  if (localStorage.getItem("User_Wishlist")) {
+    emptyWishlist = false;
+    let storedUserWishlist = localStorage.getItem("User_Wishlist");
+    wishlistElements = { ...JSON.parse(storedUserWishlist) };
+    console.log(storedUserWishlist, emptyWishlist, wishlistElements);
+  } else {
+    emptyWishlist = true;
+    console.log(emptyWishlist);
+  }
+};
+
+exportFromLocalStorage();
 renderShopProductsResults(shopProductsFromJSONFile.products);
 loadMoreButton.addEventListener("click", loadMoreCards);
-// wishlistBtn.addEventListener("click", () => {
-//   console.log("hii");
-// });
-// console.log(wishlistBtn);

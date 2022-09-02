@@ -119,6 +119,18 @@
             "color":["flamingo pink","white","yellow","blue"],
             "size":"10 inch",
             "note":"-6%"
+        },
+        {
+            "id":11,
+            "frontImg":"images/section6/10061.jpg",
+            "backImg":"images/section6/10066.jpg",
+            "type":"robot clean",
+            "title":"VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction Self-charging",
+            "price":575.64,
+            "oldPrice":null,
+            "color":["platinum","sky blue","rose gold","blue"],
+            "size":"10 inch",
+            "note":null
         }
     ]
 }

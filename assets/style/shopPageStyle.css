@@ -78,7 +78,9 @@
 .color-btn {
   width: auto;
 }
-
+.color-btn-item {
+  outline: 1px solid #c1c1c1 !important;
+}
 .color-btn:hover .color-btn-item {
   border-color: white;
   outline: 1px solid black;
@@ -1121,18 +1123,30 @@
 .addToWishlist-popup-msg-content-card-cancel:hover {
   color: red;
 }
+.addToWishlist-popup-msg-content {
+  max-height: 400px;
+  overflow-y: scroll;
+}
 
 .addToWishlist-popup-msg-content-card-select,
 .addToWishlist-popup-msg-footer-openWishlist,
-.addToWishlist-popup-msg-footer-continueShopping {
+.addToWishlist-popup-msg-footer-continueShopping,
+.addToWishlist-popup-msg-content-card-header a {
   transition: 0.2s all ease-in-out;
 }
-
+.addToWishlist-popup-msg-content-card-header {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .addToWishlist-popup-msg-content-card-select:hover {
   outline: 3px solid black;
 }
 
 .addToWishlist-popup-msg-footer-openWishlist:hover,
-.addToWishlist-popup-msg-footer-continueShopping:hover {
+.addToWishlist-popup-msg-footer-continueShopping:hover,
+.addToWishlist-popup-msg-content-card-header a:hover {
   color: #666 !important;
 }

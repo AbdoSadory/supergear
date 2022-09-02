@@ -12,21 +12,28 @@ const shopAllResultsSpanTag = document.querySelector(
 const shopFilterProductResultsContainer = document.querySelector(
   ".filterResult-results-container"
 );
+
+const shopWishlistPopupMsgContentContainer = document.querySelector(
+  ".addToWishlist-popup-msg-content "
+);
+
 let numbersOfCardInFilterResultContainer = 0;
 const loadMoreButton = document.getElementById("load-more");
-const resultCardsLimit = productsNumber + 1;
-shopAllResultsSpanTag.innerHTML = resultCardsLimit;
 const resultCardsIncreaseByLoadMoreClick = 2;
 let wishlistElements = {};
 let wishlistElement = false;
 let emptyWishlist;
 const closePopUpMsg = document.getElementById("closePopUp");
+const backgroundPopUpMsg = document.getElementById("addToWishlist-popup");
+const wishlistCounters = document.getElementsByClassName(
+  "wishlist-product-number"
+);
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
   const shopProducts = prodcutsFromJSONFile;
   //for render cards from json file
-  for (let productIndex = 0; productIndex < 3; productIndex++) {
+  for (let productIndex = 0; productIndex < 4; productIndex++) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
     numbersOfCardInFilterResultContainer++;
     let productObject = new productModel(
@@ -126,22 +133,25 @@ const shopProductCard = (productObject) => {
       ? '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>'
       : '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
   addToWishlistIconAnchor.addEventListener("click", () => {
-    console.log(
-      addToWishlistIconAnchor.parentElement.parentElement.parentElement
-        .parentElement.parentElement
-    );
+    // console.log(
+    //   addToWishlistIconAnchor.parentElement.parentElement.parentElement
+    //     .parentElement.parentElement
+    // );
     if (productObject.productModelID in wishlistElements) {
       removeWishlistElementFromLocalStorage(productObject.productModelID);
+      wishlistCounter(wishlistElements);
       addToWishlistIconAnchor.innerHTML =
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle  text-dark"></i>';
     } else {
-      renderWishlistPopUp();
       saveToLocalStorage(
         productObject.productModelID,
+        productObject.productModelFrontImage,
         productObject.productModelTitle,
         productObject.productModelOldPrice,
         productObject.productModelPrice
       );
+      renderWishlistPopUp();
+      wishlistCounter(wishlistElements);
       addToWishlistIconAnchor.innerHTML =
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>';
     }
@@ -247,7 +257,6 @@ function renderMoreCards(prodcutsFromJSONFile) {
     productIndex++
   ) {
     shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
-    // console.log(numbersOfCardInFilterResultContainer);
     let productObject = new productModel(
       shopProducts[numbersOfCardInFilterResultContainer].id,
       shopProducts[numbersOfCardInFilterResultContainer].frontImg,
@@ -278,22 +287,165 @@ const loadMoreCards = () => {
   }
 };
 
-const popUpProductCard = (parentID) => {
-  console.log(`${parentID} is added To Wishlist`);
+const renderPopUpProductCard = (wishlistFromLocalStorage) => {
+  let wishlistKeys = Object.keys(wishlistFromLocalStorage);
+  let wishlistLength = wishlistKeys.length;
+  // console.log(shopWishlistPopupMsgContentContainer);
+  shopWishlistPopupMsgContentContainer.innerHTML = null;
+  for (const elementKey in wishlistFromLocalStorage) {
+    popUpProdcutCard(wishlistFromLocalStorage[elementKey]);
+  }
+};
+
+const popUpProdcutCard = (storedWishlistelement) => {
+  const parentCardDiv = document.createElement("div");
+  parentCardDiv.classList.add(
+    "addToWishlist-popup-msg-content-card",
+    "w-100",
+    "m-0",
+    "my-3",
+    "p-2",
+    "border-bottom",
+    "border-2"
+  );
+  parentCardDiv.id = storedWishlistelement.id;
+
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("row", "justify-content-between", "align-items-center");
+
+  // Cancel Part
+  const cancelColDiv = document.createElement("div");
+  cancelColDiv.classList.add("col-1", "text-dark");
+  cancelColDiv.innerHTML =
+    '<i class="addToWishlist-popup-msg-content-card-cancel fa-solid fa-xmark fs-5"></i>';
+  cancelColDiv.addEventListener("click", () => {
+    removeWishlistElementFromLocalStorage(storedWishlistelement.id);
+    parentCardDiv.remove();
+    wishlistCounter(wishlistElements);
+    console.log(wishlistElements);
+    if (Object.keys(wishlistElements) == 0) {
+      shopWishlistPopupMsgContentContainer.innerHTML = `<h4 class="text-center py-2 p-0">There are no products on the Wishlist!</h4>`;
+    }
+  });
+
+  // Content Part
+  const contentColDiv = document.createElement("div");
+  contentColDiv.classList.add("col-8", "m-0", "p-0");
+
+  const contentRowDiv = document.createElement("div");
+  contentRowDiv.classList.add(
+    "row",
+    "justify-content-between",
+    "align-items-center",
+    "w-100"
+  );
+  const contentRowCardImageDiv = document.createElement("div");
+  contentRowCardImageDiv.classList.add(
+    "addToWishlist-popup-msg-content-card-img",
+    "col-2",
+    "p-0"
+  );
+
+  const contentRowCardImage = document.createElement("img");
+  contentRowCardImage.classList.add("w-100");
+  contentRowCardImage.src = `assets/${storedWishlistelement.img}`;
+  contentRowCardImage.alt = storedWishlistelement.title;
+
+  const contentRowCardDetailsDiv = document.createElement("div");
+  contentRowCardDetailsDiv.classList.add(
+    "addToWishlist-popup-msg-content-card-details",
+    "col-10"
+  );
+  const contentRowCardDetailsTitle = document.createElement("h3");
+  contentRowCardDetailsTitle.classList.add(
+    "addToWishlist-popup-msg-content-card-header",
+    "fs-5",
+    "m-0"
+  );
+  contentRowCardDetailsTitle.innerHTML = `<a href="#" class="text-decoration-none text-dark">${storedWishlistelement.title}</a>`;
+
+  const contentRowCardDetailsOldPrice = document.createElement("span");
+  contentRowCardDetailsOldPrice.classList.add(
+    "addToWishlist-popup-msg-content-card-old-price",
+    "fs-6",
+    "m-0",
+    "text-gray",
+    "text-decoration-line-through"
+  );
+  contentRowCardDetailsOldPrice.textContent = storedWishlistelement.oldPrice;
+
+  const contentRowCardDetailsPrice = document.createElement("span");
+  contentRowCardDetailsPrice.classList.add(
+    "addToWishlist-popup-msg-content-card-price",
+    "fs-6",
+    "m-0"
+  );
+  contentRowCardDetailsPrice.textContent = ` ${storedWishlistelement.price}`;
+
+  const contentRowCardDetailsDate = document.createElement("p");
+  contentRowCardDetailsDate.classList.add(
+    "addToWishlist-popup-msg-content-card-currentDate",
+    "fs-6",
+    "m-0"
+  );
+  contentRowCardDetailsDate.textContent = storedWishlistelement.dataTime;
+
+  // Select Part
+  const selectColDiv = document.createElement("div");
+  selectColDiv.classList.add("col-3", "m-0", "p-0");
+  const selectDiv = document.createElement("div");
+  selectDiv.classList.add("w-100", "text-center", "m-0", "p-0");
+  const selectButton = document.createElement("button");
+  selectButton.classList.add(
+    "addToWishlist-popup-msg-content-card-select",
+    "btn",
+    "btn-dark",
+    "rounded-pill",
+    "text-uppercase",
+    "py-2",
+    "px-4"
+  );
+  selectButton.id = "select";
+  selectButton.type = "button";
+  selectButton.textContent = "select";
+  //////////////////////////////
+  contentRowCardImageDiv.appendChild(contentRowCardImage);
+  contentRowCardDetailsDiv.appendChild(contentRowCardDetailsTitle);
+  contentRowCardDetailsDiv.appendChild(contentRowCardDetailsOldPrice);
+  contentRowCardDetailsDiv.appendChild(contentRowCardDetailsPrice);
+  contentRowCardDetailsDiv.appendChild(contentRowCardDetailsDate);
+  contentRowDiv.appendChild(contentRowCardImageDiv);
+  contentRowDiv.appendChild(contentRowCardDetailsDiv);
+  contentColDiv.appendChild(contentRowDiv);
+  selectDiv.appendChild(selectButton);
+  selectColDiv.appendChild(selectDiv);
+
+  cardDiv.appendChild(cancelColDiv);
+  cardDiv.appendChild(contentColDiv);
+  cardDiv.appendChild(selectColDiv);
+
+  parentCardDiv.appendChild(cardDiv);
+
+  shopWishlistPopupMsgContentContainer.appendChild(parentCardDiv);
 };
 
 const saveToLocalStorage = (
   wishlistElementID,
+  wishlistElementImage,
   wishlistElementTitle,
   wishlistElementOldPrice,
   wishlistElementPrice
 ) => {
+  const currentDate = new Date().toString();
+
   if (!(wishlistElementID in wishlistElements)) {
     let choosenElement = {
       id: wishlistElementID,
+      img: wishlistElementImage,
       title: wishlistElementTitle,
       oldPrice: wishlistElementOldPrice,
       price: wishlistElementPrice,
+      dataTime: currentDate.slice(0, 15),
     };
     wishlistElements[`${wishlistElementID}`] = choosenElement;
     console.log(wishlistElements);
@@ -314,17 +466,29 @@ const exportFromLocalStorage = () => {
 
 const removeWishlistElementFromLocalStorage = (elementID) => {
   delete wishlistElements[elementID];
-  console.log(wishlistElements);
   localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
 };
 
-function renderWishlistPopUp() {
+const renderWishlistPopUp = () => {
+  renderPopUpProductCard(wishlistElements);
   const popup = document.getElementById("addToWishlist-popup");
   popup.classList.toggle("d-none");
-}
+};
 
+const wishlistCounter = (wishlistElementsObject) => {
+  for (var i = 0; i < wishlistCounters.length; i++) {
+    wishlistCounters[i].textContent = Object.keys(
+      wishlistElementsObject
+    ).length;
+  }
+};
 exportFromLocalStorage();
 renderShopProductsResults(shopProductsFromJSONFile.products);
+renderPopUpProductCard(wishlistElements);
+
 loadMoreButton.addEventListener("click", loadMoreCards);
 closePopUpMsg.addEventListener("click", renderWishlistPopUp);
-console.log(wishlistElements);
+// backgroundPopUpMsg.addEventListener("click", renderWishlistPopUp);
+wishlistCounter(wishlistElements);
+// console.log(wishlistElements);
+export { exportFromLocalStorage, wishlistElements };

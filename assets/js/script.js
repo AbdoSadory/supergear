@@ -1,3 +1,5 @@
+// import { exportFromLocalStorage, wishlistElements } from "./shopePageScript";
+
 var swiper = new Swiper(".mySwiper0", {
   slidesPerView: 6,
   spaceBetween: 10,

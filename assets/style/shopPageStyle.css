@@ -1115,7 +1115,9 @@
   width: 570px;
   max-width: 570px;
 }
-
+.addToWishlist-popup-msg-content-card:last-child {
+  border-bottom: none !important;
+}
 .addToWishlist-popup-msg-content-card-cancel {
   color: #666;
   transition: 0.2s all ease-in-out;

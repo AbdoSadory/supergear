@@ -1,5 +1,7 @@
-import { exportFromLocalStorage, wishlistElements } from "./shopePageScript";
-const exportingLocalStoredData = exportFromLocalStorage();
-const wishlistElementsData = wishlistElements;
+import { wishlistElements, elementsLength } from "./shopePageScript";
+const wishlistProductNumbersDiv = document.getElementsByClassName(
+  "wishlist-product-number"
+);
+let wishlistElementsfromShopJSFile = wishlistElements;
 
-console.log("1010");
+console.log(wishlistElementsfromShopJSFile);

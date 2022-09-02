@@ -20,7 +20,7 @@ const shopWishlistPopupMsgContentContainer = document.querySelector(
 let numbersOfCardInFilterResultContainer = 0;
 const loadMoreButton = document.getElementById("load-more");
 const resultCardsIncreaseByLoadMoreClick = 2;
-let wishlistElements = {};
+export let wishlistElements = {};
 let wishlistElement = false;
 let emptyWishlist;
 const closePopUpMsg = document.getElementById("closePopUp");
@@ -28,6 +28,10 @@ const backgroundPopUpMsg = document.getElementById("addToWishlist-popup");
 const wishlistCounters = document.getElementsByClassName(
   "wishlist-product-number"
 );
+const continueShoppingBtn = document.getElementById(
+  "addToWishlist-popup-msg-footer-continueShopping"
+);
+export let elementsLength;
 
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
@@ -461,10 +465,15 @@ const saveToLocalStorage = (
 };
 
 const exportFromLocalStorage = () => {
-  if (localStorage.getItem("User_Wishlist")) {
+  let localStorageDataLength = Object.keys(
+    JSON.parse(localStorage.getItem("User_Wishlist"))
+  ).length;
+
+  if (localStorageDataLength != 0 || localStorageDataLength != null) {
     emptyWishlist = false;
     let storedUserWishlist = localStorage.getItem("User_Wishlist");
     wishlistElements = { ...JSON.parse(storedUserWishlist) };
+    elementsLength = localStorageDataLength;
   } else {
     emptyWishlist = true;
     console.log(emptyWishlist);
@@ -489,13 +498,13 @@ const wishlistCounter = (wishlistElementsObject) => {
     ).length;
   }
 };
+
 exportFromLocalStorage();
 renderShopProductsResults(shopProductsFromJSONFile.products);
 renderPopUpProductCard(wishlistElements);
 
 loadMoreButton.addEventListener("click", loadMoreCards);
 closePopUpMsg.addEventListener("click", renderWishlistPopUp);
-// backgroundPopUpMsg.addEventListener("click", renderWishlistPopUp);
+continueShoppingBtn.addEventListener("click", renderWishlistPopUp);
 wishlistCounter(wishlistElements);
 // console.log(wishlistElements);
-export { exportFromLocalStorage, wishlistElements };

@@ -1,6 +1,9 @@
 /* .wishlist-content {
   max-width: 80%;
 } */
+.wishlist-section {
+  margin-bottom: 100px;
+}
 .wishlist-card {
   border-bottom-color: #666;
 }

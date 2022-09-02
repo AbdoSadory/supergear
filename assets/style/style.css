@@ -1,9 +1,29 @@
+@font-face {
+  font-family: GeneralSansRegular;
+  src: url(fonts/GeneralSans-Regular.woff2);
+}
+@font-face {
+  font-family: GeneralSansMedium;
+  src: url(fonts/GeneralSans-Medium.woff2);
+}
+@font-face {
+  font-family: GeneralSansItalic;
+  src: url(fonts/GeneralSans-Italic.woff2);
+}
+@font-face {
+  font-family: GeneralSansSemibold;
+  src: url(fonts/GeneralSans-Semibold.woff2);
+}
+@font-face {
+  font-family: GeneralSansSemiboldItalic;
+  src: url(fonts/GeneralSans-SemiboldItalic.woff2);
+}
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: GeneralSansRegular, "Cairo", sans-serif;
 }
 .seperator {
   width: 0.5%;

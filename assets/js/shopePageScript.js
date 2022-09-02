@@ -128,6 +128,7 @@ const shopProductCard = (productObject) => {
     "p-0"
   );
   addToWishlistIconAnchor.href = "#";
+  addToWishlistIconAnchor.id = `add-to-wishlist-${productObject.productModelID}`;
   addToWishlistIconAnchor.innerHTML =
     productObject.productModelID in wishlistElements
       ? '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>'
@@ -322,10 +323,16 @@ const popUpProdcutCard = (storedWishlistelement) => {
     removeWishlistElementFromLocalStorage(storedWishlistelement.id);
     parentCardDiv.remove();
     wishlistCounter(wishlistElements);
-    console.log(wishlistElements);
+    // console.log(wishlistElements);
     if (Object.keys(wishlistElements) == 0) {
       shopWishlistPopupMsgContentContainer.innerHTML = `<h4 class="text-center py-2 p-0">There are no products on the Wishlist!</h4>`;
     }
+    let storedWishlistelementAnchor = document.getElementById(
+      `add-to-wishlist-${storedWishlistelement.id}`
+    );
+    storedWishlistelementAnchor.innerHTML =
+      '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
+    // console.log(storedWishlistelement);
   });
 
   // Content Part
@@ -448,7 +455,7 @@ const saveToLocalStorage = (
       dataTime: currentDate.slice(0, 15),
     };
     wishlistElements[`${wishlistElementID}`] = choosenElement;
-    console.log(wishlistElements);
+    // console.log(wishlistElements);
     localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
   }
 };

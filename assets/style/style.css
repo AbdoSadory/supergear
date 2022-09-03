@@ -283,7 +283,7 @@ body {
 }
 .nav-bar-container nav {
   text-align: center;
-  width: 76%;
+  width: 70%;
   margin: auto;
 }
 .nav-bar-container .nav-ul-container {
@@ -294,6 +294,7 @@ body {
 }
 .nav-item {
   font-size: 14px;
+  font-family: GeneralSansMedium;
 }
 .nav-item-categories-content {
   position: static !important;
@@ -310,7 +311,7 @@ body {
 .nav-item-categories-content:hover .nav-item-content-container {
   color: #e02b2b;
   visibility: visible;
-  z-index: 2;
+  z-index: 999;
 }
 .nav-item-menu-list h3,
 .nav-item-menu-list ul {

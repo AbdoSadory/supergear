@@ -1,6 +1,8 @@
 import productModel from "./dataModel/productModel.js";
 import products from "../data/products.json" assert { type: "json" };
-// Variables
+//=======================================================
+//=======================Variables=======================
+//=======================================================
 const shopProductsFromJSONFile = products;
 const productsNumber = shopProductsFromJSONFile.products.length;
 const shopCurrentResultsSpanTag = document.querySelector(
@@ -33,6 +35,9 @@ const continueShoppingBtn = document.getElementById(
 );
 export let elementsLength;
 
+//=======================================================
+//=======================Functions=======================
+//=======================================================
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
   const shopProducts = prodcutsFromJSONFile;

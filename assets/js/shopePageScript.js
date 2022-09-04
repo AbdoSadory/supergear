@@ -470,9 +470,9 @@ const saveToLocalStorage = (
 };
 
 const exportFromLocalStorage = () => {
-  let localStorageDataLength = Object.keys(
-    JSON.parse(localStorage.getItem("User_Wishlist"))
-  ).length;
+  let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
+    ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
+    : 0;
 
   if (localStorageDataLength != 0 || localStorageDataLength != null) {
     emptyWishlist = false;

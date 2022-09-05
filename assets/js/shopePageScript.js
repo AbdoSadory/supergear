@@ -38,6 +38,7 @@ export let elementsLength;
 //=======================================================
 //=======================Functions=======================
 //=======================================================
+
 function renderShopProductsResults(prodcutsFromJSONFile) {
   // JSON file data
   const shopProducts = prodcutsFromJSONFile;
@@ -55,7 +56,14 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
       shopProducts[productIndex].oldPrice,
       shopProducts[productIndex].color,
       shopProducts[productIndex].size,
-      shopProducts[productIndex].note
+      shopProducts[productIndex].note,
+      shopProducts[productIndex].category,
+      shopProducts[productIndex].description,
+      shopProducts[productIndex].additionalInfo,
+      shopProducts[productIndex].aboutBrand,
+      shopProducts[productIndex].reviews,
+      shopProducts[productIndex].questions,
+      shopProducts[productIndex].amount
     );
     shopProductCard(productObject);
   }
@@ -153,12 +161,20 @@ const shopProductCard = (productObject) => {
       addToWishlistIconAnchor.innerHTML =
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle  text-dark"></i>';
     } else {
+      console.log(productObject.productModelAmount);
       saveToLocalStorage(
         productObject.productModelID,
         productObject.productModelFrontImage,
         productObject.productModelTitle,
         productObject.productModelOldPrice,
-        productObject.productModelPrice
+        productObject.productModelPrice,
+        productObject.productModelCategory,
+        productObject.productModelDescription,
+        productObject.productModelAdditionalInfo,
+        productObject.productModelAboutBrand,
+        productObject.productModelReviews,
+        productObject.productModelQuestions,
+        productObject.productModelAmount
       );
       renderWishlistPopUp();
       wishlistCounter(wishlistElements);
@@ -277,7 +293,13 @@ function renderMoreCards(prodcutsFromJSONFile) {
       shopProducts[numbersOfCardInFilterResultContainer].oldPrice,
       shopProducts[numbersOfCardInFilterResultContainer].color,
       shopProducts[numbersOfCardInFilterResultContainer].size,
-      shopProducts[numbersOfCardInFilterResultContainer].note
+      shopProducts[numbersOfCardInFilterResultContainer].note,
+      shopProducts[numbersOfCardInFilterResultContainer].category,
+      shopProducts[numbersOfCardInFilterResultContainer].description,
+      shopProducts[numbersOfCardInFilterResultContainer].additionalInfo,
+      shopProducts[numbersOfCardInFilterResultContainer].aboutBrand,
+      shopProducts[numbersOfCardInFilterResultContainer].reviews,
+      shopProducts[numbersOfCardInFilterResultContainer].questions
     );
     shopProductCard(productObject);
     if (
@@ -332,7 +354,6 @@ const popUpProdcutCard = (storedWishlistelement) => {
     removeWishlistElementFromLocalStorage(storedWishlistelement.id);
     parentCardDiv.remove();
     wishlistCounter(wishlistElements);
-    // console.log(wishlistElements);
     if (Object.keys(wishlistElements) == 0) {
       shopWishlistPopupMsgContentContainer.innerHTML = `<h4 class="text-center py-2 p-0">There are no products on the Wishlist!</h4>`;
     }
@@ -450,7 +471,14 @@ const saveToLocalStorage = (
   wishlistElementImage,
   wishlistElementTitle,
   wishlistElementOldPrice,
-  wishlistElementPrice
+  wishlistElementPrice,
+  wishlistElementCategory,
+  wishlistElementDescription,
+  wishlistElementAdditionalInfo,
+  wishlistElementAboutBrand,
+  wishlistElementReviews,
+  wishlistElementQuestions,
+  wishlistElementAmount
 ) => {
   const currentDate = new Date().toString();
 
@@ -462,6 +490,13 @@ const saveToLocalStorage = (
       oldPrice: wishlistElementOldPrice,
       price: wishlistElementPrice,
       dataTime: currentDate.slice(0, 15),
+      category: wishlistElementCategory,
+      description: wishlistElementDescription,
+      additionalInfo: wishlistElementAdditionalInfo,
+      aboutBrand: wishlistElementAboutBrand,
+      reviews: wishlistElementReviews,
+      questions: wishlistElementQuestions,
+      amount: wishlistElementAmount,
     };
     wishlistElements[`${wishlistElementID}`] = choosenElement;
     // console.log(wishlistElements);

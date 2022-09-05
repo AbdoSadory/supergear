@@ -10,7 +10,14 @@
             "oldPrice":null,
             "color":["black","flamingo pink","sage green"],
             "size":"gts 2 mini",
-            "note":"-5%"
+            "note":"-5%",
+            "amount":5,
+            "category":"smartElectronics",
+            "description":"This is the product description of Amazfit GTS 2 Mini Sports Smartwatch GPS Bluetooth 5.0",
+            "additionalInfo":"This is the additional info of Amazfit GTS 2 Mini Sports Smartwatch GPS Bluetooth 5.0",
+            "aboutBrand":"This is the about Brand of Amazfit GTS 2 Mini Sports Smartwatch GPS Bluetooth 5.0",
+            "reviews":["It's good product"],
+            "questions":["what's the performance of Amazfit GTS 2 Mini Sports Smartwatch GPS Bluetooth 5.0"]
         },
         {
             "id":2,
@@ -22,7 +29,15 @@
             "oldPrice":null,
             "color":["black","red"],
             "size":null,
-            "note":"sale"
+            "note":"sale",
+            "amount":3,
+            "category":"headphones",
+            "description":"This is the product description of Cwxuan Sports Magnetic Bluetooth V4.1",
+            "additionalInfo":"This is the additional info of Cwxuan Sports Magnetic Bluetooth V4.1",
+            "aboutBrand":"This is the about Brand of Cwxuan Sports Magnetic Bluetooth V4.1",
+            "reviews":["It's good product","blah blah blahhhhhhhh"],
+            "questions":["what's the performance of Cwxuan Sports Magnetic Bluetooth V4.1"]
+            
         },
         {
             "id":3,
@@ -34,7 +49,14 @@
             "oldPrice":49.99,
             "color":["white"],
             "size":null,
-            "note":null
+            "note":null,
+            "amount":10,
+            "category":"consumerElectronics",
+            "description":"This is the product description of DIDSeth Pan Tilt Security Light Camera Full HD 1080P",
+            "additionalInfo":"This is the additional info of DIDSeth Pan Tilt Security Light Camera Full HD 1080P",
+            "aboutBrand":"This is the about Brand of DIDSeth Pan Tilt Security Light Camera Full HD 1080P",
+            "reviews":["It's bad product"],
+            "questions":["what's the performance of DIDSeth Pan Tilt Security Light Camera Full HD 1080P"]
         },
         {
             "id":4,
@@ -46,7 +68,14 @@
             "oldPrice":null,
             "color":["red","green","black","white"],
             "size":null,
-            "note":null
+            "note":null,
+            "amount":0,
+            "category":"tv&audio",
+            "description":"This is the product description of Divoom Tivoo Portable Bluetooth Speaker Smart Clock Alarm Pixel Art DIY",
+            "additionalInfo":"This is the additional info of Divoom Tivoo Portable Bluetooth Speaker Smart Clock Alarm Pixel Art DIY",
+            "aboutBrand":"This is the about Brand of Divoom Tivoo Portable Bluetooth Speaker Smart Clock Alarm Pixel Art DIY",
+            "reviews":["It's a little bit good product"],
+            "questions":["what's the performance of Divoom Tivoo Portable Bluetooth Speaker Smart Clock Alarm Pixel Art DIY"]
         },
         {
             "id":5,
@@ -58,7 +87,14 @@
             "oldPrice":27.49,
             "color":["grey"],
             "size":null,
-            "note":"sale"
+            "note":"sale",
+            "amount":7,
+            "category":"powerTools",
+            "description":"This is the product description of Electric Hot Melt Glue Gun Cordless Repair DIY Tool",
+            "additionalInfo":"This is the additional info of Electric Hot Melt Glue Gun Cordless Repair DIY Tool",
+            "aboutBrand":"This is the about Brand of Electric Hot Melt Glue Gun Cordless Repair DIY Tool",
+            "reviews":[],
+            "questions":[]
         },
         {
             "id":6,
@@ -70,7 +106,14 @@
             "oldPrice":null,
             "color":["pink","yellow","black","blue","orange"],
             "size":null,
-            "note":null
+            "note":null,
+            "amount":6,
+            "category":"smartElectronics",
+            "description":"This is the product description of Fitness M3 Color Screen Smart Sport Bracelet Activity Running Tracker",
+            "additionalInfo":"This is the additional info of Fitness M3 Color Screen Smart Sport Bracelet Activity Running Tracker",
+            "aboutBrand":"This is the about Brand of Fitness M3 Color Screen Smart Sport Bracelet Activity Running Tracker",
+            "reviews":[],
+            "questions":[]
         },
         {
             "id":7,
@@ -82,7 +125,14 @@
             "oldPrice":null,
             "color":["blue","black","white","gold"],
             "size":null,
-            "note":null
+            "note":null,
+            "amount":20,
+            "category":"cellPhone",
+            "description":"This is the product description of Global Version 6.7 Inch U Screen 5G Smartphone 12GB+512GB For Apple IPhone 13 Pro Max",
+            "additionalInfo":"This is the additional info of Global Version 6.7 Inch U Screen 5G Smartphone 12GB+512GB For Apple IPhone 13 Pro Max",
+            "aboutBrand":"This is the about Brand of Global Version 6.7 Inch U Screen 5G Smartphone 12GB+512GB For Apple IPhone 13 Pro Max",
+            "reviews":[],
+            "questions":[]
         },
         {
             "id":8,
@@ -94,7 +144,14 @@
             "oldPrice":139.00,
             "color":["pink","yellow","black","blue","orange"],
             "size":"10 inch",
-            "note":"sold out"
+            "note":"sold out",
+            "amount":22,
+            "category":"tv&audio",
+            "description":"This is the product description of Klipsch R-120SW Powerful Detailed Home Speaker",
+            "additionalInfo":"This is the additional info of Klipsch R-120SW Powerful Detailed Home Speaker",
+            "aboutBrand":"This is the about Brand of Klipsch R-120SW Powerful Detailed Home Speaker",
+            "reviews":["It's good product"],
+            "questions":[]
         },
         {
             "id":9,
@@ -106,7 +163,14 @@
             "oldPrice":null,
             "color":["pink","black","grass green","gold"],
             "size":"13.5 inch",
-            "note":null
+            "note":null,
+            "amount":12,
+            "category":"consumerElectronics",
+            "description":"This is the product description of MIJIA Robot Vacuum 1T Sweeping Wet Mopping Cleaner For Home Dust",
+            "additionalInfo":"This is the additional info of MIJIA Robot Vacuum 1T Sweeping Wet Mopping Cleaner For Home Dust",
+            "aboutBrand":"This is the about Brand of MIJIA Robot Vacuum 1T Sweeping Wet Mopping Cleaner For Home Dust",
+            "reviews":["It's awesome product"],
+            "questions":[]
         },
         {
             "id":10,
@@ -118,7 +182,14 @@
             "oldPrice":307.60,
             "color":["flamingo pink","white","yellow","blue"],
             "size":"10 inch",
-            "note":"-6%"
+            "note":"-6%",
+            "amount":0,
+            "category":"computersTablets",
+            "description":"This is the product description of Teclast M40 10.1 inch Android 10.0 Tablet PC ",
+            "additionalInfo":"This is the additional info of Teclast M40 10.1 inch Android 10.0 Tablet PC ",
+            "aboutBrand":"This is the about Brand of Teclast M40 10.1 inch Android 10.0 Tablet PC ",
+            "reviews":[],
+            "questions":[]
         },
         {
             "id":11,
@@ -130,8 +201,37 @@
             "oldPrice":null,
             "color":["platinum","sky blue","rose gold","blue"],
             "size":"10 inch",
-            "note":null
+            "note":null,
+            "amount":1,
+            "category":"consumerElectronics",
+            "description":"This is the product description of VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet",
+            "additionalInfo":"This is the additional info of VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet",
+            "aboutBrand":"This is the about Brand of VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet",
+            "reviews":[],
+            "questions":[]
         }
-    ]
+    ],
+    "coupons":{
+        "diamond":{
+            "coupon_word":"2022GiveAway",
+            "usage": 2,
+            "discound_type": "percentage",
+            "discound": 0.10
+        },
+        "golden":{
+            "coupon_word":"2020NotFinishedYet",
+            "usage": 3,
+            "discound_type": "flatRate",
+            "discound": 50
+        },
+        "silver":{
+            "coupon_word":"2019ForYou",
+            "usage": 1,
+            "discound_type": "percentage",
+            "discound": 0.25
+        }
+    }
+
+    
 }
 

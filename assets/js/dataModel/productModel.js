@@ -9,7 +9,14 @@ export default class ProductModel {
     oldPrice,
     color,
     size,
-    note
+    note,
+    category,
+    description,
+    additionalInfo,
+    aboutBrand,
+    reviews,
+    questions,
+    amount
   ) {
     this.productModelID = id;
     this.productModelFrontImage = frontImage;
@@ -21,5 +28,12 @@ export default class ProductModel {
     this.productModelColor = color;
     this.productModelSize = size;
     this.productModelNote = note;
+    this.productModelCategory = category;
+    this.productModelDescription = description;
+    this.productModelAdditionalInfo = additionalInfo;
+    this.productModelAboutBrand = aboutBrand;
+    this.productModelReviews = reviews;
+    this.productModelQuestions = questions;
+    this.productModelAmount = amount;
   }
 }

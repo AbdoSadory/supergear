@@ -103,7 +103,7 @@
   .footer-lists-div .collapse:not(.show) {
     display: none;
   }
-  .footer-lists-div button {
+  .footer-lists-div a {
     pointer-events: painted;
   }
   .footer-down-arrow {

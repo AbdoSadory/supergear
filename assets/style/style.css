@@ -1211,7 +1211,7 @@ body {
 .footer-lists-div .collapse:not(.show) {
   display: block;
 }
-.footer-lists-div button {
+.footer-lists-div a {
   pointer-events: none;
 }
 /* ==============BottomNav============== */

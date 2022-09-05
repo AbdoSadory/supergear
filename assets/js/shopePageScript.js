@@ -127,7 +127,8 @@ const shopProductCard = (productObject) => {
     "flex-column",
     "align-items-end",
     "m-0",
-    "p-0"
+    "p-0",
+    "text-end"
   );
 
   const addToWishlistDiv = document.createElement("div");

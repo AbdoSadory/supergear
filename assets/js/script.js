@@ -155,13 +155,13 @@ const wishlistCounters = document.getElementsByClassName(
 );
 export function bottomNavWishlistbtnNumber(StoredElementsList) {
   bottomNavWishlistbtn.setAttribute(
-    "wishlist-length",
+    "data-tooltip",
     Object.keys(StoredElementsList).length
   );
 }
 export function bottomNavaddToCardbtnNumber(StoredElementsList) {
   bottomNavaddToCardbtn.setAttribute(
-    "add-to-card-length",
+    "data-tooltip",
     Object.keys(StoredElementsList).length
   );
 }

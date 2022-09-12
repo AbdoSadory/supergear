@@ -1,10 +1,12 @@
+@import "./style.css";
+
 .treeRoute-products-li {
   position: relative;
 }
 .treeRoute-products-li-span::before {
   content: ">";
   position: absolute;
-  top: 4px;
+  top: 0px;
   left: -20px;
 }
 
@@ -982,17 +984,17 @@
 }
 /* =================================================== */
 .filterResult .filterResult-showingitemsNumbers p {
-  color: #666;
+  color: var(--darker-gray);
 }
 #defaultSorting {
   border-color: transparent !important;
-  background-color: #f2f2f2 !important;
+  background-color: var(--light-gray) !important;
   font-weight: 500;
 }
 .alignment {
   width: 29px;
   height: 29px;
-  background-color: #f2f2f2;
+  background-color: var(--light-gray);
   transition: 0.35s all ease-in-out;
   position: relative;
   border: none;
@@ -1080,26 +1082,26 @@
 .selectOption {
   visibility: hidden;
   transition: 0.2s all ease-in-out;
-  background-color: #f2f2f2;
+  background-color: var(--light-gray);
   border: none !important;
   outline: none;
 }
 .selectOption:hover {
-  color: #f2f2f2;
-  background-color: #000;
-  outline: 3px auto #000;
+  color: var(--light-gray);
+  background-color: var(--black);
+  outline: 3px auto var(--black);
 }
 .result-card:hover .selectOption {
   visibility: visible;
 }
 
 .load-more {
-  border-color: #212529;
+  border-color: var(--black);
   transition: 0.2s all ease-in-out;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 .load-more:hover {
-  outline: 4px solid #212529;
+  outline: 4px solid var(--black);
 }
 
 .addToWishlist-popup {
@@ -1119,7 +1121,7 @@
   border-bottom: none !important;
 }
 .addToWishlist-popup-msg-content-card-cancel {
-  color: #666;
+  color: var(--darker-gray);
   transition: 0.2s all ease-in-out;
 }
 .addToWishlist-popup-msg-content-card-cancel:hover {
@@ -1150,5 +1152,5 @@
 .addToWishlist-popup-msg-footer-openWishlist:hover,
 .addToWishlist-popup-msg-footer-continueShopping:hover,
 .addToWishlist-popup-msg-content-card-header a:hover {
-  color: #666 !important;
+  color: var(--darker-gray) !important;
 }

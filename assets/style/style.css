@@ -18,6 +18,15 @@
   font-family: GeneralSansSemiboldItalic;
   src: url(fonts/GeneralSans-SemiboldItalic.woff2);
 }
+:root {
+  --red: #e02b2b;
+  --black: #212529;
+  --darker-gray: #666;
+  --dark-gray: #eee;
+  --light-gray: #f2f2f2;
+  --out-of-stock: green;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +64,7 @@ body {
 }
 
 .bg-red {
-  background-color: #e02b2b;
+  background-color: var(--red);
 }
 
 .font-10px {
@@ -128,7 +137,8 @@ body {
 /* ======================SearchBar======================== */
 .searchBar-select-div,
 .searchBar-select-div-top {
-  max-width: 125px;
+  min-width: 130px;
+  max-width: 132px;
 }
 
 .search-nav-contianer {
@@ -309,7 +319,7 @@ body {
   z-index: 2;
 }
 .nav-item-categories-content:hover .nav-item-content-container {
-  color: #e02b2b;
+  color: var(--red);
   visibility: visible;
   z-index: 999;
 }
@@ -556,7 +566,7 @@ body {
   grid-column-gap: 39px;
 }
 .popular-categories-content-item {
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
 }
 .popular-categories-content-item img {
   transition: 0.35s all ease-in-out;
@@ -800,7 +810,7 @@ body {
 .consumer-electronics-right-item {
   position: relative;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
 }
 .consumer-electronics-right-item .overlay img {
   width: 100%;
@@ -808,7 +818,7 @@ body {
 }
 
 .consumer-electronics-right-item .overlay {
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
   transition: 0.35s all ease-in-out;
 }
 
@@ -951,12 +961,12 @@ body {
 .readMore {
   visibility: hidden;
   transition: 0.2s all ease-in-out;
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
   border: none !important;
   outline: none;
 }
 .readMore:hover {
-  color: #f2f2f2;
+  color: var(--dark-gray);
   background-color: #000;
   outline: 3px auto #000;
 }
@@ -1013,7 +1023,7 @@ body {
 .MusicAudioVideo-right-item {
   position: relative;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
 }
 .MusicAudioVideo-right-item .overlay img {
   width: 100%;
@@ -1021,7 +1031,7 @@ body {
 }
 
 .MusicAudioVideo-right-item .overlay {
-  background-color: #f2f2f2;
+  background-color: var(--dark-gray);
   transition: 0.35s all ease-in-out;
 }
 
@@ -1051,7 +1061,7 @@ body {
 
 /* ================= Main-Section9 =============*/
 .main-discount {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   position: relative;
   z-index: 0;
 }
@@ -1100,7 +1110,7 @@ body {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #e02b2b;
+  background-color: var(--red);
 }
 
 .brands-brand-container:hover .brands-brand {
@@ -1168,7 +1178,7 @@ body {
 
 /* ================= Main-Section12 =============*/
 .main-benefits {
-  background-color: #f7f7f7;
+  background-color: var(--dark-gray);
 }
 .benefits-content-item {
   display: flex;
@@ -1211,7 +1221,7 @@ body {
 .footer-lists-div .collapse:not(.show) {
   display: block;
 }
-.footer-lists-div a {
+.footer-list-container-header {
   pointer-events: none;
 }
 /* ==============BottomNav============== */

@@ -1,11 +1,10 @@
-/* .wishlist-content {
-  max-width: 80%;
-} */
+@import "./style.css";
+
 .wishlist-section {
   margin-bottom: 100px;
 }
 .wishlist-card {
-  border-bottom-color: #666;
+  border-bottom-color: var(--darker-gray);
 }
 
 .wishlist-card:last-child {
@@ -13,17 +12,17 @@
 }
 
 .wishlist-card-cancel {
-  color: #666;
+  color: var(--darker-gray);
   transition: 0.2s all ease-in-out;
 }
 .wishlist-card-cancel:hover {
-  color: red;
+  color: var(--red);
 }
 .wishlist-card-header a {
   transition: 0.2s all ease-in-out;
 }
 .wishlist-card-header a:hover {
-  color: #666 !important;
+  color: var(--darker-gray) !important;
 }
 .wishlist-card-select,
 .wishlist-card-details {
@@ -33,7 +32,7 @@
   color: #000;
 }
 .wishlist-card-details a:hover {
-  color: #666;
+  color: var(--darker-gray);
 }
 .wishlist-card-select:hover {
   outline: 3px solid black;

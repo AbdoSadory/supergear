@@ -1,3 +1,9 @@
+import {
+  wishlistElements,
+  wishlistCounter,
+  bottomNavWishlistbtnNumber,
+  headeraddToCardCounter,
+} from "./script.js";
 import productModel from "./dataModel/productModel.js";
 import products from "../data/products.json" assert { type: "json" };
 //=======================================================
@@ -22,7 +28,7 @@ const shopWishlistPopupMsgContentContainer = document.querySelector(
 let numbersOfCardInFilterResultContainer = 0;
 const loadMoreButton = document.getElementById("load-more");
 const resultCardsIncreaseByLoadMoreClick = 2;
-export let wishlistElements = {};
+
 let wishlistElement = false;
 let emptyWishlist;
 const closePopUpMsg = document.getElementById("closePopUp");
@@ -33,7 +39,6 @@ const wishlistCounters = document.getElementsByClassName(
 const continueShoppingBtn = document.getElementById(
   "addToWishlist-popup-msg-footer-continueShopping"
 );
-export let elementsLength;
 
 //=======================================================
 //=======================Functions=======================
@@ -44,7 +49,9 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
   const shopProducts = prodcutsFromJSONFile;
   //for render cards from json file
   for (let productIndex = 0; productIndex < 4; productIndex++) {
-    shopCurrentResultsSpanTag.innerHTML = productIndex + 1;
+    shopCurrentResultsSpanTag
+      ? (shopCurrentResultsSpanTag.innerHTML = productIndex + 1)
+      : null;
     numbersOfCardInFilterResultContainer++;
     let productObject = new productModel(
       shopProducts[productIndex].id,
@@ -159,10 +166,11 @@ const shopProductCard = (productObject) => {
     if (productObject.productModelID in wishlistElements) {
       removeWishlistElementFromLocalStorage(productObject.productModelID);
       wishlistCounter(wishlistElements);
+      bottomNavWishlistbtnNumber(wishlistElements);
       addToWishlistIconAnchor.innerHTML =
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle  text-dark"></i>';
     } else {
-      console.log(productObject.productModelAmount);
+      console.log(`the amount is ${productObject.productModelAmount}`);
       saveToLocalStorage(
         productObject.productModelID,
         productObject.productModelFrontImage,
@@ -179,6 +187,7 @@ const shopProductCard = (productObject) => {
       );
       renderWishlistPopUp();
       wishlistCounter(wishlistElements);
+      bottomNavWishlistbtnNumber(wishlistElements);
       addToWishlistIconAnchor.innerHTML =
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-dark rounded-circle text-light"></i>';
     }
@@ -273,7 +282,9 @@ const shopProductCard = (productObject) => {
 
   parentColDiv.appendChild(parentResultCardDiv);
 
-  shopFilterProductResultsContainer.appendChild(parentColDiv);
+  shopFilterProductResultsContainer
+    ? shopFilterProductResultsContainer.appendChild(parentColDiv)
+    : null;
 };
 
 function renderMoreCards(prodcutsFromJSONFile) {
@@ -300,7 +311,8 @@ function renderMoreCards(prodcutsFromJSONFile) {
       shopProducts[numbersOfCardInFilterResultContainer].additionalInfo,
       shopProducts[numbersOfCardInFilterResultContainer].aboutBrand,
       shopProducts[numbersOfCardInFilterResultContainer].reviews,
-      shopProducts[numbersOfCardInFilterResultContainer].questions
+      shopProducts[numbersOfCardInFilterResultContainer].questions,
+      shopProducts[numbersOfCardInFilterResultContainer].amount
     );
     shopProductCard(productObject);
     if (
@@ -324,7 +336,9 @@ const renderPopUpProductCard = (wishlistFromLocalStorage) => {
   let wishlistKeys = Object.keys(wishlistFromLocalStorage);
   let wishlistLength = wishlistKeys.length;
   // console.log(shopWishlistPopupMsgContentContainer);
-  shopWishlistPopupMsgContentContainer.innerHTML = null;
+  shopWishlistPopupMsgContentContainer
+    ? (shopWishlistPopupMsgContentContainer.innerHTML = null)
+    : null;
   for (const elementKey in wishlistFromLocalStorage) {
     popUpProdcutCard(wishlistFromLocalStorage[elementKey]);
   }
@@ -355,14 +369,17 @@ const popUpProdcutCard = (storedWishlistelement) => {
     removeWishlistElementFromLocalStorage(storedWishlistelement.id);
     parentCardDiv.remove();
     wishlistCounter(wishlistElements);
+    bottomNavWishlistbtnNumber(wishlistElements);
     if (Object.keys(wishlistElements) == 0) {
       shopWishlistPopupMsgContentContainer.innerHTML = `<h4 class="text-center py-2 p-0">There are no products on the Wishlist!</h4>`;
     }
     let storedWishlistelementAnchor = document.getElementById(
       `add-to-wishlist-${storedWishlistelement.id}`
     );
-    storedWishlistelementAnchor.innerHTML =
-      '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>';
+    storedWishlistelementAnchor
+      ? (storedWishlistelementAnchor.innerHTML =
+          '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>')
+      : null;
     // console.log(storedWishlistelement);
   });
 
@@ -464,7 +481,9 @@ const popUpProdcutCard = (storedWishlistelement) => {
 
   parentCardDiv.appendChild(cardDiv);
 
-  shopWishlistPopupMsgContentContainer.appendChild(parentCardDiv);
+  shopWishlistPopupMsgContentContainer
+    ? shopWishlistPopupMsgContentContainer.appendChild(parentCardDiv)
+    : null;
 };
 
 const saveToLocalStorage = (
@@ -505,22 +524,6 @@ const saveToLocalStorage = (
   }
 };
 
-const exportFromLocalStorage = () => {
-  let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
-    ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
-    : 0;
-
-  if (localStorageDataLength != 0 || localStorageDataLength != null) {
-    emptyWishlist = false;
-    let storedUserWishlist = localStorage.getItem("User_Wishlist");
-    wishlistElements = { ...JSON.parse(storedUserWishlist) };
-    elementsLength = localStorageDataLength;
-  } else {
-    emptyWishlist = true;
-    console.log(emptyWishlist);
-  }
-};
-
 const removeWishlistElementFromLocalStorage = (elementID) => {
   delete wishlistElements[elementID];
   localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
@@ -532,20 +535,15 @@ const renderWishlistPopUp = () => {
   popup.classList.toggle("d-none");
 };
 
-const wishlistCounter = (wishlistElementsObject) => {
-  for (var i = 0; i < wishlistCounters.length; i++) {
-    wishlistCounters[i].textContent = Object.keys(
-      wishlistElementsObject
-    ).length;
-  }
-};
-
-exportFromLocalStorage();
 renderShopProductsResults(shopProductsFromJSONFile.products);
 renderPopUpProductCard(wishlistElements);
 
-loadMoreButton.addEventListener("click", loadMoreCards);
-closePopUpMsg.addEventListener("click", renderWishlistPopUp);
-continueShoppingBtn.addEventListener("click", renderWishlistPopUp);
+loadMoreButton ? loadMoreButton.addEventListener("click", loadMoreCards) : null;
+closePopUpMsg
+  ? closePopUpMsg.addEventListener("click", renderWishlistPopUp)
+  : null;
+continueShoppingBtn
+  ? continueShoppingBtn.addEventListener("click", renderWishlistPopUp)
+  : null;
 wishlistCounter(wishlistElements);
 // console.log(wishlistElements);

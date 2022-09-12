@@ -1,23 +1,12 @@
-// import { wishlistElements } from "./shopePageScript.js";
+import {
+  wishlistElements,
+  bottomNavWishlistbtnNumber,
+  wishlistCounter,
+  headeraddToCardCounter,
+} from "./script.js";
 
 const wishlistContentDiv = document.getElementById("wishlist-content");
-let elementsFromLocalStorage = {};
-const wishlistCounters = document.getElementsByClassName(
-  "wishlist-product-number"
-);
-
-const exportFromLocalStorage = () => {
-  let localStorageDataLength = Object.keys(
-    JSON.parse(localStorage.getItem("User_Wishlist"))
-  ).length;
-
-  if (localStorageDataLength != 0 || localStorageDataLength != null) {
-    let storedUserWishlist = localStorage.getItem("User_Wishlist");
-    elementsFromLocalStorage = { ...JSON.parse(storedUserWishlist) };
-  } else {
-    console.log("No Data");
-  }
-};
+let elementsFromLocalStorage = { ...wishlistElements };
 
 const renderWishlistPageProductCard = (wishlistFromLocalStorage) => {
   let wishlistKeys = Object.keys(wishlistFromLocalStorage);
@@ -52,6 +41,8 @@ const wishlistPageProdcutCard = (storedWishlistelement) => {
   cancelColDiv.addEventListener("click", () => {
     removeWishlistPageElementFromLocalStorage(storedWishlistelement.id);
     parentCardDiv.remove();
+    bottomNavWishlistbtnNumber(elementsFromLocalStorage);
+    headeraddToCardCounter(elementsFromLocalStorage);
     wishlistCounter(elementsFromLocalStorage);
     if (Object.keys(elementsFromLocalStorage) == 0) {
       wishlistContentDiv.innerHTML = `<h4 class="text-center py-2 p-0">There are no products on the Wishlist!</h4>`;
@@ -161,14 +152,6 @@ const removeWishlistPageElementFromLocalStorage = (elementID) => {
   );
 };
 
-const wishlistCounter = (wishlistElementsObject) => {
-  for (var i = 0; i < wishlistCounters.length; i++) {
-    wishlistCounters[i].textContent = Object.keys(
-      wishlistElementsObject
-    ).length;
-  }
-};
-exportFromLocalStorage();
 renderWishlistPageProductCard(elementsFromLocalStorage);
 wishlistCounter(elementsFromLocalStorage);
 if (Object.keys(elementsFromLocalStorage) == 0) {

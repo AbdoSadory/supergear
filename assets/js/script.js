@@ -121,3 +121,65 @@ var swiper = new Swiper(".mySwiper5", {
     },
   },
 });
+
+// =====================================================
+// =====================================================
+// =====================================================
+// =====================================================
+export let wishlistElements = {};
+export let elementsLength;
+export let productsInCard = {};
+const exportFromLocalStorage = () => {
+  let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
+    ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
+    : 0;
+
+  if (localStorageDataLength != 0 || localStorageDataLength != null) {
+    let storedUserWishlist = localStorage.getItem("User_Wishlist");
+    wishlistElements = { ...JSON.parse(storedUserWishlist) };
+    elementsLength = localStorageDataLength;
+  } else {
+    console.log(`There's no data in localStorage`);
+  }
+};
+
+const bottomNavWishlistbtn = document.querySelector(
+  ".bottom-nav .container-fluid .col:nth-child(3) a p"
+);
+const bottomNavaddToCardbtn = document.querySelector(
+  ".bottom-nav .container-fluid .col:nth-child(4) a p"
+);
+const headeraddToCardbtns = document.querySelectorAll(".add-to-card-counter");
+const wishlistCounters = document.getElementsByClassName(
+  "wishlist-product-number"
+);
+export function bottomNavWishlistbtnNumber(StoredElementsList) {
+  bottomNavWishlistbtn.setAttribute(
+    "wishlist-length",
+    Object.keys(StoredElementsList).length
+  );
+}
+export function bottomNavaddToCardbtnNumber(StoredElementsList) {
+  bottomNavaddToCardbtn.setAttribute(
+    "add-to-card-length",
+    Object.keys(StoredElementsList).length
+  );
+}
+
+export const headeraddToCardCounter = (CardElementsObject) => {
+  for (var i = 0; i < headeraddToCardbtns.length; i++) {
+    headeraddToCardbtns[i].textContent = Object.keys(CardElementsObject).length;
+  }
+};
+export const wishlistCounter = (wishlistElementsObject) => {
+  for (var i = 0; i < wishlistCounters.length; i++) {
+    wishlistCounters[i].textContent = Object.keys(
+      wishlistElementsObject
+    ).length;
+  }
+};
+exportFromLocalStorage();
+bottomNavWishlistbtnNumber(wishlistElements);
+bottomNavaddToCardbtnNumber(wishlistElements);
+headeraddToCardCounter(wishlistElements);
+wishlistCounter(wishlistElements);

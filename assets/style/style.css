@@ -1247,7 +1247,7 @@ body {
 .bottom-nav .container-fluid .col:nth-child(3) a p::before,
 .bottom-nav .container-fluid .col:nth-child(4) a p::before {
   z-index: 9999;
-  content: "0";
+  content: attr(wishlist-length);
   color: white;
   background-color: red;
   border-radius: 50%;
@@ -1256,4 +1256,7 @@ body {
   position: absolute;
   top: 8px;
   left: 51%;
+}
+.bottom-nav .container-fluid .col:nth-child(4) a p::before {
+  content: attr(add-to-card-length);
 }

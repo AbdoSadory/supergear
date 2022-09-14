@@ -1101,18 +1101,20 @@
                         <li class="d-inline me-3">
                             <a href="index.html" class="text-decoration-none text-dark font-15px">home</a>
                         </li>
-                        <li class="d-inline treeRoute-products-li ms-3">
+                        <li class="d-inline treeRoute-products-li mx-3">
                             <span class="text-dark font-15px treeRoute-products-li-span">products</span>
+                        </li>
+                        <li class="d-inline treeRoute-productDetails-li mx-3">
+                            <span class="text-dark font-15px treeRoute-productDetails-li-span">product Details</span>
                         </li>
                     </ul>
                 </section>
                 <section class="prodcutDetails m-0 mt-5 p-0 w-100">
                     <div class="container-fluid m-0 p-0">
-                        <div
-                            class="prodcutDetails-content-container m-0 p-0  border border-2  w-100 row justify-content-between">
+                        <div class="prodcutDetails-content-container m-0 p-0   w-100 row justify-content-between">
+                            <!-- left slider -->
                             <div class="col-12 col-md-6 m-0 p-0">
-                                <div
-                                    class="prodcutDetails-left-slider  mb-3 m-lg-0 m-auto border border-3 border-dark rounded-3">
+                                <div class="prodcutDetails-left-slider  mb-3 m-lg-0 m-auto rounded-3">
                                     <div class="swiper-slider-container  row d-flex justify-content-start m-0 p-0">
                                         <div
                                             class="swiper mySwiper col-2 swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-watch-progress swiper-backface-hidden swiper-thumbs">
@@ -1194,12 +1196,21 @@
 
                                 </div>
                             </div>
+                            <!-- right details -->
                             <div class="col-12 col-md-6 m-0 p-0 border border-2">
-                                <div class="prodcutDetails-right ">
+                                <div class="prodcutDetails-right m-0 p-0">
+                                    <!-- Discount -->
+                                    <div class="discount-container m-0 mb-4 p-0">
+                                        <span
+                                            class="text-light bg-danger text-capitalize fs-6 rounded-pill py-1 px-2">-3%</span>
+                                    </div>
+                                    <!-- Title -->
                                     <div
-                                        class="prodcutDetails-title-container row justify-content-between align-items-center m-0 p-0">
+                                        class="prodcutDetails-title-container row justify-content-between align-items-center m-0 mb-4 p-0">
+
                                         <div class="productDetails-title col-10 m-0 p-0">
-                                            <h3>ZY418 Ultra-Thin Sport MP3 MP4 Music Player</h3>
+                                            <h3 class="productDetails-title-h3">ZY418 Ultra-Thin Sport MP3 MP4 Music
+                                                Player</h3>
                                         </div>
                                         <div
                                             class="productDetails-addToWishlist col-2 m-0 p-0 text-end border border-2">
@@ -1215,17 +1226,117 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Price -->
                                     <div
-                                        class="prodcutDetails-price-reviews-container row justify-content-between align-items-center m-0 p-0 border border-2">
+                                        class="prodcutDetails-price-reviews-container row justify-content-between align-items-center m-0 mb-4 p-0 ">
+                                        <div class="col m-0 p-0 text-start">
+                                            <span class="prodcutDetails-price-span align-self-center">$15.90</span>
+                                        </div>
+                                        <div class="col m-0 p-0 text-end align-self-center">
+                                            <span class="prodcutDetails-reviews-span">
+                                                <i class="fa-regular fa-star m-0 p-0"></i>
+                                                <i class="fa-regular fa-star m-0 p-0"></i>
+                                                <i class="fa-regular fa-star m-0 p-0"></i>
+                                                <i class="fa-regular fa-star m-0 p-0"></i>
+                                                <i class="fa-regular fa-star m-0 p-0"></i>
+                                            </span>
+                                            <span class="prodcutDetails-add-review-span">
+                                                <a href="#"
+                                                    class="prodcutDetails-add-review-span-btn text-decoration-none text-dark btn-hover text-capitalize">add
+                                                    review</a>
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="prodcutDetails-currentViews-container"></div>
-                                    <div class="prodcutDetails-colors-container"></div>
-                                    <div class="prodcutDetails-quantity-addToCard-container"></div>
-                                    <div class="prodcutDetails-buyNow-container"></div>
-                                    <div class="prodcutDetails-compare-ask-share-container"></div>
-                                    <div class="prodcutDetails-estimatedDelivery-container"></div>
-                                    <div class="prodcutDetails-freeShipping-container"></div>
-                                    <div class="prodcutDetails-paymentWays-container"></div>
+                                    <!-- Views -->
+                                    <div class="prodcutDetails-currentViews-container  m-0 mb-4 p-0">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span> 25 people are viewing this right now</span>
+                                    </div>
+                                    <!-- Colors -->
+                                    <div class="prodcutDetails-colors-container  m-0 mb-4 p-0">
+                                        <h4 class="fs-6 fw-bold text-capitalize ">color:</h4>
+                                        <div class="color-btns row justify-content-start m-0 p-0">
+                                            <div class="color-btn m-0 mb-2 me-3 p-0">
+                                                <div class="color-btn-item color-btn-grassGreen rounded-circle m-0 p-0 row"
+                                                    data-tooltip="grass green">
+                                                    <a href="#" class="text-decoration-none"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Sizes -->
+                                    <div class="prodcutDetails-sizes-container m-0 mb-4 p-0">
+                                        <h4 class="fs-6 fw-bold text-capitalize">size:</h4>
+                                        <div class="size-btns ">
+                                            <a href="#"
+                                                class="size-btn d-inline-block text-decoration-none fs-5 py-1 mt-1 px-2 border border-2  rounded-3">10
+                                                inch</a>
+                                            <a href="#"
+                                                class="size-btn d-inline-block text-decoration-none fs-5 py-1 mt-1 px-2 border border-2 rounded-3">13.5
+                                                inch</a>
+                                            <a href="#"
+                                                class="size-btn d-inline-block text-decoration-none fs-5 py-1 mt-1 px-2 border border-2 rounded-3"><span
+                                                    class="text-uppercase">gts</span> 2 mini</a>
+                                        </div>
+                                    </div>
+                                    <!-- Quantity & Add To Card -->
+                                    <div class="prodcutDetails-quantity-addToCard-container m-0 mb-4 p-0 ">
+                                        <h4 class="fs-6 fw-bold text-capitalize">quantity:</h4>
+                                        <div
+                                            class="quantity-addToCard-container row justify-content-between align-items-center m-0 p-0">
+                                            <div
+                                                class="quantity-counter-container rounded-pill overflow-hidden m-0 p-0 fs-5">
+                                                <div
+                                                    class="counter m-0 p-0 d-flex justify-content-between align-items-center">
+                                                    <span class="minus col-3 text-center py-2" onclick="">-</span>
+                                                    <span class="number col text-center py-2">01</span>
+                                                    <span class="plus col-3 text-center py-2" onclick="">+</span>
+                                                </div>
+                                            </div>
+                                            <div class="add-To-Card-btn-container col-9 m-0 p-0 fs-5 ">
+                                                <button
+                                                    class="add-To-Card-btn w-100 m-0 py-2 text-capitalize fw-bold  rounded-pill">add
+                                                    to
+                                                    card</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Buy Now -->
+                                    <div class="prodcutDetails-buyNow-container m-0 mb-1 p-0 fs-5">
+                                        <button
+                                            class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
+                                            now</button>
+                                    </div>
+                                    <!-- compare-Ask-Share -->
+                                    <div
+                                        class="prodcutDetails-compare-ask-share-container m-0 mb-3 p-0 py-3 border-bottom border-2">
+                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize me-5">
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i> compare
+                                        </a>
+                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize me-5">
+                                            <i class="fa-solid fa-question"></i> ask a question
+                                        </a>
+                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize">
+                                            <i class="fa-solid fa-share-nodes"></i> share
+                                        </a>
+                                    </div>
+                                    <div class=" prodcutDetails-estimatedDelivery-container mb-2">
+                                        <i class="fa-solid fa-truck"></i>
+                                        <span class="text-capitalize fw-bold">estimated delivery:</span>
+                                        <span class="estimatedDelivery-date text-capitalize">13 - 20 Sep,
+                                            2022</span>
+                                    </div>
+                                    <div class="prodcutDetails-freeShipping-container mb-2">
+                                        <i class="fa-solid fa-box"></i>
+                                        <span class="text-capitalize fw-bold">free shipping & returns:</span>
+                                        <span class="estimatedDelivery-date text-capitalize">On all orders over
+                                            $200.00</span>
+                                    </div>
+                                    <div class="prodcutDetails-paymentWays-container p-3 text-center align-self-center">
+                                        <img src="assets/images/product-trust-badge.png" alt="product-trust-badge"
+                                            class="w-50">
+                                        <p class="p-0 m-0">Guaranteed safe & secure checkout</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1335,7 +1446,7 @@
                 </section>
             </div>
         </main>
-        <!-- footer -->
+        <!-- Footer -->
         <footer class="main-footer  mt-3  p-0 px-3">
             <div class="container-fluid m-0 p-0">
                 <section class="footer-lists-container container-xl p-0 pb-5 ">
@@ -1345,7 +1456,7 @@
                             <!-- 1 -->
                             <div class="footer-list-container col-12 col-md-6 m-0 p-0">
                                 <a role="button"
-                                    class="text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
+                                    class="footer-list-container-header text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
                                     data-bs-toggle="collapse" href="#findItFast" aria-expanded="false"
                                     aria-controls="findItFast">
                                     <div class="row justify-content-between ">
@@ -1386,7 +1497,7 @@
                             <!-- 2 -->
                             <div class="footer-list-container col-12 col-md-6 m-0 p-0">
                                 <a role="button"
-                                    class="text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
+                                    class="footer-list-container-header text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
                                     data-bs-toggle="collapse" href="#customerCare" aria-expanded="false"
                                     aria-controls="customerCare">
                                     <div class="row justify-content-between">
@@ -1428,7 +1539,7 @@
                             <!-- 3 -->
                             <div class="footer-list-container col-12 col-md-6 m-0 p-0">
                                 <a role="button"
-                                    class="text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
+                                    class="footer-list-container-header text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
                                     data-bs-toggle="collapse" href="#otherBusiness" aria-expanded="false"
                                     aria-controls="otherBusiness">
                                     <div class="row justify-content-between  ">
@@ -1467,7 +1578,7 @@
                             <!-- 4 -->
                             <div class="footer-list-container col-12 col-md-6 m-0 p-0">
                                 <a role="button"
-                                    class="text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
+                                    class="footer-list-container-header text-dark fw-bold border-0 bg-white mb-3 text-uppercase w-100 text-decoration-none"
                                     data-bs-toggle="collapse" href="#newsLetter" aria-expanded="false"
                                     aria-controls="newsLetter">
                                     <div class="row justify-content-between">

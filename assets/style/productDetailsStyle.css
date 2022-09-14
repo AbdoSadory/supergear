@@ -1,3 +1,17 @@
+@import "./style.css";
+* {
+  font-family: GeneralSansRegular;
+}
+.treeRoute-productDetails-li {
+  position: relative;
+}
+.treeRoute-productDetails-li-span::before {
+  content: ">";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
 .prodcutDetails-left-slider .swiper {
   margin: auto;
 }
@@ -127,6 +141,10 @@
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
+.productDetails-title-h3 {
+  font-weight: 1000;
+  font-family: "GeneralSansMedium";
+}
 .productDetails-addToWishlist .add-to-wishlist {
   position: relative;
 }
@@ -148,4 +166,67 @@
 .productDetails-addToWishlist .add-to-wishlist:hover i {
   color: white !important;
   background-color: #212529 !important;
+}
+
+.prodcutDetails-price-span {
+  font-size: 25px;
+  font-weight: 600;
+}
+.prodcutDetails-add-review-span-btn:hover {
+  color: var(--darker-gray) !important;
+}
+.prodcutDetails-add-review-span-btn::before {
+  background-color: var(--black);
+}
+
+.quantity-counter-container {
+  background-color: var(--dark-gray);
+  min-width: 135px;
+  max-width: 138px;
+}
+.counter .minus,
+.counter .plus {
+  transition: 0.3s all ease-in-out;
+}
+.counter .minus:hover,
+.counter .plus:hover {
+  color: var(--darker-gray);
+}
+.add-To-Card-btn {
+  background-color: var(--dark-gray);
+  border: none;
+  outline: 2px solid transparent !important;
+  transition: 0.3s all ease-in-out;
+}
+
+.add-To-Card-btn:hover {
+  background-color: var(--black);
+  color: var(--light-gray);
+  outline: 4px solid var(--black) !important;
+}
+
+.buyNow-btn {
+  background-color: var(--black);
+  color: var(--light-gray);
+  outline: 2px solid transparent !important;
+  transition: 0.3s all ease-in-out;
+}
+
+.buyNow-btn:hover {
+  outline: 4px solid var(--black) !important;
+}
+
+.compare-link {
+  transition: 0.3s all ease-in-out;
+  color: var(--black) !important;
+}
+.compare-link:hover {
+  color: var(--darker-gray) !important;
+}
+.estimatedDelivery-date {
+  color: var(--darker-gray);
+}
+
+.prodcutDetails-paymentWays-container {
+  background-color: var(--light-gray);
 }

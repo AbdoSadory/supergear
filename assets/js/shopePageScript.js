@@ -70,7 +70,8 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
       shopProducts[productIndex].aboutBrand,
       shopProducts[productIndex].reviews,
       shopProducts[productIndex].questions,
-      shopProducts[productIndex].amount
+      shopProducts[productIndex].amount,
+      shopProducts[productIndex].relatedProducts
     );
     shopProductCard(productObject);
   }
@@ -183,7 +184,8 @@ const shopProductCard = (productObject) => {
         productObject.productModelAboutBrand,
         productObject.productModelReviews,
         productObject.productModelQuestions,
-        productObject.productModelAmount
+        productObject.productModelAmount,
+        productObject.productModelRelatedProducts
       );
       renderWishlistPopUp();
       wishlistCounter(wishlistElements);
@@ -312,7 +314,8 @@ function renderMoreCards(prodcutsFromJSONFile) {
       shopProducts[numbersOfCardInFilterResultContainer].aboutBrand,
       shopProducts[numbersOfCardInFilterResultContainer].reviews,
       shopProducts[numbersOfCardInFilterResultContainer].questions,
-      shopProducts[numbersOfCardInFilterResultContainer].amount
+      shopProducts[numbersOfCardInFilterResultContainer].amount,
+      shopProducts[numbersOfCardInFilterResultContainer].relatedProducts
     );
     shopProductCard(productObject);
     if (
@@ -498,7 +501,8 @@ const saveToLocalStorage = (
   wishlistElementAboutBrand,
   wishlistElementReviews,
   wishlistElementQuestions,
-  wishlistElementAmount
+  wishlistElementAmount,
+  wishlistElementRelatedProducts
 ) => {
   const currentDate = new Date().toString();
 
@@ -517,6 +521,7 @@ const saveToLocalStorage = (
       reviews: wishlistElementReviews,
       questions: wishlistElementQuestions,
       amount: wishlistElementAmount,
+      relatedProducts: wishlistElementRelatedProducts,
     };
     wishlistElements[`${wishlistElementID}`] = choosenElement;
     // console.log(wishlistElements);

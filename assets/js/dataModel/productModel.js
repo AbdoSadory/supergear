@@ -16,7 +16,8 @@ export default class ProductModel {
     aboutBrand,
     reviews,
     questions,
-    amount
+    amount,
+    relatedProducts
   ) {
     this.productModelID = id;
     this.productModelFrontImage = frontImage;
@@ -35,5 +36,6 @@ export default class ProductModel {
     this.productModelReviews = reviews;
     this.productModelQuestions = questions;
     this.productModelAmount = amount;
+    this.productModelRelatedProducts = relatedProducts;
   }
 }

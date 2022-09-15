@@ -184,6 +184,9 @@
   min-width: 135px;
   max-width: 138px;
 }
+.card-product-details-quantity-counter-container {
+  background-color: var(--dark-gray);
+}
 .counter .minus,
 .counter .plus {
   transition: 0.3s all ease-in-out;
@@ -198,13 +201,21 @@
   outline: 2px solid transparent !important;
   transition: 0.3s all ease-in-out;
 }
-
+.remove-btn {
+  background-color: transparent;
+  border: none;
+  transition: 0.3s all ease-in-out;
+  font-size: 15px;
+  text-decoration: underline;
+}
 .add-To-Card-btn:hover {
   background-color: var(--black);
   color: var(--light-gray);
   outline: 4px solid var(--black) !important;
 }
-
+.remove-btn:hover {
+  color: var(--darker-gray);
+}
 .buyNow-btn {
   background-color: var(--black);
   color: var(--light-gray);
@@ -229,4 +240,98 @@
 
 .prodcutDetails-paymentWays-container {
   background-color: var(--light-gray);
+}
+
+.relatedProducts-slider .swiper,
+.recentlyViewed-slider .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.relatedProducts-slider .swiper-slide,
+.recentlyViewed-slider .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.relatedProducts-slider .swiper-slide img,
+.recentlyViewed-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.relatedProducts-card,
+.recentlyViewed-card {
+  border: 2px solid transparent;
+  transition: 0.2s all ease-in-out;
+}
+.relatedProducts-card:hover,
+.recentlyViewed-card:hover {
+  border-color: black;
+}
+.relatedProducts-card-img,
+.recentlyViewed-card-img {
+  position: relative;
+}
+
+.relatedProducts-card-img:hover .popup,
+.recentlyViewed-card-img:hover .popup {
+  left: -5%;
+}
+.relatedProducts-card-img:hover .main-img,
+.recentlyViewed-card-img:hover .main-img {
+  opacity: 0 !important;
+}
+.relatedProducts-card-img:hover .back-img,
+.recentlyViewed-card-img:hover .back-img {
+  transform: scale(1.16);
+  opacity: 1;
+}
+
+.relatedProducts-card-content h3,
+.recentlyViewed-card-content h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+.relatedProducts-card .rating,
+.recentlyViewed-card .rating {
+  font-size: 12px;
+}
+.relatedProducts-card:hover .readMore,
+.recentlyViewed-card:hover .readMore {
+  visibility: visible;
+}
+.relatedProducts-card .type a,
+.recentlyViewed-card .type a {
+  transition: 0.2s all ease-in-out;
+}
+.relatedProducts-card .type a:hover,
+.recentlyViewed-card .type a:hover {
+  color: var(--black);
+}
+
+.card-product-details-container .card-product-details-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.offcanvas-body .card-products {
+  height: 415px;
+  overflow: hidden;
+  overflow-y: scroll;
 }

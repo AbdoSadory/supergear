@@ -673,7 +673,7 @@
                                 </svg>
                             </button>
                         </div>
-
+                        <!-- offcanvasRight for search in small screens -->
                         <div class="offcanvas offcanvas-end" data-bs-scroll="false" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <!-- header -->
@@ -841,6 +841,7 @@
                         </div>
 
                         <!-- ===offcanvas-end=== -->
+                        <!-- ===offcanvasRight2 for card=== -->
                         <div class="offcanvas offcanvas-end" data-bs-scroll="false" data-bs-backdrop="false"
                             tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
                             <!-- header -->
@@ -852,15 +853,14 @@
                                     aria-label="Close"></button>
                             </div>
                             <!-- body -->
-                            <div class="offcanvas-body text-center">
+                            <div class="offcanvas-body text-center border border-2 border-danger">
                                 <p class="text-dark fw-bold font-15px">🔥 These products are limited, checkout within
                                     00m 00s
                                 </p>
                                 <p class="text-dark fw-bold font-15px">Buy $200.00 more to enjoy <span
-                                        class="fw-bolder">FREE
-                                        Shipping</span></p>
+                                        class="fw-bolder">FREE Shipping</span></p>
                                 <div class="yellow-star w-100"></div>
-                                <div class="offcanvas-right-img w-75 m-auto p-0">
+                                <!-- <div class="offcanvas-right-img w-75 m-auto p-0">
                                     <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
                                 </div>
                                 <p class="fw-bold fs-6">
@@ -868,8 +868,66 @@
                                 </p>
                                 <p class="text-gray fw-bold font-15px">
                                     You may check out all the available products and buy some in the shop. </p>
-                                <a href="#" class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to
-                                    shop</a>
+                                <a href="#" aria-label="Close" data-bs-dismiss="offcanvas" type="button"
+                                    class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to
+                                    shop</a> -->
+                                <div class="card-products w-100 m-0 my-3 p-0 border border-2 border-dark">
+                                    <div class="card-product w-100 m-0 mb-3 p-0 ">
+                                        <div class="row justify-content-between align-items-start">
+                                            <div class="card-product-img-container col-4 border border-1">
+                                                <img src="assets/images/json/1 (1).jpg" alt="blah blah" class="w-100">
+                                            </div>
+                                            <div class="card-product-details-container col text-start">
+                                                <h3 class="card-product-details-title m-0 mb-2">blah blah blah blah blah
+                                                    blah
+                                                    blah</h3>
+                                                <p class="card-product-details-color m-0 mb-2">color: <span>red</span>
+                                                </p>
+                                                <p class="card-product-details-price m-0 mb-2">$858</p>
+                                                <div
+                                                    class="card-product-details-counter-container row justify-content-start align-items-center m-0 p-0">
+                                                    <div
+                                                        class="card-product-details-quantity-counter-container col-4 rounded-pill overflow-hidden m-0 me-3 p-0 fs-6">
+                                                        <div
+                                                            class="counter m-0 p-0 d-flex justify-content-between align-items-center">
+                                                            <span class="minus col-3 text-center py-2"
+                                                                onclick="">-</span>
+                                                            <span class="number col text-center py-2">01</span>
+                                                            <span class="plus col-3 text-center py-2"
+                                                                onclick="">+</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="card-product-details-remove-btn-container col-4 m-0 p-0 ">
+                                                        <button
+                                                            class="remove-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">remove</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer w-100 m-0  p-0 border border-2 border-dark">
+                                    <div class="card-footer-nav-container">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col m-0 p-0 border-end border-1">
+                                                <a href="wishlistPage.html" class="text-decoration-none text-dark">
+                                                    <p class="m-0 px-0 py-3">
+                                                        <svg class="bottom-nav-icon" width="22" height="22"
+                                                            viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M20.425 7.71875C20.9458 7.77083 21.2844 8.04427 21.4406 8.53906C21.5969 9.03385 21.4927 9.46354 21.1281 9.82812L16.9875 13.8516L17.9641 19.5547C18.0422 20.0495 17.8729 20.4401 17.4562 20.7266C17.0396 21.0391 16.6099 21.0781 16.1672 20.8438L11.05 18.1875L5.93281 20.8438C5.4901 21.1042 5.06042 21.0781 4.64375 20.7656C4.22708 20.4531 4.05781 20.0495 4.13594 19.5547L5.1125 13.8516L0.971875 9.82812C0.607292 9.46354 0.503125 9.03385 0.659375 8.53906C0.815625 8.04427 1.15417 7.77083 1.675 7.71875L7.37812 6.85938L9.91719 1.70312C10.1516 1.23438 10.5292 1 11.05 1C11.5708 1 11.9484 1.23438 12.1828 1.70312L14.7219 6.85938L20.425 7.71875ZM14.9953 13.1875L18.9016 9.35938L13.4719 8.57812L11.05 3.65625L8.62812 8.57812L3.19844 9.35938L7.10469 13.1875L6.20625 18.6172L11.05 16.0391L15.8937 18.6172L14.9953 13.1875Z"
+                                                                fill=""></path>
+                                                        </svg>
+                                                    </p>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1109,6 +1167,7 @@
                         </li>
                     </ul>
                 </section>
+                <!-- productDetails -->
                 <section class="prodcutDetails m-0 mt-5 p-0 w-100">
                     <div class="container-fluid m-0 p-0">
                         <div class="prodcutDetails-content-container m-0 p-0   w-100 row justify-content-between">
@@ -1197,7 +1256,7 @@
                                 </div>
                             </div>
                             <!-- right details -->
-                            <div class="col-12 col-md-6 m-0 p-0 border border-2">
+                            <div class="col-12 col-md-6 m-0 p-0">
                                 <div class="prodcutDetails-right m-0 p-0">
                                     <!-- Discount -->
                                     <div class="discount-container m-0 mb-4 p-0">
@@ -1212,8 +1271,7 @@
                                             <h3 class="productDetails-title-h3">ZY418 Ultra-Thin Sport MP3 MP4 Music
                                                 Player</h3>
                                         </div>
-                                        <div
-                                            class="productDetails-addToWishlist col-2 m-0 p-0 text-end border border-2">
+                                        <div class="productDetails-addToWishlist col-2 m-0 p-0 text-end">
                                             <div class="add-to-wishlist-container m-0 my-2 p-0">
                                                 <a href="#" class="add-to-wishlist text-decoration-none m-0 p-0">
                                                     <span
@@ -1285,7 +1343,7 @@
                                         <div
                                             class="quantity-addToCard-container row justify-content-between align-items-center m-0 p-0">
                                             <div
-                                                class="quantity-counter-container rounded-pill overflow-hidden m-0 p-0 fs-5">
+                                                class="quantity-counter-container rounded-pill overflow-hidden m-0 me-3 p-0 fs-6">
                                                 <div
                                                     class="counter m-0 p-0 d-flex justify-content-between align-items-center">
                                                     <span class="minus col-3 text-center py-2" onclick="">-</span>
@@ -1293,16 +1351,17 @@
                                                     <span class="plus col-3 text-center py-2" onclick="">+</span>
                                                 </div>
                                             </div>
-                                            <div class="add-To-Card-btn-container col-9 m-0 p-0 fs-5 ">
+                                            <div class="add-To-Card-btn-container col m-0 p-0 fs-6 ">
                                                 <button
-                                                    class="add-To-Card-btn w-100 m-0 py-2 text-capitalize fw-bold  rounded-pill">add
-                                                    to
-                                                    card</button>
+                                                    class="add-To-Card-btn w-100 m-0 py-2 text-capitalize fw-bold  rounded-pill"
+                                                    type="button" data-bs-toggle="offcanvas"
+                                                    data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">add
+                                                    to card</button>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Buy Now -->
-                                    <div class="prodcutDetails-buyNow-container m-0 mb-1 p-0 fs-5">
+                                    <div class="prodcutDetails-buyNow-container m-0 mb-1 p-0 fs-6">
                                         <button
                                             class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
                                             now</button>
@@ -1320,18 +1379,21 @@
                                             <i class="fa-solid fa-share-nodes"></i> share
                                         </a>
                                     </div>
+                                    <!-- estimatedDelivery -->
                                     <div class=" prodcutDetails-estimatedDelivery-container mb-2">
                                         <i class="fa-solid fa-truck"></i>
                                         <span class="text-capitalize fw-bold">estimated delivery:</span>
                                         <span class="estimatedDelivery-date text-capitalize">13 - 20 Sep,
                                             2022</span>
                                     </div>
+                                    <!-- freeShipping -->
                                     <div class="prodcutDetails-freeShipping-container mb-2">
                                         <i class="fa-solid fa-box"></i>
                                         <span class="text-capitalize fw-bold">free shipping & returns:</span>
                                         <span class="estimatedDelivery-date text-capitalize">On all orders over
                                             $200.00</span>
                                     </div>
+                                    <!-- paymentWays -->
                                     <div class="prodcutDetails-paymentWays-container p-3 text-center align-self-center">
                                         <img src="assets/images/product-trust-badge.png" alt="product-trust-badge"
                                             class="w-50">
@@ -1342,6 +1404,7 @@
                         </div>
                     </div>
                 </section>
+                <!-- productDetails-more -->
                 <section class="productDetails-more m-0 mt-5 p-0 w-100">
                     <div class="container-fluid m-0 p-0">
                         <div class="productDetails-more-content">
@@ -1391,7 +1454,972 @@
                         </div>
                     </div>
                 </section>
+                <!-- productDetails-relatedProducts -->
+                <section class="productDetails-relatedProducts m-0 mt-5 p-0 w-100">
+                    <div class="w-100 m-0 p-0 text-center">
+                        <h2 class="text-capitalize fw-bold">related products</h2>
+                    </div>
+                    <div class="relatedProducts-content-container m-0 p-0 w-100 row justify-content-between">
+                        <div class="relatedProducts-slider w-100 m-0 p-0">
+                            <div class="swiper mySwiper6">
+                                <div class="swiper-wrapper">
+                                    <!-- 1 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img overflow-hidden">
+                                                <a href="#" class="text-decoration-none text-dark">
+                                                    <img src="assets/images/section6/10025.jpg" class="main-img"
+                                                        alt="Klipsch R-120SW Powerful Detailed Home Speaker Unit">
+                                                    <img src="assets/images/section6/10026.jpg" class="back-img "
+                                                        alt="Klipsch R-120SW Powerful Detailed Home Speaker">
+                                                    <div
+                                                        class="note text-uppercase fw-bold font-15px text-light bg-dark rounded-pill m-0 py-1 px-2">
+                                                        sold out
+                                                    </div>
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">bluetooth
+                                                        speakers</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Klipsch
+                                                        R-120SW Powerful Detailed Home Speaker – Unit</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class="text-decoration-line-through text-gray">$139.00</span>
+                                                    <span class=" text-dark fw-bold">$129.00</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">read
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10071.jpg" class="main-img"
+                                                        alt="MIJIA Robot Vacuum 1T">
+                                                    <img src="assets/images/section6/10072.jpg" class="back-img "
+                                                        alt="MIJIA Robot Vacuum 1T">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">robot clean</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">MIJIA Robot
+                                                        Vacuum 1T Sweeping Wet
+                                                        Mopping
+                                                        Cleaner For Home Dust Sterilize 3000PA Cyclone Suction WIFI APP
+                                                        Smart Planned</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$579.99</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10073.jpg" class="main-img"
+                                                        alt="Teclast M40 10.1 inch Android 10.0 Tablet">
+                                                    <img src="assets/images/section6/10074.jpg" class="back-img "
+                                                        alt="Teclast M40 10.1 inch Android 10.0 Tablet">
+                                                    <div
+                                                        class="note text-uppercase fw-bold font-15px text-light bg-danger rounded-pill m-0 py-1 px-3">
+                                                        -6%
+                                                    </div>
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">tablets</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Teclast M40 10.1
+                                                        inch Android 10.0
+                                                        Tablet
+                                                        PC
+                                                        UNISOC T618 Octa Core 6GB RAM 128GB ROM 4G LTE Full HD</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class="text-decoration-line-through text-gray">$307.60</span>
+                                                    <span class=" text-dark fw-bold">$285.95</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10075-1.jpg" class="main-img"
+                                                        alt="UMIDIGI Power 3 6150mAh">
+                                                    <img src="assets/images/section6/10075.jpg" class="back-img "
+                                                        alt="UMIDIGI Power 3 6150mAh">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">featured
+                                                        phones</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">UMIDIGI Power 3
+                                                        6150mAh 6.53 inch
+                                                        FHD+
+                                                        4GB
+                                                        Global Version Helio P60 64GB ROM Quad Camera Android 10 Face ID
+                                                        Smartphone</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$219.90</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10076.jpg" class="main-img"
+                                                        alt="ZY418 Ultra-thin Sport MP3">
+                                                    <img src="assets/images/section6/10077.jpg" class="back-img "
+                                                        alt="ZY418 Ultra-thin Sport MP3">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">mp3 players</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">ZY418 Ultra-thin
+                                                        Sport MP3 MP4 Music
+                                                        Player</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$45.99</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 6 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10062.jpg" class="main-img"
+                                                        alt="Soundcore Flare Mini Bluetooth Speaker Outdoor Bluetooth Speaker IPX7 Waterproof">
+                                                    <img src="assets/images/section6/10063.jpg" class="back-img "
+                                                        alt="Soundcore Flare Mini Bluetooth Speaker Outdoor Bluetooth Speaker IPX7 Waterproof">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">bluetooth
+                                                        speakers</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Soundcore Flare
+                                                        Mini Bluetooth
+                                                        Speaker
+                                                        Outdoor Bluetooth Speaker IPX7 Waterproof</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$77.08</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 7 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10064.jpg" class="main-img"
+                                                        alt="DIDSeth Pan Tilt Security Light Camera Full HD 1080P Wireless Wi-Fi IP Camera Home Dome Surveillance Cameras">
+                                                    <img src="assets/images/section6/10065.jpg" class="back-img "
+                                                        alt="DIDSeth Pan Tilt Security Light Camera Full HD 1080P Wireless Wi-Fi IP Camera Home Dome Surveillance Cameras">
+                                                    <div
+                                                        class="note text-uppercase fw-bold font-15px text-light bg-danger rounded-pill m-0 py-1 px-3">
+                                                        -3%
+                                                    </div>
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">security &
+                                                        protection</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">DIDSeth Pan Tilt
+                                                        Security Light
+                                                        Camera
+                                                        Full
+                                                        HD 1080P Wireless Wi-Fi IP Camera Home Dome Surveillance
+                                                        Cameras</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class="text-decoration-line-through text-gray">$49.99</span>
+                                                    <span class=" text-dark fw-bold">$48.50</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 8 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10061.jpg" class="main-img"
+                                                        alt="VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction Self-charging">
+                                                    <img src="assets/images/section6/10066.jpg" class="back-img "
+                                                        alt="VIOMI V2 Pro LDS Sensor 2 in 1 Sweeping Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction Self-charging">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">robot clean</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">VIOMI V2 Pro LDS
+                                                        Sensor 2 in 1
+                                                        Sweeping
+                                                        Mopping Robot Wet and Dry Vacuum Cleaner 2100Pa Strong Suction
+                                                        Self-charging</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$575.64</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 9 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10067.jpg" class="main-img"
+                                                        alt="Teclast F7 Plus 14.1 inch Notebook Intel N4100 8GB RAM 256GB SSD Platinum 8GB+256GB">
+                                                    <img src="assets/images/section6/10068.jpg" class="back-img "
+                                                        alt="Teclast F7 Plus 14.1 inch Notebook Intel N4100 8GB RAM 256GB SSD Platinum 8GB+256GB">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">computers &
+                                                        laptop</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Teclast F7 Plus
+                                                        14.1 inch Notebook
+                                                        Intel
+                                                        N4100 8GB RAM 256GB SSD Platinum 8GB+256GB</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$696.90</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 10 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="relatedProducts-card w-100 m-0 p-2 rounded-3">
+                                            <div class="relatedProducts-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10069.jpg" class="main-img"
+                                                        alt="Xiaomi Mi Watch Lite GPS Bluetooth 5.1 Smart Watch Sports Fitness Heart Rate Monitor 1.4 inch TFTLCD Screen 5 ATM Waterproof mi band">
+                                                    <img src="assets/images/section6/10070.jpg" class="back-img "
+                                                        alt="Xiaomi Mi Watch Lite GPS Bluetooth 5.1 Smart Watch Sports Fitness Heart Rate Monitor 1.4 inch TFTLCD Screen 5 ATM Waterproof mi band">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="relatedProducts-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">smart health
+                                                        watch</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Xiaomi Mi Watch
+                                                        Lite GPS Bluetooth
+                                                        5.1
+                                                        Smart
+                                                        Watch Sports Fitness Heart Rate Monitor 1.4 inch TFTLCD Screen 5
+                                                        ATM
+                                                        Waterproof mi band</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$79.99</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- productDetails-recentlyViewed -->
+                <section class="productDetails-recentlyViewed m-0 mt-5 p-0 w-100">
+                    <div class="w-100 m-0 p-0 text-center">
+                        <h2 class="text-capitalize fw-bold">recently viewed products</h2>
+                    </div>
+                    <div class="recentlyViewed-content-container m-0 p-0 w-100 row justify-content-between">
+                        <div class="recentlyViewed-slider w-100 m-0 p-0">
+                            <div class="swiper mySwiper6">
+                                <div class="swiper-wrapper">
+                                    <!-- 1 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="recentlyViewed-card w-100 m-0 p-2 rounded-3">
+                                            <div class="recentlyViewed-card-img overflow-hidden">
+                                                <a href="#" class="text-decoration-none text-dark">
+                                                    <img src="assets/images/section6/10025.jpg" class="main-img"
+                                                        alt="Klipsch R-120SW Powerful Detailed Home Speaker Unit">
+                                                    <img src="assets/images/section6/10026.jpg" class="back-img "
+                                                        alt="Klipsch R-120SW Powerful Detailed Home Speaker">
+                                                    <div
+                                                        class="note text-uppercase fw-bold font-15px text-light bg-dark rounded-pill m-0 py-1 px-2">
+                                                        sold out
+                                                    </div>
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="recentlyViewed-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">bluetooth
+                                                        speakers</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Klipsch
+                                                        R-120SW Powerful Detailed Home Speaker – Unit</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                    <i class="fa-solid fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class="text-decoration-line-through text-gray">$139.00</span>
+                                                    <span class=" text-dark fw-bold">$129.00</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">read
+                                                    more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="recentlyViewed-card w-100 m-0 p-2 rounded-3">
+                                            <div class="recentlyViewed-card-img border-none overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10071.jpg" class="main-img"
+                                                        alt="MIJIA Robot Vacuum 1T">
+                                                    <img src="assets/images/section6/10072.jpg" class="back-img "
+                                                        alt="MIJIA Robot Vacuum 1T">
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="recentlyViewed-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">robot clean</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">MIJIA Robot
+                                                        Vacuum 1T Sweeping Wet
+                                                        Mopping
+                                                        Cleaner For Home Dust Sterilize 3000PA Cyclone Suction WIFI APP
+                                                        Smart Planned</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class=" text-dark fw-bold">$579.99</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="swiper-slide  p-0">
+                                        <div class="recentlyViewed-card w-100 m-0 p-2 rounded-3">
+                                            <div class="recentlyViewed-card-img overflow-hidden">
+                                                <a href="#">
+                                                    <img src="assets/images/section6/10073.jpg" class="main-img"
+                                                        alt="Teclast M40 10.1 inch Android 10.0 Tablet">
+                                                    <img src="assets/images/section6/10074.jpg" class="back-img "
+                                                        alt="Teclast M40 10.1 inch Android 10.0 Tablet">
+                                                    <div
+                                                        class="note text-uppercase fw-bold font-15px text-light bg-danger rounded-pill m-0 py-1 px-3">
+                                                        -6%
+                                                    </div>
+                                                </a>
+                                                <div class="popup w-100 m-0 p-0">
+                                                    <div
+                                                        class="popup-icons m-0 p-0 d-flex flex-column align-items-end text-end">
+                                                        <div class="add-to-wishlist-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add
+                                                                    to
+                                                                    wishlist</span>
+                                                                <i
+                                                                    class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">compare</span>
+                                                                <i
+                                                                    class="fa-solid fa-arrow-right-arrow-left m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-container m-0 my-2 p-0">
+                                                            <a href="#" class="text-decoration-none m-0 p-0">
+                                                                <span
+                                                                    class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">quick
+                                                                    view</span>
+                                                                <i
+                                                                    class="fa-solid fa-eye m-0 p-3 fs-6 bg-white  rounded-circle text-dark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="recentlyViewed-card-content mt-3">
+                                                <p class="type font-10px text-uppercase ">
+                                                    <a href="#" class="text-decoration-none text-gray">tablets</a>
+                                                </p>
+                                                <h3 class="title text-capitalize font-15px fw-bold">
+                                                    <a href="#" class="text-decoration-none text-dark">Teclast M40 10.1
+                                                        inch Android 10.0
+                                                        Tablet
+                                                        PC
+                                                        UNISOC T618 Octa Core 6GB RAM 128GB ROM 4G LTE Full HD</a>
+                                                </h3>
+                                                <div class="rating d-inline me-3">
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                    <i class="fa-regular fa-star m-0 p-0"></i>
+                                                </div>
+                                                <div class="price my-2">
+                                                    <span class="text-decoration-line-through text-gray">$307.60</span>
+                                                    <span class=" text-dark fw-bold">$285.95</span>
+                                                </div>
+                                                <a href="#"
+                                                    class="readMore btn text-uppercase font-15px fw-bold w-100  rounded-pill py-2">select
+                                                    options</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <!-- main-benefits -->
             <div class="container-fluid m-0 mt-5 p-0">
                 <section class="main-benefits  m-0 mt-3 p-0 py-4 ">
                     <div class="container-xl m-0 m-auto p-0">

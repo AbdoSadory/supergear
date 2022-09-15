@@ -973,7 +973,12 @@ body {
 .bestSeller-card:hover .readMore {
   visibility: visible;
 }
-
+.bestSeller-card .type a {
+  transition: 0.2s all ease-in-out;
+}
+.bestSeller-card .type a:hover {
+  color: var(--black);
+}
 /* ================= Main-Section7 =============*/
 .MusicAudioVideo-left {
   max-width: 520px;

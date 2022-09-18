@@ -157,7 +157,7 @@ var swiper = new Swiper(".mySwiper6", {
 export let wishlistElements = {};
 export let elementsLength;
 export let productsInCard = {};
-const exportFromLocalStorage = () => {
+const exportWishlistProductsFromLocalStorage = () => {
   let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
     ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
     : 0;
@@ -206,8 +206,9 @@ export const wishlistCounter = (wishlistElementsObject) => {
     ).length;
   }
 };
-exportFromLocalStorage();
+exportWishlistProductsFromLocalStorage();
 bottomNavWishlistbtnNumber(wishlistElements);
 bottomNavaddToCardbtnNumber(wishlistElements);
 headeraddToCardCounter(wishlistElements);
 wishlistCounter(wishlistElements);
+console.log(localStorage.getItem("User_Wishlistddd"));

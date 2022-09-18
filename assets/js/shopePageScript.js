@@ -79,7 +79,8 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
 
 const shopProductCard = (productObject) => {
   const parentColDiv = document.createElement("div");
-  parentColDiv.classList.add("col-6", "col-sm-4", "col-lg-3", "p-0");
+  parentColDiv.classList.add("col-lg-3", "p-0");
+  // "col-6", "col-sm-4",
 
   const parentResultCardDiv = document.createElement("div");
   parentResultCardDiv.classList.add(
@@ -93,10 +94,27 @@ const shopProductCard = (productObject) => {
 
   const resultCardImgDiv = document.createElement("div");
   resultCardImgDiv.classList.add("result-card-img", "overflow-hidden");
+  resultCardImgDiv.addEventListener("click", () => {
+    saveElementToProductDetailsToLocalStorage(
+      productObject.productModelID,
+      productObject.productModelFrontImage,
+      productObject.productModelTitle,
+      productObject.productModelOldPrice,
+      productObject.productModelPrice,
+      productObject.productModelCategory,
+      productObject.productModelDescription,
+      productObject.productModelAdditionalInfo,
+      productObject.productModelAboutBrand,
+      productObject.productModelReviews,
+      productObject.productModelQuestions,
+      productObject.productModelAmount,
+      productObject.productModelRelatedProducts
+    );
+  });
 
   const resultImageAnchor = document.createElement("a");
   resultImageAnchor.href = "#";
-  resultCardImgDiv.classList.add("text-decoration-none", "text-dark");
+  resultImageAnchor.classList.add("text-decoration-none", "text-dark");
 
   const resultFrontImage = document.createElement("img");
   resultFrontImage.src = "assets/" + productObject.productModelFrontImage;
@@ -172,7 +190,7 @@ const shopProductCard = (productObject) => {
         '<span class="m-0 p-2 px-3 bg-dark text-white font-15px rounded-3 text-capitalize">add to wishlist</span> <i class="fa-regular fa-star m-0 p-3 fs-6 bg-white rounded-circle  text-dark"></i>';
     } else {
       console.log(`the amount is ${productObject.productModelAmount}`);
-      saveToLocalStorage(
+      saveElementToWishlistToLocalStorage(
         productObject.productModelID,
         productObject.productModelFrontImage,
         productObject.productModelTitle,
@@ -235,7 +253,23 @@ const shopProductCard = (productObject) => {
     "fw-bold"
   );
   resultProductTitle.innerHTML = `<a href="#" class="text-decoration-none text-dark">${productObject.productModelTitle}</a>`;
-
+  resultProductTitle.addEventListener("click", () => {
+    saveElementToProductDetailsToLocalStorage(
+      productObject.productModelID,
+      productObject.productModelFrontImage,
+      productObject.productModelTitle,
+      productObject.productModelOldPrice,
+      productObject.productModelPrice,
+      productObject.productModelCategory,
+      productObject.productModelDescription,
+      productObject.productModelAdditionalInfo,
+      productObject.productModelAboutBrand,
+      productObject.productModelReviews,
+      productObject.productModelQuestions,
+      productObject.productModelAmount,
+      productObject.productModelRelatedProducts
+    );
+  });
   const resultProductPriceDiv = document.createElement("div");
   resultProductPriceDiv.classList.add("price", "my-2");
   productObject.productModelOldPrice
@@ -255,6 +289,23 @@ const shopProductCard = (productObject) => {
   );
   selectOptionAnchor.href = "#";
   selectOptionAnchor.textContent = "select option";
+  selectOptionAnchor.addEventListener("click", () => {
+    saveElementToProductDetailsToLocalStorage(
+      productObject.productModelID,
+      productObject.productModelFrontImage,
+      productObject.productModelTitle,
+      productObject.productModelOldPrice,
+      productObject.productModelPrice,
+      productObject.productModelCategory,
+      productObject.productModelDescription,
+      productObject.productModelAdditionalInfo,
+      productObject.productModelAboutBrand,
+      productObject.productModelReviews,
+      productObject.productModelQuestions,
+      productObject.productModelAmount,
+      productObject.productModelRelatedProducts
+    );
+  });
 
   resultImageAnchor.appendChild(resultFrontImage);
   resultImageAnchor.appendChild(resultBackImage);
@@ -489,7 +540,7 @@ const popUpProdcutCard = (storedWishlistelement) => {
     : null;
 };
 
-const saveToLocalStorage = (
+const saveElementToWishlistToLocalStorage = (
   wishlistElementID,
   wishlistElementImage,
   wishlistElementTitle,
@@ -527,6 +578,39 @@ const saveToLocalStorage = (
     // console.log(wishlistElements);
     localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
   }
+};
+const saveElementToProductDetailsToLocalStorage = (
+  wishlistElementID,
+  wishlistElementImage,
+  wishlistElementTitle,
+  wishlistElementOldPrice,
+  wishlistElementPrice,
+  wishlistElementCategory,
+  wishlistElementDescription,
+  wishlistElementAdditionalInfo,
+  wishlistElementAboutBrand,
+  wishlistElementReviews,
+  wishlistElementQuestions,
+  wishlistElementAmount,
+  wishlistElementRelatedProducts
+) => {
+  let choosenElement = {
+    id: wishlistElementID,
+    img: wishlistElementImage,
+    title: wishlistElementTitle,
+    oldPrice: wishlistElementOldPrice,
+    price: wishlistElementPrice,
+    category: wishlistElementCategory,
+    description: wishlistElementDescription,
+    additionalInfo: wishlistElementAdditionalInfo,
+    aboutBrand: wishlistElementAboutBrand,
+    reviews: wishlistElementReviews,
+    questions: wishlistElementQuestions,
+    amount: wishlistElementAmount,
+    relatedProducts: wishlistElementRelatedProducts,
+  };
+  // console.log(wishlistElements);
+  localStorage.setItem("product_details", JSON.stringify(choosenElement));
 };
 
 const removeWishlistElementFromLocalStorage = (elementID) => {

@@ -2,6 +2,10 @@
 * {
   font-family: GeneralSansRegular;
 }
+body {
+  overflow: unset !important;
+  padding-right: unset !important;
+}
 .treeRoute-productDetails-li {
   position: relative;
 }
@@ -335,3 +339,31 @@
   overflow: hidden;
   overflow-y: scroll;
 }
+.card-footer-nav-container {
+  background-color: var(--light-gray);
+}
+.card-footer-nav-container .card-note,
+.card-footer-nav-container .shipping,
+.card-footer-nav-container .coupon {
+  color: var(--black);
+  transition: 0.2s all ease-in-out;
+}
+.card-footer-nav-container .card-note:hover,
+.card-footer-nav-container .shipping:hover,
+.card-footer-nav-container .coupon:hover {
+  color: var(--darker-gray);
+}
+
+/* .offcanvas-bottom1 {
+  position: fixed;
+  bottom: 0;
+  z-index: 1053;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  visibility: hidden;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform 0.3s ease-in-out;
+} */

@@ -3,13 +3,12 @@ import {
   wishlistCounter,
   bottomNavWishlistbtnNumber,
   headeraddToCardCounter,
+  shopProductsFromJSONFile,
 } from "./script.js";
 import productModel from "./dataModel/productModel.js";
-import products from "../data/products.json" assert { type: "json" };
 //=======================================================
 //=======================Variables=======================
 //=======================================================
-const shopProductsFromJSONFile = products;
 const productsNumber = shopProductsFromJSONFile.products.length;
 const shopCurrentResultsSpanTag = document.querySelector(
   ".showingitemsNumbers-current"
@@ -39,6 +38,19 @@ const wishlistCounters = document.getElementsByClassName(
 const continueShoppingBtn = document.getElementById(
   "addToWishlist-popup-msg-footer-continueShopping"
 );
+let shopCardalginmentType = "four";
+const alignmentList = document.getElementById("alignment-list");
+const alignmentTwo = document.getElementById("alignment-two");
+const alignmentThree = document.getElementById("alignment-three");
+const alignmentFour = document.getElementById("alignment-four");
+const alignmentFive = document.getElementById("alignment-five");
+let shopCardresults = document.getElementsByClassName("result-card-container");
+let shopCardResultsContent = document.getElementsByClassName("result-card");
+let shopCardResultsContentDetails = document.getElementsByClassName(
+  "result-card-content"
+);
+let shopCardResultsContentImgs =
+  document.getElementsByClassName("result-card-img");
 
 //=======================================================
 //=======================Functions=======================
@@ -79,8 +91,22 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
 
 const shopProductCard = (productObject) => {
   const parentColDiv = document.createElement("div");
-  parentColDiv.classList.add("col-lg-3", "p-0");
-  // "col-6", "col-sm-4",
+
+  shopCardalginmentType == "three" || screen.width <= 991
+    ? parentColDiv.classList.add("result-card-container", "col-4", "p-0")
+    : null;
+  shopCardalginmentType == "two" || screen.width <= 767
+    ? parentColDiv.classList.add("result-card-container", "col-6", "p-0")
+    : null;
+  shopCardalginmentType == "four"
+    ? parentColDiv.classList.add("result-card-container", "col-3", "p-0")
+    : null;
+  shopCardalginmentType == "five"
+    ? parentColDiv.classList.add("result-card-container", "col-2", "p-0")
+    : null;
+  shopCardalginmentType == "list"
+    ? parentColDiv.classList.add("result-card-container", "col-12", "p-0")
+    : null;
 
   const parentResultCardDiv = document.createElement("div");
   parentResultCardDiv.classList.add(
@@ -90,27 +116,17 @@ const shopProductCard = (productObject) => {
     "p-2",
     "rounded-3"
   );
+  shopCardalginmentType == "list"
+    ? parentResultCardDiv.classList.add("d-flex")
+    : null;
+
   parentResultCardDiv.id = productObject.productModelID;
 
   const resultCardImgDiv = document.createElement("div");
   resultCardImgDiv.classList.add("result-card-img", "overflow-hidden");
-  resultCardImgDiv.addEventListener("click", () => {
-    saveElementToProductDetailsToLocalStorage(
-      productObject.productModelID,
-      productObject.productModelFrontImage,
-      productObject.productModelTitle,
-      productObject.productModelOldPrice,
-      productObject.productModelPrice,
-      productObject.productModelCategory,
-      productObject.productModelDescription,
-      productObject.productModelAdditionalInfo,
-      productObject.productModelAboutBrand,
-      productObject.productModelReviews,
-      productObject.productModelQuestions,
-      productObject.productModelAmount,
-      productObject.productModelRelatedProducts
-    );
-  });
+  shopCardalginmentType == "list"
+    ? (resultCardImgDiv.style.width = "25%")
+    : null;
 
   const resultImageAnchor = document.createElement("a");
   resultImageAnchor.href = "#";
@@ -257,6 +273,7 @@ const shopProductCard = (productObject) => {
     saveElementToProductDetailsToLocalStorage(
       productObject.productModelID,
       productObject.productModelFrontImage,
+      productObject.productModelBackImage,
       productObject.productModelTitle,
       productObject.productModelOldPrice,
       productObject.productModelPrice,
@@ -293,6 +310,7 @@ const shopProductCard = (productObject) => {
     saveElementToProductDetailsToLocalStorage(
       productObject.productModelID,
       productObject.productModelFrontImage,
+      productObject.productModelBackImage,
       productObject.productModelTitle,
       productObject.productModelOldPrice,
       productObject.productModelPrice,
@@ -579,37 +597,40 @@ const saveElementToWishlistToLocalStorage = (
     localStorage.setItem("User_Wishlist", JSON.stringify(wishlistElements));
   }
 };
+
 const saveElementToProductDetailsToLocalStorage = (
-  wishlistElementID,
-  wishlistElementImage,
-  wishlistElementTitle,
-  wishlistElementOldPrice,
-  wishlistElementPrice,
-  wishlistElementCategory,
-  wishlistElementDescription,
-  wishlistElementAdditionalInfo,
-  wishlistElementAboutBrand,
-  wishlistElementReviews,
-  wishlistElementQuestions,
-  wishlistElementAmount,
-  wishlistElementRelatedProducts
+  productDetailsID,
+  productDetailsFrontImage,
+  productDetailsBackImage,
+  productDetailsTitle,
+  productDetailsOldPrice,
+  productDetailsPrice,
+  productDetailsCategory,
+  productDetailsDescription,
+  productDetailsAdditionalInfo,
+  productDetailsAboutBrand,
+  productDetailsReviews,
+  productDetailsQuestions,
+  productDetailsAmount,
+  productDetailsRelatedProducts
 ) => {
   let choosenElement = {
-    id: wishlistElementID,
-    img: wishlistElementImage,
-    title: wishlistElementTitle,
-    oldPrice: wishlistElementOldPrice,
-    price: wishlistElementPrice,
-    category: wishlistElementCategory,
-    description: wishlistElementDescription,
-    additionalInfo: wishlistElementAdditionalInfo,
-    aboutBrand: wishlistElementAboutBrand,
-    reviews: wishlistElementReviews,
-    questions: wishlistElementQuestions,
-    amount: wishlistElementAmount,
-    relatedProducts: wishlistElementRelatedProducts,
+    id: productDetailsID,
+    frontImg: productDetailsFrontImage,
+    backImg: productDetailsBackImage,
+    title: productDetailsTitle,
+    oldPrice: productDetailsOldPrice,
+    price: productDetailsPrice,
+    category: productDetailsCategory,
+    description: productDetailsDescription,
+    additionalInfo: productDetailsAdditionalInfo,
+    aboutBrand: productDetailsAboutBrand,
+    reviews: productDetailsReviews,
+    questions: productDetailsQuestions,
+    amount: productDetailsAmount,
+    relatedProducts: productDetailsRelatedProducts,
   };
-  // console.log(wishlistElements);
+  // console.log(productDetailss);
   localStorage.setItem("product_details", JSON.stringify(choosenElement));
 };
 
@@ -624,9 +645,69 @@ const renderWishlistPopUp = () => {
   popup.classList.toggle("d-none");
 };
 
+console.log(screen.width <= 991);
+const shopCartAlignment = (alginmentTypeFromHTML) => {
+  shopCardalginmentType = alginmentTypeFromHTML;
+
+  for (const key of shopCardresults) {
+    if (shopCardalginmentType == "three" || screen.width <= 991) {
+      key.classList.contains("col-2") ? key.classList.remove("col-2") : null;
+      key.classList.contains("col-3") ? key.classList.remove("col-3") : null;
+      key.classList.contains("col-6") ? key.classList.remove("col-6") : null;
+      key.classList.contains("col-12") ? key.classList.remove("col-12") : null;
+      key.classList.add("col-4");
+    } else if (shopCardalginmentType == "two" || screen.width <= 767) {
+      key.classList.contains("col-2") ? key.classList.remove("col-2") : null;
+      key.classList.contains("col-3") ? key.classList.remove("col-3") : null;
+      key.classList.contains("col-4") ? key.classList.remove("col-4") : null;
+      key.classList.contains("col-12") ? key.classList.remove("col-12") : null;
+      key.classList.add("col-6");
+    } else if (shopCardalginmentType == "four") {
+      key.classList.contains("col-2") ? key.classList.remove("col-2") : null;
+      key.classList.contains("col-4") ? key.classList.remove("col-4") : null;
+      key.classList.contains("col-6") ? key.classList.remove("col-6") : null;
+      key.classList.contains("col-12") ? key.classList.remove("col-12") : null;
+      key.classList.add("col-3");
+    } else if (shopCardalginmentType == "five") {
+      key.classList.contains("col-3") ? key.classList.remove("col-3") : null;
+      key.classList.contains("col-4") ? key.classList.remove("col-4") : null;
+      key.classList.contains("col-6") ? key.classList.remove("col-6") : null;
+      key.classList.contains("col-12") ? key.classList.remove("col-12") : null;
+      key.classList.add("col-2");
+    } else if (shopCardalginmentType == "list") {
+      key.classList.contains("col-2") ? key.classList.remove("col-2") : null;
+      key.classList.contains("col-3") ? key.classList.remove("col-3") : null;
+      key.classList.contains("col-4") ? key.classList.remove("col-4") : null;
+      key.classList.contains("col-6") ? key.classList.remove("col-6") : null;
+      key.classList.add("col-12");
+    }
+  }
+
+  for (const key of shopCardResultsContent) {
+    if (shopCardalginmentType == "list") {
+      key.classList.add("d-flex");
+    } else {
+      key.classList.remove("d-flex");
+    }
+  }
+  for (const key of shopCardResultsContentImgs) {
+    if (shopCardalginmentType == "list") {
+      key.style.width = "25%";
+    } else {
+      key.style.width = "unset";
+    }
+  }
+  for (const key of shopCardResultsContentDetails) {
+    if (shopCardalginmentType == "list") {
+      key.classList.add("align-self-center");
+    } else {
+      key.classList.remove("align-self-center");
+    }
+  }
+};
+
 renderShopProductsResults(shopProductsFromJSONFile.products);
 renderPopUpProductCard(wishlistElements);
-
 loadMoreButton ? loadMoreButton.addEventListener("click", loadMoreCards) : null;
 closePopUpMsg
   ? closePopUpMsg.addEventListener("click", renderWishlistPopUp)
@@ -635,4 +716,32 @@ continueShoppingBtn
   ? continueShoppingBtn.addEventListener("click", renderWishlistPopUp)
   : null;
 wishlistCounter(wishlistElements);
-// console.log(wishlistElements);
+
+alignmentList
+  ? alignmentList.addEventListener(
+      "click",
+      shopCartAlignment.bind(this, "list")
+    )
+  : null;
+alignmentTwo
+  ? alignmentTwo.addEventListener("click", shopCartAlignment.bind(this, "two"))
+  : null;
+alignmentThree
+  ? alignmentThree.addEventListener(
+      "click",
+      shopCartAlignment.bind(this, "three")
+    )
+  : null;
+alignmentFour
+  ? alignmentFour.addEventListener(
+      "click",
+      shopCartAlignment.bind(this, "four")
+    )
+  : null;
+alignmentFive
+  ? alignmentFive.addEventListener(
+      "click",
+      shopCartAlignment.bind(this, "five")
+    )
+  : null;
+console.log(shopCardresults);

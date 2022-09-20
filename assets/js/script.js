@@ -1,3 +1,6 @@
+import jsonData from "../data/products.json" assert { type: "json" };
+export const shopProductsFromJSONFile = jsonData;
+
 var swiper = new Swiper(".mySwiper0", {
   slidesPerView: 6,
   spaceBetween: 10,
@@ -157,6 +160,7 @@ var swiper = new Swiper(".mySwiper6", {
 export let wishlistElements = {};
 export let elementsLength;
 export let productsInCard = {};
+export let recentlyProducts = {};
 const exportWishlistProductsFromLocalStorage = () => {
   let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
     ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
@@ -211,4 +215,3 @@ bottomNavWishlistbtnNumber(wishlistElements);
 bottomNavaddToCardbtnNumber(wishlistElements);
 headeraddToCardCounter(wishlistElements);
 wishlistCounter(wishlistElements);
-console.log(localStorage.getItem("User_Wishlistddd"));

@@ -10,3 +10,5 @@
     max-width: unset;
   }
 }
+@media (max-width: 768px) {
+}

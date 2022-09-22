@@ -191,12 +191,12 @@ body {
 .card-product-details-quantity-counter-container {
   background-color: var(--dark-gray);
 }
-.counter .minus,
-.counter .plus {
+.counter .quantity-minus,
+.counter .quantity-plus {
   transition: 0.3s all ease-in-out;
 }
-.counter .minus:hover,
-.counter .plus:hover {
+.counter .quantity-minus:hover,
+.counter .quantity-plus:hover {
   color: var(--darker-gray);
 }
 .add-To-Card-btn {

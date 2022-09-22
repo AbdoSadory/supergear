@@ -854,14 +854,14 @@
                             </div>
                             <!-- body -->
                             <div
-                                class="offcanvas-body m-0 p-0 text-center border border-2 border-danger overflow-hidden">
-                                <p class="text-dark fw-bold font-15px">🔥 These products are limited, checkout
+                                class="offcanvas-body card-offcanvas-body m-0 p-0 text-center border border-2 border-danger">
+                                <p class="text-dark fw-bold font-15px mx-0">🔥 These products are limited, checkout
                                     within
                                     00m 00s
                                 </p>
-                                <p class="text-dark fw-bold font-15px">Buy $200.00 more to enjoy <span
+                                <p class="text-dark fw-bold font-15px mx-0">Buy $200.00 more to enjoy <span
                                         class="fw-bolder">FREE Shipping</span></p>
-                                <div class="yellow-star w-100"></div>
+                                <div class="yellow-star w-100 mx-0"></div>
                                 <!-- <div class="offcanvas-right-img w-75 m-auto p-0">
                                     <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
                                 </div>
@@ -957,7 +957,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-footer-pill m-0 mt-3 p-0 px-2">
+                                    <div class="card-footer-pill m-0 my-3 p-0 px-2">
                                         <div class="card-footer-numbers w-100 m-0 p-0 border-bottom border-2">
                                             <div class=" card-footer-subtotal-container">
                                                 <div class="row justify-content-between align-items-center">
@@ -995,6 +995,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="card-footer-buyNow-container m-0 mb-1 p-0 fs-6">
+                                        <button class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill"
+                                            id="buyNow-btn">buy
+                                            now</button>
                                     </div>
                                 </div>
 
@@ -1353,15 +1358,16 @@
                                                 <button
                                                     class="add-To-Card-btn w-100 m-0 py-2 text-capitalize fw-bold  rounded-pill"
                                                     type="button" data-bs-toggle="offcanvas"
-                                                    data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">add
+                                                    data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight"
+                                                    id="add-To-Card-btn">add
                                                     to card</button>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Buy Now -->
                                     <div class="prodcutDetails-buyNow-container m-0 mb-1 p-0 fs-6">
-                                        <button
-                                            class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
+                                        <button class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill"
+                                            id="buyNow-btn">buy
                                             now</button>
                                     </div>
                                     <!-- compare-Ask-Share -->
@@ -1472,17 +1478,23 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-additionalInfo" role="tabpanel"
-                                    aria-labelledby="nav-additionalInfo-tab" tabindex="0">additional information details
+                                    aria-labelledby="nav-additionalInfo-tab" tabindex="0">
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-aboutBrand" role="tabpanel"
-                                    aria-labelledby="nav-aboutBrand-tab" tabindex="0">about brand details</div>
+                                    aria-labelledby="nav-aboutBrand-tab" tabindex="0"></div>
 
                                 <div class="tab-pane fade" id="nav-reviews" role="tabpanel"
-                                    aria-labelledby="nav-reviews-tab" tabindex="0">reviews details
+                                    aria-labelledby="nav-reviews-tab" tabindex="0">
+                                    <div class="reviews-container w-100 m-0 p-2" id="reviews-container">
+
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-questions" role="tabpanel"
-                                    aria-labelledby="nav-questions-tab" tabindex="0">questions details
+                                    aria-labelledby="nav-questions-tab" tabindex="0">
+                                    <div class="questions-container w-100 m-0 p-2" id="questions-container">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>

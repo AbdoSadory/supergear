@@ -46,6 +46,19 @@ const prodcutDetailsPriceSpan = document.getElementById(
 );
 const colorBtns = document.getElementById("color-btns");
 const sizeBtns = document.getElementById("size-btns");
+const minusBtns = document.getElementsByClassName("quantity-minus");
+const quantityCounters = document.getElementsByClassName("quantity-counter");
+const plusBtns = document.getElementsByClassName("quantity-plus");
+const addToCardBtn = document.getElementById("add-To-Card-btn");
+const buyNowBtn = document.getElementById("buyNow-btn");
+const navDesc = document.getElementById("nav-desc");
+navDesc.textContent = `${productDetails.description}`;
+const navAdditionalInfo = document.getElementById("nav-additionalInfo");
+navAdditionalInfo.textContent = `${productDetails.additionalInfo}`;
+const navAboutBrand = document.getElementById("nav-aboutBrand");
+navAboutBrand.textContent = `${productDetails.aboutBrand}`;
+const navReviews = document.getElementById("reviews-container");
+const navQuestions = document.getElementById("questions-container");
 
 // console.log(typeof `${productDetails.frontImg}`);
 // console.log(productDetails.backImg);
@@ -121,7 +134,6 @@ if (productDetails.color) {
     colorBtns.appendChild(colorbtn);
   }
 }
-console.log(productDetails.size);
 if (productDetails.size) {
   for (const key of productDetails.size) {
     let sizebtn = document.createElement("a");
@@ -141,4 +153,92 @@ if (productDetails.size) {
     sizebtn.textContent = `${key}`;
     sizeBtns.appendChild(sizebtn);
   }
+}
+
+if (minusBtns && productDetails.amount) {
+  for (const minusbtn of minusBtns) {
+    minusbtn.addEventListener("click", () => {
+      console.log("minus");
+      removequantity();
+    });
+  }
+}
+
+if (plusBtns && productDetails.amount) {
+  for (const plusbtn of plusBtns) {
+    plusbtn.addEventListener("click", () => {
+      console.log("plus");
+      addquantity();
+    });
+  }
+}
+
+for (const quantityCounter of quantityCounters) {
+  productDetails.amount
+    ? (quantityCounter.textContent = 1)
+    : (quantityCounter.textContent = 0);
+}
+
+const addquantity = () => {
+  let amount = 1;
+  for (const quantityCounter of quantityCounters) {
+    if (quantityCounter.textContent < productDetails.amount) {
+      quantityCounter.textContent = +quantityCounter.textContent + amount;
+      quantityCounter.textContent > 0
+        ? (addToCardBtn.disabled = false) && (buyNowBtn.disabled = false)
+        : null;
+    }
+  }
+};
+
+const removequantity = () => {
+  let amount = 1;
+  for (const quantityCounter of quantityCounters) {
+    if (quantityCounter.textContent > 0) {
+      quantityCounter.textContent = +quantityCounter.textContent - amount;
+      quantityCounter.textContent == 0
+        ? (addToCardBtn.disabled = true) && (buyNowBtn.disabled = true)
+        : null;
+    }
+  }
+};
+
+if (productDetails.reviews.length > 0) {
+  for (const review of productDetails.reviews) {
+    const reviewContainer = document.createElement("div");
+    reviewContainer.classList.add(
+      "review-container",
+      "w-100",
+      "m-0",
+      "mb-4",
+      "p-0",
+      "border-bottom",
+      "border-2"
+    );
+    reviewContainer.innerHTML = `<p class=" review-para fs-6 m-0 p-0 pb-2">${review}</p>`;
+    navReviews ? navReviews.appendChild(reviewContainer) : null;
+  }
+} else {
+  navReviews.classList.add("text-center");
+  navReviews.innerHTML = `<p class=" review-para fs-5 m-0 p-0 pb-2 text-capitalize">there's no reviews</p>`;
+}
+
+if (productDetails.questions.length > 0) {
+  for (const question of productDetails.questions) {
+    const questionContainer = document.createElement("div");
+    questionContainer.classList.add(
+      "question-container",
+      "w-100",
+      "m-0",
+      "mb-4",
+      "p-0",
+      "border-bottom",
+      "border-2"
+    );
+    questionContainer.innerHTML = `<p class=" question-para fs-6 m-0 p-0 pb-2">${question}</p>`;
+    navQuestions ? navQuestions.appendChild(questionContainer) : null;
+  }
+} else {
+  navQuestions.classList.add("text-center");
+  navQuestions.innerHTML = `<p class=" question-para fs-5 m-0 p-0 pb-2 text-capitalize">there's no questions</p>`;
 }

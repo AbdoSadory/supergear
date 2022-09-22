@@ -342,6 +342,9 @@ body {
 .card-footer-nav-container {
   background-color: var(--light-gray);
 }
+.card-offcanvas-body {
+  overflow-x: hidden;
+}
 .card-footer-nav-container .card-note,
 .card-footer-nav-container .shipping,
 .card-footer-nav-container .coupon {

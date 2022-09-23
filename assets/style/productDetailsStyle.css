@@ -273,56 +273,46 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.relatedProducts-card,
-.recentlyViewed-card {
+/* ===================================== */
+.product-card {
   border: 2px solid transparent;
   transition: 0.2s all ease-in-out;
 }
-.relatedProducts-card:hover,
-.recentlyViewed-card:hover {
+.product-card:hover {
   border-color: black;
 }
-.relatedProducts-card-img,
-.recentlyViewed-card-img {
+.product-card-img {
   position: relative;
 }
 
-.relatedProducts-card-img:hover .popup,
-.recentlyViewed-card-img:hover .popup {
+.product-card-img:hover .popup {
   left: -5%;
 }
-.relatedProducts-card-img:hover .main-img,
-.recentlyViewed-card-img:hover .main-img {
+.product-card-img:hover .main-img {
   opacity: 0 !important;
 }
-.relatedProducts-card-img:hover .back-img,
-.recentlyViewed-card-img:hover .back-img {
+.product-card-img:hover .back-img {
   transform: scale(1.16);
   opacity: 1;
 }
 
-.relatedProducts-card-content h3,
-.recentlyViewed-card-content h3 {
+.product-card-content h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
 }
-.relatedProducts-card .rating,
-.recentlyViewed-card .rating {
+.product-card .rating {
   font-size: 12px;
 }
-.relatedProducts-card:hover .readMore,
-.recentlyViewed-card:hover .readMore {
+.product-card:hover .readMore {
   visibility: visible;
 }
-.relatedProducts-card .type a,
-.recentlyViewed-card .type a {
+.product-card .type a {
   transition: 0.2s all ease-in-out;
 }
-.relatedProducts-card .type a:hover,
-.recentlyViewed-card .type a:hover {
+.product-card .type a:hover {
   color: var(--black);
 }
 

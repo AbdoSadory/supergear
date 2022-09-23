@@ -327,13 +327,21 @@ body {
 .nav-item-menu-list ul {
   text-align: left !important;
 }
-.nav-item-menu-list ul a {
+.nav-item-menu-list ul a,
+.card-body ul a {
   transition: 0.35s color ease-in-out;
 }
 .nav-item-menu-list ul a:hover {
   color: #000;
 }
 
+.card-body ul a::before {
+  background-color: #000;
+  height: 1px;
+}
+.card-body ul a:hover {
+  color: #000;
+}
 .nav-item-menu-list ul a::before {
   background-color: #000;
   height: 1px;

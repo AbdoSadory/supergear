@@ -3,13 +3,14 @@ import {
   wishlistCounter,
   bottomNavWishlistbtnNumber,
   headeraddToCardCounter,
-  shopProductsFromJSONFile,
+  shopDataFromJSONFile,
+  recentlyProducts,
 } from "./script.js";
 import productModel from "./dataModel/productModel.js";
 //=======================================================
 //=======================Variables=======================
 //=======================================================
-const productsNumber = shopProductsFromJSONFile.products.length;
+const productsNumber = shopDataFromJSONFile.products.length;
 const shopCurrentResultsSpanTag = document.querySelector(
   ".showingitemsNumbers-current"
 );
@@ -268,7 +269,7 @@ const shopProductCard = (productObject) => {
     "font-15px",
     "fw-bold"
   );
-  resultProductTitle.innerHTML = `<a href="#" class="text-decoration-none text-dark">${productObject.productModelTitle}</a>`;
+  resultProductTitle.innerHTML = `<a href="productDetails.html" class="text-decoration-none text-dark">${productObject.productModelTitle}</a>`;
   resultProductTitle.addEventListener("click", () => {
     saveElementToProductDetailsToLocalStorage(
       productObject.productModelID,
@@ -289,6 +290,8 @@ const shopProductCard = (productObject) => {
       productObject.productModelColor,
       productObject.productModelSize
     );
+
+    saveElementIDToRecentlyProductToLocalStorage(productObject.productModelID);
   });
   const resultProductPriceDiv = document.createElement("div");
   resultProductPriceDiv.classList.add("price", "my-2");
@@ -307,7 +310,7 @@ const shopProductCard = (productObject) => {
     "rounded-pill",
     "py-2"
   );
-  selectOptionAnchor.href = "#";
+  selectOptionAnchor.href = "productDetails.html";
   selectOptionAnchor.textContent = "select option";
   selectOptionAnchor.addEventListener("click", () => {
     saveElementToProductDetailsToLocalStorage(
@@ -406,7 +409,7 @@ function renderMoreCards(prodcutsFromJSONFile) {
 
 const loadMoreCards = () => {
   if (numbersOfCardInFilterResultContainer < productsNumber) {
-    renderMoreCards(shopProductsFromJSONFile.products);
+    renderMoreCards(shopDataFromJSONFile.products);
   }
 };
 
@@ -607,7 +610,7 @@ export const saveElementToWishlistToLocalStorage = (
   }
 };
 
-const saveElementToProductDetailsToLocalStorage = (
+export const saveElementToProductDetailsToLocalStorage = (
   productDetailsID,
   productDetailsFrontImage,
   productDetailsBackImage,
@@ -647,6 +650,13 @@ const saveElementToProductDetailsToLocalStorage = (
   };
   // console.log(productDetailss);
   localStorage.setItem("product_details", JSON.stringify(choosenElement));
+};
+
+export const saveElementIDToRecentlyProductToLocalStorage = (elementID) => {
+  let choosenElement = elementID;
+  recentlyProducts[choosenElement] = choosenElement;
+  console.log(typeof recentlyProducts);
+  localStorage.setItem("recently_products", JSON.stringify(recentlyProducts));
 };
 
 export const removeWishlistElementFromLocalStorage = (elementID) => {
@@ -721,7 +731,7 @@ const shopCartAlignment = (alginmentTypeFromHTML) => {
   }
 };
 
-renderShopProductsResults(shopProductsFromJSONFile.products);
+renderShopProductsResults(shopDataFromJSONFile.products);
 renderPopUpProductCard(wishlistElements);
 loadMoreButton ? loadMoreButton.addEventListener("click", loadMoreCards) : null;
 closePopUpMsg

@@ -1,5 +1,5 @@
 import jsonData from "../data/products.json" assert { type: "json" };
-export const shopProductsFromJSONFile = jsonData;
+export const shopDataFromJSONFile = jsonData;
 
 var swiper = new Swiper(".mySwiper0", {
   slidesPerView: 6,
@@ -161,6 +161,7 @@ export let wishlistElements = {};
 export let elementsLength;
 export let productsInCard = {};
 export let recentlyProducts = {};
+
 const exportWishlistProductsFromLocalStorage = () => {
   let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
     ? Object.keys(JSON.parse(localStorage.getItem("User_Wishlist"))).length
@@ -175,6 +176,21 @@ const exportWishlistProductsFromLocalStorage = () => {
   }
 };
 
+export const exportRecentlyProductsFromLocalStorage = () => {
+  let localStorageDataLength = JSON.parse(
+    localStorage.getItem("recently_products")
+  )
+    ? Object.keys(JSON.parse(localStorage.getItem("recently_products"))).length
+    : 0;
+  // console.log(localStorageDataLength);
+  if (localStorageDataLength != 0) {
+    let storedRecentlyProducts = localStorage.getItem("recently_products");
+    recentlyProducts = { ...JSON.parse(storedRecentlyProducts) };
+    // console.log(recentlyProducts);
+  } else {
+    console.log(`There's no recentlyProducts in localStorage`);
+  }
+};
 const bottomNavWishlistbtn = document.querySelector(
   ".bottom-nav .container-fluid .col:nth-child(3) a p"
 );
@@ -211,6 +227,7 @@ export const wishlistCounter = (wishlistElementsObject) => {
   }
 };
 exportWishlistProductsFromLocalStorage();
+exportRecentlyProductsFromLocalStorage();
 bottomNavWishlistbtnNumber(wishlistElements);
 bottomNavaddToCardbtnNumber(wishlistElements);
 headeraddToCardCounter(wishlistElements);

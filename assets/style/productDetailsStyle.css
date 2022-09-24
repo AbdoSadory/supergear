@@ -325,7 +325,7 @@ body {
 }
 
 .offcanvas-body .card-products {
-  height: 415px;
+  max-height: 415px;
   overflow: hidden;
   overflow-y: scroll;
 }

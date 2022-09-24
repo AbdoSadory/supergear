@@ -44,6 +44,11 @@ exportProductDetailsFromLocalStorage();
 let cartProductAmount = cartProducts[productDetails.id]
   ? cartProducts[productDetails.id].amount
   : 1;
+
+const treeRouteProductDetailsLiSpan = document.getElementById(
+  "treeRoute-productDetails-li-span"
+);
+treeRouteProductDetailsLiSpan.textContent = productDetails.title;
 const swiperWrapperSideBad = document.getElementById("swiper-wrapper-sideBad");
 const swiperWrapperMain = document.getElementById("swiper-wrapper-main");
 const discountContainer = document.getElementById("discount-container");
@@ -84,11 +89,31 @@ const quantityCounters = document.getElementsByClassName(
 
 const plusBtns = document.getElementsByClassName("quantity-plus");
 // console.log(plusBtns);
-const addToCardBtn = document.getElementById("add-To-Card-btn");
-const buyNowBtn = document.getElementById("buyNow-btn");
+const addToCardBtns = document.getElementsByClassName("add-To-Card-btn");
+const deactiveAddToCart = () => {
+  for (const addToCardBtn of addToCardBtns) {
+    addToCardBtn.disabled = true;
+  }
+};
+const activeAddToCart = () => {
+  for (const addToCardBtn of addToCardBtns) {
+    addToCardBtn.disabled = false;
+  }
+};
+const buyNowBtns = document.getElementsByClassName("buyNow-btn");
+const deactiveBuyNowBtn = () => {
+  for (const buyNowBtn of buyNowBtns) {
+    buyNowBtn.disabled = true;
+  }
+};
+const activeBuyNowBtn = () => {
+  for (const buyNowBtn of buyNowBtns) {
+    buyNowBtn.disabled = false;
+  }
+};
 productDetails.amount == 0
-  ? (addToCardBtn.disabled = true) && (buyNowBtn.disabled = true)
-  : (addToCardBtn.disabled = false) && (buyNowBtn.disabled = false);
+  ? deactiveAddToCart() && deactiveBuyNowBtn()
+  : activeAddToCart() && activeBuyNowBtn();
 const navDesc = document.getElementById("nav-desc");
 navDesc.textContent = `${productDetails.description}`;
 const navAdditionalInfo = document.getElementById("nav-additionalInfo");
@@ -104,6 +129,8 @@ const recentlyViewedContainer = document.getElementById(
   "recentlyViewed-container"
 );
 const cardProductsContainer = document.getElementById("card-products");
+const subtotalPara = document.getElementById("subtotal");
+const totalPara = document.getElementById("total");
 
 document.title = productDetails.title;
 swiperWrapperSideBad.innerHTML = `
@@ -226,7 +253,7 @@ const addquantity = (elementID) => {
       quantityCounter.textContent = +quantityCounter.textContent + amount;
       cartProductAmount = quantityCounter.textContent;
       quantityCounter.textContent > 0
-        ? (addToCardBtn.disabled = false) && (buyNowBtn.disabled = false)
+        ? activeAddToCart() && activeBuyNowBtn()
         : null;
     }
   }
@@ -243,7 +270,7 @@ const removequantity = (elementID) => {
       quantityCounter.textContent = +quantityCounter.textContent - amount;
       cartProductAmount = quantityCounter.textContent;
       quantityCounter.textContent == 0
-        ? (addToCardBtn.disabled = true) && (buyNowBtn.disabled = true)
+        ? deactiveAddToCart() && deactiveBuyNowBtn()
         : null;
     }
   }
@@ -674,6 +701,7 @@ const cartOffcanvasProductCard = (
       productPrice,
       cartProductAmount
     );
+    salaryCalculations(cartProducts);
   });
 
   const quantityCounter = document.createElement("span");
@@ -699,6 +727,7 @@ const cartOffcanvasProductCard = (
       productPrice,
       cartProductAmount
     );
+    salaryCalculations(cartProducts);
   });
 
   const cardProductDetailsRemoveBtnContainer = document.createElement("div");
@@ -736,6 +765,7 @@ const cartOffcanvasProductCard = (
           cartProducts[cartProduct].amount
         );
       }
+      salaryCalculations(cartProducts);
       headeraddToCardCounter(cartProducts);
       bottomNavaddToCardbtnNumber(cartProducts);
     } else {
@@ -750,6 +780,7 @@ const cartOffcanvasProductCard = (
     <a href="productDetails.html" aria-label="Close" data-bs-dismiss="offcanvas" type="button"
         class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to shop
     </a> `;
+      salaryCalculations(cartProducts);
     }
   });
 
@@ -795,29 +826,48 @@ const addProductToCart = (
   localStorage.setItem("cart_products", JSON.stringify(cartProducts));
 };
 
-addToCardBtn.addEventListener("click", () => {
-  if (!(productDetails.id in cartProducts)) {
-    cardProductsContainer.innerHTML = "";
-    addProductToCart(
-      productDetails.id,
-      productDetails.frontImg,
-      productDetails.title,
-      productDetails.price,
-      cartProductAmount
-    );
-    for (const cartProduct in cartProducts) {
-      cartOffcanvasProductCard(
-        cartProduct,
-        cartProducts[cartProduct].img,
-        cartProducts[cartProduct].title,
-        cartProducts[cartProduct].price,
-        cartProducts[cartProduct].amount
+for (const addToCardBtn of addToCardBtns) {
+  addToCardBtn.addEventListener("click", () => {
+    if (!(productDetails.id in cartProducts)) {
+      cardProductsContainer.innerHTML = "";
+      addProductToCart(
+        productDetails.id,
+        productDetails.frontImg,
+        productDetails.title,
+        productDetails.price,
+        cartProductAmount
       );
+      salaryCalculations(cartProducts);
+      for (const cartProduct in cartProducts) {
+        cartOffcanvasProductCard(
+          cartProduct,
+          cartProducts[cartProduct].img,
+          cartProducts[cartProduct].title,
+          cartProducts[cartProduct].price,
+          cartProducts[cartProduct].amount
+        );
+      }
+      headeraddToCardCounter(cartProducts);
+      bottomNavaddToCardbtnNumber(cartProducts);
     }
-    headeraddToCardCounter(cartProducts);
-    bottomNavaddToCardbtnNumber(cartProducts);
+  });
+}
+
+const salaryCalculations = (productsInCart) => {
+  let subtotal = 0;
+  let shipping = Object.keys(productsInCart).length == 0 ? 0 : 10;
+  let total = 0;
+  for (const cartProduct in productsInCart) {
+    let amount = productsInCart[cartProduct].amount;
+    let price = productsInCart[cartProduct].price;
+    let cost = (amount * price).toFixed(2);
+    subtotal = subtotal + +cost;
   }
-});
+  total = subtotal + shipping;
+  subtotalPara.textContent = subtotal;
+  totalPara.textContent = total;
+  console.log(total);
+};
 
 if (Object.keys(cartProducts).length > 0) {
   for (const cartProduct in cartProducts) {
@@ -840,4 +890,5 @@ if (Object.keys(cartProducts).length > 0) {
         class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to shop
     </a> `;
 }
-console.log(Object.keys(cartProducts).length);
+// console.log(Object.keys(cartProducts).length);
+salaryCalculations(cartProducts);

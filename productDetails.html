@@ -856,8 +856,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <!-- body -->
-                            <div
-                                class="offcanvas-body card-offcanvas-body m-0 p-0 text-center border border-2 border-danger">
+                            <div class="offcanvas-body card-offcanvas-body m-0 p-0 text-center">
                                 <p class="text-dark fw-bold font-15px mx-0">🔥 These products are limited, checkout
                                     within
                                     00m 00s
@@ -865,42 +864,35 @@
                                 <p class="text-dark fw-bold font-15px mx-0">Buy $200.00 more to enjoy <span
                                         class="fw-bolder">FREE Shipping</span></p>
                                 <div class="yellow-star w-100 mx-0"></div>
-
-
-
-
-
-
-
-
                                 <!-- card-products -->
                                 <div class="card-products w-100 m-0 my-3 p-0" id="card-products"></div>
                                 <!-- card-footer -->
-                                <div class="card-footer w-100 m-0 p-0 border border-2 border-dark">
+                                <div class="card-footer w-100 m-0 p-0">
                                     <div class="card-footer-nav-container w-100">
                                         <div class="w-100">
                                             <nav class="w-100 m-0p-0">
                                                 <div class="nav nav-tabs justify-content-center" id="nav-tab2"
                                                     role="tablist">
-                                                    <button class="nav-link text-capitalize active border-end border-1"
-                                                        id="nav-note-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#nav-note" type="button" role="tab"
-                                                        aria-controls="nav-note" aria-selected="true">
+                                                    <a class="nav-link text-capitalize active  text-decoration-none"
+                                                        id="nav-note-tab" data-bs-toggle="tab" href="#nav-note"
+                                                        type="button" role="tab" aria-controls="nav-note"
+                                                        aria-selected="true">
                                                         <i class="fa-solid fa-pen"></i>
                                                         <p class="m-0 p-0 text-capitalize">note</p>
-                                                    </button>
+                                                    </a>
 
-                                                    <button class="nav-link text-capitalize" id="nav-shipping-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#nav-shipping"
+                                                    <a class="nav-link  text-capitalize text-decoration-none"
+                                                        id="nav-shipping-tab" data-bs-toggle="tab" href="#nav-shipping"
                                                         type="button" role="tab" aria-controls="nav-shipping"
                                                         aria-selected="false">
                                                         <i class="fa-solid fa-truck"></i>
                                                         <p class="m-0 p-0 text-capitalize">shipping</p>
-                                                    </button>
+                                                    </a>
 
-                                                    <button class="nav-link text-capitalize" id="nav-coupon-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#nav-coupon" type="button"
-                                                        role="tab" aria-controls="nav-coupon" aria-selected="false">
+                                                    <a class="nav-link text-capitalize text-decoration-none"
+                                                        id="nav-coupon-tab" data-bs-toggle="tab" href="#nav-coupon"
+                                                        type="button" role="tab" aria-controls="nav-coupon"
+                                                        aria-selected="false">
                                                         <svg class="" width="22" fill="currentColor"
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14">
                                                             <path fill="currentColor"
@@ -908,10 +900,10 @@
                                                             </path>
                                                         </svg>
                                                         <p class="m-0 p-0 text-capitalize">coupon</p>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </nav>
-                                            <div class="tab-content text-start p-2" id="nav-tabContent">
+                                            <div class="tab-content text-start p-2" id="nav-tab-Content">
                                                 <div class="tab-pane fade show active" id="nav-note" role="tabpanel"
                                                     aria-labelledby="nav-note-tab" tabindex="0">
                                                     <h3 class="fs-5">Add note for seller</h3>
@@ -982,8 +974,7 @@
                                                     </div>
                                                     <div class="card-footer-subtotal-value col ">
                                                         <p class="text-start text-capitalize m-0 p-0 text-end"
-                                                            id="subtotal">$63.22
-                                                        </p>
+                                                            id="subtotal">- - -</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1007,16 +998,15 @@
                                                     </div>
                                                     <div class="card-footer-total-value col ">
                                                         <p class="text-start text-capitalize fw-bold m-0 p-0 text-end"
-                                                            id="total">
-                                                            $73.21</p>
+                                                            id="total">- - -</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-footer-buyNow-container m-0 mb-1 p-0 fs-6">
-                                        <button class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill"
-                                            id="buyNow-btn">buy
+                                        <button
+                                            class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
                                             now</button>
                                     </div>
                                 </div>
@@ -1256,7 +1246,8 @@
                             <span class="text-dark font-15px treeRoute-products-li-span">products</span>
                         </li>
                         <li class="d-inline treeRoute-productDetails-li mx-3">
-                            <span class="text-dark font-15px treeRoute-productDetails-li-span">product Details</span>
+                            <span class="text-dark font-15px treeRoute-productDetails-li-span"
+                                id="treeRoute-productDetails-li-span">product Details</span>
                         </li>
                     </ul>
                 </section>
@@ -1269,7 +1260,7 @@
                                 <div class="prodcutDetails-left-slider  mb-3 m-lg-0 m-auto rounded-3">
                                     <div class="swiper-slider-container  row d-flex justify-content-start m-0 p-0">
                                         <!-- Sidebar Images -->
-                                        <div thumbsSlider="" class="swiper mySwiper col-2">
+                                        <div class="swiper mySwiper col-2">
                                             <div class="swiper-wrapper w-75" id="swiper-wrapper-sideBad">
                                             </div>
                                         </div>
@@ -1298,7 +1289,7 @@
                                     <div
                                         class="prodcutDetails-title-container row justify-content-between align-items-center m-0 mb-4 p-0">
                                         <div class="productDetails-title col-10 m-0 p-0">
-                                            <h3 class="productDetails-title-h3" id="productDetails-title-h3"></h3>
+                                            <h3 class="productDetails-title-h3" id="productDetails-title-h3">---</h3>
                                         </div>
                                         <div class="productDetails-addToWishlist col-2 m-0 p-0 text-end"
                                             id="productDetails-addToWishlist">
@@ -1330,22 +1321,21 @@
                                                 <i class="fa-regular fa-star m-0 p-0"></i>
                                                 <i class="fa-regular fa-star m-0 p-0"></i>
                                             </span>
-                                            <span class="prodcutDetails-add-review-span">
+                                            <div class="prodcutDetails-add-review-div d-inline-block">
                                                 <!--  Model -->
-                                                <a href="#shareStaticBackdrop1"
+                                                <a href="#reviewStaticBackdrop1"
                                                     class="prodcutDetails-add-review-span-btn text-decoration-none text-dark btn-hover text-capitalize"
-                                                    type="button" data-bs-toggle="modal" href="#askStaticBackdrop1"
-                                                    title="add-review">add
+                                                    type="button" data-bs-toggle="modal" title="add-review">add
                                                     review</a>
                                                 <!--review Modal -->
-                                                <div class="modal fade " id="shareStaticBackdrop1"
+                                                <div class="modal fade " id="reviewStaticBackdrop1"
                                                     data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                                    aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                                                    aria-hidden="true">
                                                     <div
                                                         class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                         <div class="modal-content">
                                                             <div class="modal-header m-0">
-                                                                </h5>
+
                                                                 <button type="button" class="btn-close"
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
@@ -1408,7 +1398,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- Views -->
@@ -1458,8 +1448,8 @@
                                     </div>
                                     <!-- Buy Now -->
                                     <div class="prodcutDetails-buyNow-container m-0 mb-1 p-0 fs-6">
-                                        <button class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill"
-                                            id="buyNow-btn">buy
+                                        <button
+                                            class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
                                             now</button>
                                     </div>
                                     <!-- compare-Ask-Share -->
@@ -1477,12 +1467,10 @@
                                         </a>
                                         <!-- ask Modal -->
                                         <div class="modal fade" id="askStaticBackdrop2" data-bs-backdrop="static"
-                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                            aria-hidden="true">
+                                            data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                                     <div class="modal-header m-0">
-                                                        </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
@@ -1491,11 +1479,11 @@
                                                             <h2 class="text-capitalize text-dark text-center my-4">ask a
                                                                 question</h2>
                                                             <form>
-                                                                <input type="text" name="userName" id="userName"
+                                                                <input type="text" name="userName" id="userName2"
                                                                     placeholder="Your Name*"
                                                                     class="ask-input inputs w-100 border border-2 rounded-pill p-2 text-dark"
                                                                     required>
-                                                                <input type="email" name="userEmail" id="userEmail"
+                                                                <input type="email" name="userEmail" id="userEmail2"
                                                                     placeholder="Your Email*"
                                                                     class="ask-input inputs w-100 border border-2 rounded-pill my-4 p-2 text-dark"
                                                                     required>
@@ -1520,12 +1508,10 @@
                                         </a>
                                         <!--share Modal -->
                                         <div class="modal fade " id="shareStaticBackdrop3" data-bs-backdrop="static"
-                                            data-bs-keyboard="false" tabindex="-1"
-                                            aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                                            data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                 <div class="modal-content">
                                                     <div class="modal-header m-0">
-                                                        </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
@@ -1618,6 +1604,7 @@
                 </section>
                 <!-- productDetails-more -->
                 <section class="productDetails-more m-0 mt-5 p-0 w-100">
+                    <h6 class="d-none">productDetails-more</h6>
                     <div class="container-fluid m-0 p-0">
                         <div class="productDetails-more-content">
                             <nav class="my-4">
@@ -1644,7 +1631,7 @@
                                         aria-controls="nav-questions" aria-selected="false">questions</button>
                                 </div>
                             </nav>
-                            <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-content" id="nav-tab-Content2">
                                 <div class="tab-pane fade show active" id="nav-desc" role="tabpanel"
                                     aria-labelledby="nav-desc-tab" tabindex="0">description details
                                 </div>
@@ -1979,8 +1966,8 @@
                     </a>
                 </div>
                 <div class="col m-0 p-0 border-end border-1">
-                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
-                        aria-controls="offcanvasRight" class="text-decoration-none text-dark">
+                    <a type="button" data-bs-toggle="offcanvas" href="#offcanvasRight2" aria-controls="offcanvasRight"
+                        class="text-decoration-none text-dark">
                         <p class="m-0 px-0 py-3">
                             <svg class="bottom-nav-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

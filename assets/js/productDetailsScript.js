@@ -4,7 +4,10 @@ import {
   bottomNavWishlistbtnNumber,
   shopDataFromJSONFile,
   recentlyProducts,
-  exportRecentlyProductsFromLocalStorage,
+  exportCartProductsFromLocalStorage,
+  cartProducts,
+  headeraddToCardCounter,
+  bottomNavaddToCardbtnNumber,
 } from "./script.js";
 import {
   removeWishlistElementFromLocalStorage,
@@ -13,7 +16,7 @@ import {
   saveElementToProductDetailsToLocalStorage,
   saveElementIDToRecentlyProductToLocalStorage,
 } from "./shopePageScript.js";
-
+exportCartProductsFromLocalStorage();
 const prodcutDetailsContentContainer = document.querySelector(
   ".prodcutDetails-content-container"
 );
@@ -38,7 +41,9 @@ const exportProductDetailsFromLocalStorage = () => {
 };
 
 exportProductDetailsFromLocalStorage();
-
+let cartProductAmount = cartProducts[productDetails.id]
+  ? cartProducts[productDetails.id].amount
+  : 1;
 const swiperWrapperSideBad = document.getElementById("swiper-wrapper-sideBad");
 const swiperWrapperMain = document.getElementById("swiper-wrapper-main");
 const discountContainer = document.getElementById("discount-container");
@@ -58,8 +63,27 @@ const prodcutDetailsPriceSpan = document.getElementById(
 const colorBtns = document.getElementById("color-btns");
 const sizeBtns = document.getElementById("size-btns");
 const minusBtns = document.getElementsByClassName("quantity-minus");
-const quantityCounters = document.getElementsByClassName("quantity-counter");
+for (const minusbtn of minusBtns) {
+  const quantityCounter = document.createElement("span");
+  quantityCounter.classList.add(
+    `quantity-counter-${productDetails.id}`,
+    "col",
+    "text-center",
+    "py-2"
+  );
+  productDetails.amount
+    ? (quantityCounter.textContent = cartProducts[productDetails.id]
+        ? cartProducts[productDetails.id].amount
+        : 1)
+    : (quantityCounter.textContent = 0);
+  minusbtn.after(quantityCounter);
+}
+const quantityCounters = document.getElementsByClassName(
+  `quantity-counter-${productDetails.id}`
+);
+
 const plusBtns = document.getElementsByClassName("quantity-plus");
+// console.log(plusBtns);
 const addToCardBtn = document.getElementById("add-To-Card-btn");
 const buyNowBtn = document.getElementById("buyNow-btn");
 productDetails.amount == 0
@@ -79,9 +103,8 @@ const relatedProductContainer = document.getElementById(
 const recentlyViewedContainer = document.getElementById(
   "recentlyViewed-container"
 );
+const cardProductsContainer = document.getElementById("card-products");
 
-// console.log(typeof `${productDetails.frontImg}`);
-// console.log(productDetails.backImg);
 document.title = productDetails.title;
 swiperWrapperSideBad.innerHTML = `
 <div class="swiper-slide rounded-3 swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" role="group" aria-label="1 / 2" style="width: 43.5px; margin-right: 20px;">
@@ -179,7 +202,7 @@ if (minusBtns && productDetails.amount) {
   for (const minusbtn of minusBtns) {
     minusbtn.addEventListener("click", () => {
       console.log("minus");
-      removequantity();
+      removequantity(productDetails.id);
     });
   }
 }
@@ -188,39 +211,43 @@ if (plusBtns && productDetails.amount) {
   for (const plusbtn of plusBtns) {
     plusbtn.addEventListener("click", () => {
       console.log("plus");
-      addquantity();
+      addquantity(productDetails.id);
     });
   }
 }
 
-for (const quantityCounter of quantityCounters) {
-  productDetails.amount
-    ? (quantityCounter.textContent = 1)
-    : (quantityCounter.textContent = 0);
-}
-
-const addquantity = () => {
+const addquantity = (elementID) => {
   let amount = 1;
-  for (const quantityCounter of quantityCounters) {
+  let specificQuantityCounters = document.getElementsByClassName(
+    `quantity-counter-${elementID}`
+  );
+  for (const quantityCounter of specificQuantityCounters) {
     if (quantityCounter.textContent < productDetails.amount) {
       quantityCounter.textContent = +quantityCounter.textContent + amount;
+      cartProductAmount = quantityCounter.textContent;
       quantityCounter.textContent > 0
         ? (addToCardBtn.disabled = false) && (buyNowBtn.disabled = false)
         : null;
     }
   }
+  console.log(cartProductAmount);
 };
 
-const removequantity = () => {
+const removequantity = (elementID) => {
   let amount = 1;
-  for (const quantityCounter of quantityCounters) {
+  let specificQuantityCounters = document.getElementsByClassName(
+    `quantity-counter-${elementID}`
+  );
+  for (const quantityCounter of specificQuantityCounters) {
     if (quantityCounter.textContent > 0) {
       quantityCounter.textContent = +quantityCounter.textContent - amount;
+      cartProductAmount = quantityCounter.textContent;
       quantityCounter.textContent == 0
         ? (addToCardBtn.disabled = true) && (buyNowBtn.disabled = true)
         : null;
     }
   }
+  console.log(typeof cartProductAmount);
 };
 
 if (productDetails.reviews.length > 0) {
@@ -535,7 +562,6 @@ if (productDetails.relatedProducts.length) {
 }
 if (Object.keys(recentlyProducts).length) {
   for (const productId in recentlyProducts) {
-    console.log(productId);
     ProductDetailsProductsCard(
       shopProductDataFromJSON[productId - 1],
       "recentlyViewed"
@@ -547,3 +573,271 @@ if (Object.keys(recentlyProducts).length) {
     there're no products recently
   </p>;`;
 }
+
+const cartOffcanvasProductCard = (
+  productId,
+  productImgPath,
+  productTitle,
+  productPrice,
+  productAmount
+) => {
+  const parentDiv = document.createElement("div");
+  parentDiv.classList.add("card-product", "w-100", "m-0", "mb-3", "p-0");
+
+  const rowDiv = document.createElement("div");
+  rowDiv.classList.add(
+    "row",
+    "justify-content-between",
+    "align-items-start",
+    "m-0",
+    "p-0"
+  );
+
+  const cardProductImgContainer = document.createElement("div");
+  cardProductImgContainer.classList.add(
+    "card-product-img-container",
+    "col-4",
+    "border",
+    "border-1",
+    "text-center",
+    "p-0"
+  );
+  cardProductImgContainer.innerHTML = `<img src="assets/${productImgPath}" alt="${productTitle}" class="w-100">`;
+
+  const cardProductDetailsContainer = document.createElement("div");
+  cardProductDetailsContainer.classList.add(
+    "card-product-details-container",
+    "col",
+    "text-start"
+  );
+
+  const cardProductDetailsTitle = document.createElement("h3");
+  cardProductDetailsTitle.classList.add(
+    "card-product-details-title",
+    "m-0",
+    "mb-1",
+    "fs-6"
+  );
+  cardProductDetailsTitle.textContent = productTitle;
+
+  const cardProductDetailsPrice = document.createElement("p");
+  cardProductDetailsPrice.classList.add(
+    "card-product-details-price",
+    "m-0",
+    "mb-2"
+  );
+  cardProductDetailsPrice.textContent = productPrice;
+
+  const cardProductDetailsCounterContainer = document.createElement("div");
+  cardProductDetailsCounterContainer.classList.add(
+    "card-product-details-counter-container",
+    "row",
+    "justify-content-start",
+    "align-items-start",
+    "m-0",
+    "p-0"
+  );
+
+  const cardProductDetailsQuantityCounterContainer =
+    document.createElement("div");
+  cardProductDetailsQuantityCounterContainer.classList.add(
+    "card-product-details-quantity-counter-container",
+    "col-4",
+    "rounded-pill",
+    "overflow-hidden",
+    "m-0",
+    "me-3",
+    "fs-6",
+    "p-0"
+  );
+
+  const counter = document.createElement("div");
+  counter.classList.add(
+    "counter",
+    "m-0",
+    "p-0",
+    "d-flex",
+    "justify-content-between",
+    "align-items-center"
+  );
+
+  const quantityMinus = document.createElement("span");
+  quantityMinus.classList.add("quantity-minus", "col-3", "text-center", "py-2");
+  quantityMinus.textContent = "-";
+  quantityMinus.id = "quantity-minus" + productId;
+  quantityMinus.addEventListener("click", () => {
+    removequantity(productId);
+    addProductToCart(
+      productId,
+      productImgPath,
+      productTitle,
+      productPrice,
+      cartProductAmount
+    );
+  });
+
+  const quantityCounter = document.createElement("span");
+  quantityCounter.classList.add(
+    `quantity-counter-${productId}`,
+    "col",
+    "text-center",
+    "py-2"
+  );
+  quantityCounter.textContent = productAmount;
+  quantityCounter.id = "quantity-counter" + productId;
+
+  const quantityPlus = document.createElement("span");
+  quantityPlus.classList.add("quantity-plus", "col-3", "text-center", "py-2");
+  quantityPlus.textContent = "+";
+  quantityPlus.id = "quantity-plus" + productId;
+  quantityPlus.addEventListener("click", () => {
+    addquantity(productId);
+    addProductToCart(
+      productId,
+      productImgPath,
+      productTitle,
+      productPrice,
+      cartProductAmount
+    );
+  });
+
+  const cardProductDetailsRemoveBtnContainer = document.createElement("div");
+  cardProductDetailsRemoveBtnContainer.classList.add(
+    "card-product-details-remove-btn-container",
+    "col-4",
+    "m-0",
+    "p-0"
+  );
+
+  const removeBtn = document.createElement("button");
+  removeBtn.classList.add(
+    "remove-btn",
+    "w-100",
+    "m-0",
+    "py-2",
+    "text-capitalize",
+    "fw-bold",
+    "rounded-pill"
+  );
+  removeBtn.textContent = "remove";
+  removeBtn.id = "remove-from-cart" + productId;
+  removeBtn.addEventListener("click", () => {
+    delete cartProducts[productId];
+    localStorage.setItem("cart_products", JSON.stringify(cartProducts));
+    cardProductsContainer.innerHTML = "";
+    console.log(cartProducts);
+    if (Object.keys(cartProducts).length > 0) {
+      for (const cartProduct in cartProducts) {
+        cartOffcanvasProductCard(
+          cartProduct,
+          cartProducts[cartProduct].img,
+          cartProducts[cartProduct].title,
+          cartProducts[cartProduct].price,
+          cartProducts[cartProduct].amount
+        );
+      }
+      headeraddToCardCounter(cartProducts);
+      bottomNavaddToCardbtnNumber(cartProducts);
+    } else {
+      headeraddToCardCounter(cartProducts);
+      bottomNavaddToCardbtnNumber(cartProducts);
+      cardProductsContainer.innerHTML = `
+    <div class="offcanvas-right-img w-75 m-auto p-0">
+        <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
+    </div>
+    <p class="fw-bold fs-6"> Your cart is currently empty.</p>
+    <p class="text-gray fw-bold font-15px"> You may check out all the available products and buy some in the shop. </p>
+    <a href="productDetails.html" aria-label="Close" data-bs-dismiss="offcanvas" type="button"
+        class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to shop
+    </a> `;
+    }
+  });
+
+  counter.appendChild(quantityMinus);
+  counter.appendChild(quantityCounter);
+  counter.appendChild(quantityPlus);
+
+  cardProductDetailsQuantityCounterContainer.appendChild(counter);
+  cardProductDetailsRemoveBtnContainer.appendChild(removeBtn);
+
+  cardProductDetailsCounterContainer.appendChild(
+    cardProductDetailsQuantityCounterContainer
+  );
+  cardProductDetailsCounterContainer.appendChild(
+    cardProductDetailsRemoveBtnContainer
+  );
+
+  cardProductDetailsContainer.appendChild(cardProductDetailsTitle);
+  cardProductDetailsContainer.appendChild(cardProductDetailsPrice);
+  cardProductDetailsContainer.appendChild(cardProductDetailsCounterContainer);
+  rowDiv.appendChild(cardProductImgContainer);
+  rowDiv.appendChild(cardProductDetailsContainer);
+  parentDiv.appendChild(rowDiv);
+  cardProductsContainer.appendChild(parentDiv);
+};
+
+const addProductToCart = (
+  productId,
+  productImg,
+  productTitle,
+  productPrice,
+  productAmount
+) => {
+  let choosenElement = {
+    id: productId,
+    img: productImg,
+    title: productTitle,
+    price: productPrice,
+    amount: productAmount,
+  };
+  console.log("Save in Storage");
+  cartProducts[productId] = choosenElement;
+  localStorage.setItem("cart_products", JSON.stringify(cartProducts));
+};
+
+addToCardBtn.addEventListener("click", () => {
+  if (!(productDetails.id in cartProducts)) {
+    cardProductsContainer.innerHTML = "";
+    addProductToCart(
+      productDetails.id,
+      productDetails.frontImg,
+      productDetails.title,
+      productDetails.price,
+      cartProductAmount
+    );
+    for (const cartProduct in cartProducts) {
+      cartOffcanvasProductCard(
+        cartProduct,
+        cartProducts[cartProduct].img,
+        cartProducts[cartProduct].title,
+        cartProducts[cartProduct].price,
+        cartProducts[cartProduct].amount
+      );
+    }
+    headeraddToCardCounter(cartProducts);
+    bottomNavaddToCardbtnNumber(cartProducts);
+  }
+});
+
+if (Object.keys(cartProducts).length > 0) {
+  for (const cartProduct in cartProducts) {
+    cartOffcanvasProductCard(
+      cartProduct,
+      cartProducts[cartProduct].img,
+      cartProducts[cartProduct].title,
+      cartProducts[cartProduct].price,
+      cartProducts[cartProduct].amount
+    );
+  }
+} else {
+  cardProductsContainer.innerHTML = `
+    <div class="offcanvas-right-img w-75 m-auto p-0">
+        <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
+    </div>
+    <p class="fw-bold fs-6"> Your cart is currently empty.</p>
+    <p class="text-gray fw-bold font-15px"> You may check out all the available products and buy some in the shop. </p>
+    <a href="productDetails.html" aria-label="Close" data-bs-dismiss="offcanvas" type="button"
+        class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to shop
+    </a> `;
+}
+console.log(Object.keys(cartProducts).length);

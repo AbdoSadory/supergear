@@ -360,3 +360,16 @@ body {
   outline: 0;
   transition: transform 0.3s ease-in-out;
 } */
+.modal-header {
+  border-bottom: unset;
+}
+
+.modal-footer {
+  border-top: unset;
+  justify-content: center;
+}
+#userMSG,
+#userReview,
+#cart-note {
+  resize: none;
+}

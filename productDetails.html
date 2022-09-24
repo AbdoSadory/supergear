@@ -647,7 +647,10 @@
                                                         </path>
                                                     </svg>
                                                 </button>
-                                                <div class="counter bg-red text-light rounded-circle">0</div>
+                                                <div
+                                                    class="add-to-card-counter counter bg-red text-light rounded-circle">
+                                                    0
+                                                </div>
                                                 <div
                                                     class="hoverBox bg-dark d-flex justify-content-center text-center p-2">
                                                     <span class="text-light fs-6">cart</span>
@@ -834,7 +837,7 @@
                                     </path>
                                 </svg>
                             </button>
-                            <div class="counter bg-red text-light rounded-circle">0</div>
+                            <div class="add-to-card-counter counter bg-red text-light rounded-circle">0</div>
                             <div class="hoverBox bg-dark d-flex justify-content-center text-center p-2">
                                 <span class="text-light fs-6">cart</span>
                             </div>
@@ -862,98 +865,111 @@
                                 <p class="text-dark fw-bold font-15px mx-0">Buy $200.00 more to enjoy <span
                                         class="fw-bolder">FREE Shipping</span></p>
                                 <div class="yellow-star w-100 mx-0"></div>
-                                <!-- <div class="offcanvas-right-img w-75 m-auto p-0">
-                                    <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
-                                </div>
-                                <p class="fw-bold fs-6">
-                                    Your cart is currently empty.
-                                </p>
-                                <p class="text-gray fw-bold font-15px">
-                                    You may check out all the available products and buy some in the shop. </p>
-                                <a href="#" aria-label="Close" data-bs-dismiss="offcanvas" type="button"
-                                    class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to
-                                    shop</a> -->
+
+
+
+
+
+
+
+
                                 <!-- card-products -->
-                                <div class="card-products w-100 m-0 my-3 p-0 border border-2 border-dark">
-                                    <div class="card-product w-100 m-0 mb-3 p-0 ">
-                                        <div class="row justify-content-between align-items-start">
-                                            <div class="card-product-img-container col-4 border border-1">
-                                                <img src="assets/images/json/1 (1).jpg" alt="blah blah" class="w-100">
-                                            </div>
-                                            <div class="card-product-details-container col text-start">
-                                                <h3 class="card-product-details-title m-0 mb-2">blah blah blah blah
-                                                    blah
-                                                    blah
-                                                    blah</h3>
-                                                <p class="card-product-details-color m-0 mb-2">color:
-                                                    <span>red</span>
-                                                </p>
-                                                <p class="card-product-details-price m-0 mb-2">$858</p>
-                                                <div
-                                                    class="card-product-details-counter-container row justify-content-start align-items-center m-0 p-0">
-                                                    <div
-                                                        class="card-product-details-quantity-counter-container col-4 rounded-pill overflow-hidden m-0 me-3 p-0 fs-6">
-                                                        <div
-                                                            class="counter m-0 p-0 d-flex justify-content-between align-items-center">
-                                                            <span class="quantity-minus col-3 text-center py-2"
-                                                                onclick="">-</span>
-                                                            <span
-                                                                class="quantity-counter col text-center py-2">01</span>
-                                                            <span class="quantity-plus col-3 text-center py-2"
-                                                                onclick="">+</span>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="card-product-details-remove-btn-container col-4 m-0 p-0 ">
-                                                        <button
-                                                            class="remove-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">remove</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="card-products w-100 m-0 my-3 p-0" id="card-products"></div>
                                 <!-- card-footer -->
                                 <div class="card-footer w-100 m-0 p-0 border border-2 border-dark">
                                     <div class="card-footer-nav-container w-100">
-                                        <div class="row justify-content-between align-items-center">
-                                            <div class="col m-0 p-0 border-end border-1">
-                                                <a class="card-note text-decoration-none" data-bs-toggle="offcanvas"
-                                                    href="#offcanvasBottom1" role="button"
-                                                    aria-controls="offcanvasBottom1">
-                                                    <i class="fa-solid fa-pen"></i>
-                                                    <p class="m-0 p-0 text-capitalize">note</p>
-                                                </a>
-                                                <div class="offcanvas offcanvas-bottom offcanvas-bottom1 show"
-                                                    tabindex="-1" id="offcanvasBottom1"
-                                                    aria-labelledby="offcanvasBottomLabel1">
-                                                    <div class="offcanvas-header">
-                                                        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas
-                                                            bottom</h5>
-                                                        <button type="button" class="btn-close text-reset"
-                                                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="offcanvas-body small">
-                                                        ...
-                                                    </div>
+                                        <div class="w-100">
+                                            <nav class="w-100 m-0p-0">
+                                                <div class="nav nav-tabs justify-content-center" id="nav-tab2"
+                                                    role="tablist">
+                                                    <button class="nav-link text-capitalize active border-end border-1"
+                                                        id="nav-note-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#nav-note" type="button" role="tab"
+                                                        aria-controls="nav-note" aria-selected="true">
+                                                        <i class="fa-solid fa-pen"></i>
+                                                        <p class="m-0 p-0 text-capitalize">note</p>
+                                                    </button>
+
+                                                    <button class="nav-link text-capitalize" id="nav-shipping-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#nav-shipping"
+                                                        type="button" role="tab" aria-controls="nav-shipping"
+                                                        aria-selected="false">
+                                                        <i class="fa-solid fa-truck"></i>
+                                                        <p class="m-0 p-0 text-capitalize">shipping</p>
+                                                    </button>
+
+                                                    <button class="nav-link text-capitalize" id="nav-coupon-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#nav-coupon" type="button"
+                                                        role="tab" aria-controls="nav-coupon" aria-selected="false">
+                                                        <svg class="" width="22" fill="currentColor"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14">
+                                                            <path fill="currentColor"
+                                                                d="M15.2812 3.875c.2344 0 .4336.08203.5977.24609.1641.16407.2461.36328.2461.59766v5.0625c0 .23435-.082.43355-.2461.59765-.1641.1641-.3633.2461-.5977.2461H5.71875c-.23437 0-.43359-.082-.59766-.2461-.16406-.1641-.24609-.3633-.24609-.59765v-5.0625c0-.23438.08203-.43359.24609-.59766.16407-.16406.36329-.24609.59766-.24609h9.56245zM15 9.5V5H6v4.5h9zm4.5-3.375c-.3047 0-.5742.11719-.8086.35156-.2109.21094-.3164.46875-.3164.77344s.1055.57422.3164.80859c.2344.21094.5039.31641.8086.31641h1.125v3.9375c0 .4687-.1641.8672-.4922 1.1953-.3281.3281-.7266.4922-1.1953.4922H2.0625c-.46875 0-.86719-.1641-1.195312-.4922C.539062 13.1797.375 12.7812.375 12.3125V8.375H1.5c.30469 0 .5625-.10547.77344-.31641.23437-.23437.35156-.5039.35156-.80859s-.11719-.5625-.35156-.77344C2.0625 6.24219 1.80469 6.125 1.5 6.125H.375V2.1875c0-.46875.164062-.86719.492188-1.195312C1.19531.664063 1.59375.5 2.0625.5h16.875c.4687 0 .8672.164063 1.1953.492188.3281.328122.4922.726562.4922 1.195312V6.125H19.5zm0 3.375c-.6094 0-1.1367-.22266-1.582-.66797-.4453-.44531-.668-.97265-.668-1.58203s.2227-1.13672.668-1.58203C18.3633 5.22266 18.8906 5 19.5 5V2.1875c0-.16406-.0586-.29297-.1758-.38672-.0937-.11719-.2226-.17578-.3867-.17578H2.0625c-.16406 0-.30469.05859-.42188.17578-.09374.09375-.14062.22266-.14062.38672V5c.60938 0 1.13672.22266 1.58203.66797.44531.44531.66797.97265.66797 1.58203s-.22266 1.13672-.66797 1.58203C2.63672 9.27734 2.10938 9.5 1.5 9.5v2.8125c0 .1641.04688.3047.14062.4219.11719.0937.25782.1406.42188.1406h16.875c.1641 0 .293-.0469.3867-.1406.1172-.1172.1758-.2578.1758-.4219V9.5z">
+                                                            </path>
+                                                        </svg>
+                                                        <p class="m-0 p-0 text-capitalize">coupon</p>
+                                                    </button>
                                                 </div>
-                                            </div>
-                                            <div class="col m-0 p-0 border-end border-1">
-                                                <a href="#" class="shipping text-decoration-none ">
-                                                    <i class="fa-solid fa-truck"></i>
-                                                    <p class="m-0 p-0 text-capitalize">note</p>
-                                                </a>
-                                            </div>
-                                            <div class="col m-0 p-0 border-end border-1">
-                                                <a href="#" class="coupon text-decoration-none ">
-                                                    <svg class="" width="22" fill="currentColor"
-                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14">
-                                                        <path fill="currentColor"
-                                                            d="M15.2812 3.875c.2344 0 .4336.08203.5977.24609.1641.16407.2461.36328.2461.59766v5.0625c0 .23435-.082.43355-.2461.59765-.1641.1641-.3633.2461-.5977.2461H5.71875c-.23437 0-.43359-.082-.59766-.2461-.16406-.1641-.24609-.3633-.24609-.59765v-5.0625c0-.23438.08203-.43359.24609-.59766.16407-.16406.36329-.24609.59766-.24609h9.56245zM15 9.5V5H6v4.5h9zm4.5-3.375c-.3047 0-.5742.11719-.8086.35156-.2109.21094-.3164.46875-.3164.77344s.1055.57422.3164.80859c.2344.21094.5039.31641.8086.31641h1.125v3.9375c0 .4687-.1641.8672-.4922 1.1953-.3281.3281-.7266.4922-1.1953.4922H2.0625c-.46875 0-.86719-.1641-1.195312-.4922C.539062 13.1797.375 12.7812.375 12.3125V8.375H1.5c.30469 0 .5625-.10547.77344-.31641.23437-.23437.35156-.5039.35156-.80859s-.11719-.5625-.35156-.77344C2.0625 6.24219 1.80469 6.125 1.5 6.125H.375V2.1875c0-.46875.164062-.86719.492188-1.195312C1.19531.664063 1.59375.5 2.0625.5h16.875c.4687 0 .8672.164063 1.1953.492188.3281.328122.4922.726562.4922 1.195312V6.125H19.5zm0 3.375c-.6094 0-1.1367-.22266-1.582-.66797-.4453-.44531-.668-.97265-.668-1.58203s.2227-1.13672.668-1.58203C18.3633 5.22266 18.8906 5 19.5 5V2.1875c0-.16406-.0586-.29297-.1758-.38672-.0937-.11719-.2226-.17578-.3867-.17578H2.0625c-.16406 0-.30469.05859-.42188.17578-.09374.09375-.14062.22266-.14062.38672V5c.60938 0 1.13672.22266 1.58203.66797.44531.44531.66797.97265.66797 1.58203s-.22266 1.13672-.66797 1.58203C2.63672 9.27734 2.10938 9.5 1.5 9.5v2.8125c0 .1641.04688.3047.14062.4219.11719.0937.25782.1406.42188.1406h16.875c.1641 0 .293-.0469.3867-.1406.1172-.1172.1758-.2578.1758-.4219V9.5z">
-                                                        </path>
-                                                    </svg>
-                                                    <p class="m-0 p-0 text-capitalize">note</p>
-                                                </a>
+                                            </nav>
+                                            <div class="tab-content text-start p-2" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="nav-note" role="tabpanel"
+                                                    aria-labelledby="nav-note-tab" tabindex="0">
+                                                    <h3 class="fs-5">Add note for seller</h3>
+                                                    <form method="get">
+                                                        <textarea name="note" id="cart-note" class="w-100 p-2" rows="5"
+                                                            placeholder="Your Note"></textarea>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">send</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="nav-shipping" role="tabpanel"
+                                                    aria-labelledby="nav-shipping-tab" tabindex="0">
+                                                    <h3 class="fs-5">Estimate shipping rates</h3>
+                                                    <form method="get">
+                                                        <select class="form-select rounded-pill m-0 my-2 p-2 text-dark"
+                                                            name="userCountry" id="userCountry"
+                                                            aria-label="Default select example">
+                                                            <option value="EGY" selected="">Egypt</option>
+                                                            <option value="USA">USA</option>
+                                                            <option value="KSA">KSA</option>
+                                                        </select>
+                                                        <input type="text" name="userCity" id="userCity"
+                                                            placeholder="Your City"
+                                                            class="city-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <input type="text" name="userPostcode/ZIP" id="userPostcode/ZIP"
+                                                            placeholder="Your Postcode/ZIP"
+                                                            class="zip-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">calculate
+                                                                Shipping</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="nav-coupon" role="tabpanel"
+                                                    aria-labelledby="nav-coupon-tab" tabindex="0">
+                                                    <h3 class="fs-5">Select or input Coupon</h3>
+                                                    <p class="fs-6 m-0 my-1">If you have a coupon code, please apply it
+                                                        below.
+                                                    </p>
+                                                    <form method="get">
+                                                        <input type="text" name="useCoupon" id="useCoupon"
+                                                            placeholder="Your Coupon"
+                                                            class="coupon-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">send</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -965,7 +981,8 @@
                                                         <p class="text-start text-capitalize m-0 p-0">subtotal</p>
                                                     </div>
                                                     <div class="card-footer-subtotal-value col ">
-                                                        <p class="text-start text-capitalize m-0 p-0 text-end">$63.22
+                                                        <p class="text-start text-capitalize m-0 p-0 text-end"
+                                                            id="subtotal">$63.22
                                                         </p>
                                                     </div>
                                                 </div>
@@ -989,7 +1006,8 @@
                                                         <p class="text-start text-capitalize m-0 p-0">total</p>
                                                     </div>
                                                     <div class="card-footer-total-value col ">
-                                                        <p class="text-start text-capitalize fw-bold m-0 p-0 text-end">
+                                                        <p class="text-start text-capitalize fw-bold m-0 p-0 text-end"
+                                                            id="total">
                                                             $73.21</p>
                                                     </div>
                                                 </div>
@@ -1313,9 +1331,83 @@
                                                 <i class="fa-regular fa-star m-0 p-0"></i>
                                             </span>
                                             <span class="prodcutDetails-add-review-span">
-                                                <a href="#"
-                                                    class="prodcutDetails-add-review-span-btn text-decoration-none text-dark btn-hover text-capitalize">add
+                                                <!--  Model -->
+                                                <a href="#shareStaticBackdrop1"
+                                                    class="prodcutDetails-add-review-span-btn text-decoration-none text-dark btn-hover text-capitalize"
+                                                    type="button" data-bs-toggle="modal" href="#askStaticBackdrop1"
+                                                    title="add-review">add
                                                     review</a>
+                                                <!--review Modal -->
+                                                <div class="modal fade " id="shareStaticBackdrop1"
+                                                    data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header m-0">
+                                                                </h5>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body m-0 p-0 px-4 text-start">
+                                                                <div class=" container-xl m-0 p-0">
+                                                                    <div class="container-xl m-0 p-0">
+                                                                        <h2
+                                                                            class="text-capitalize text-dark text-center my-4">
+                                                                            add review</h2>
+                                                                        <form>
+                                                                            <div
+                                                                                class="name-email-container w-100 m-0 mb-3 p-0 row justify-content-between align-items-center">
+                                                                                <div class="col-5 m-0 p-0">
+                                                                                    <label for="userName"
+                                                                                        class="text-capitalize text-dark mb-1 fw-bold">name*</label>
+                                                                                    <input type="text" name="userName"
+                                                                                        id="userName"
+                                                                                        placeholder="Your Name*"
+                                                                                        class="name-input inputs w-100 border border-2 rounded-pill p-2 text-dark"
+                                                                                        required>
+                                                                                </div>
+                                                                                <div class="col-5 m-0 p-0">
+                                                                                    <label for="userEmail"
+                                                                                        class="text-capitalize text-dark mb-1 fw-bold">email*</label>
+                                                                                    <input type="email" name="userEmail"
+                                                                                        id="userEmail"
+                                                                                        placeholder="Your Email*"
+                                                                                        class="email-input inputs w-100 border border-2 rounded-pill p-2 text-dark"
+                                                                                        required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <label for="userReviewTitle"
+                                                                                class="text-capitalize text-dark mb-1 fw-bold">review
+                                                                                title*</label>
+                                                                            <input type="text" name="userReviewTitle"
+                                                                                id="userReviewTitle"
+                                                                                placeholder="Review Title*"
+                                                                                class="reviewTitle-input inputs w-100 border border-2 rounded-pill p-2 mb-3 text-dark"
+                                                                                required>
+                                                                            <label for="userReview"
+                                                                                class="text-capitalize text-dark mb-1 fw-bold">review*</label>
+                                                                            <textarea
+                                                                                class="w-100 border border-2 rounded-3 p-2"
+                                                                                name="userReview" id="userReview"
+                                                                                rows="8" placeholder="Your Review*"
+                                                                                required></textarea>
+                                                                            <div class="w-100 text-center">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-dark text-center text-gray text-capitalize">send
+                                                                                    my message</button>
+                                                                            </div>
+
+
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </span>
                                         </div>
                                     </div>
@@ -1350,7 +1442,6 @@
                                                     class="counter m-0 p-0 d-flex justify-content-between align-items-center">
                                                     <span class="quantity-minus col-3 text-center py-2"
                                                         onclick="">-</span>
-                                                    <span class="quantity-counter col text-center py-2">01</span>
                                                     <span class="quantity-plus col-3 text-center py-2"
                                                         onclick="">+</span>
                                                 </div>
@@ -1360,7 +1451,7 @@
                                                     class="add-To-Card-btn w-100 m-0 py-2 text-capitalize fw-bold  rounded-pill"
                                                     type="button" data-bs-toggle="offcanvas"
                                                     data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight"
-                                                    id="add-To-Card-btn">add
+                                                    id="add-To-Card-btn" onclick="">add
                                                     to card</button>
                                             </div>
                                         </div>
@@ -1374,15 +1465,95 @@
                                     <!-- compare-Ask-Share -->
                                     <div
                                         class="prodcutDetails-compare-ask-share-container m-0 mb-3 p-0 py-3 border-bottom border-2">
-                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize me-5">
+                                        <!-- compare Model -->
+                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize me-5"
+                                            title="compare">
                                             <i class="fa-solid fa-arrow-right-arrow-left"></i> compare
                                         </a>
-                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize me-5">
+                                        <!--  Model -->
+                                        <a class="compare-link text-decoration-none fs-6 text-capitalize me-5"
+                                            type="button" data-bs-toggle="modal" href="#askStaticBackdrop2" title="ask">
                                             <i class="fa-solid fa-question"></i> ask a question
                                         </a>
-                                        <a href="" class="compare-link text-decoration-none fs-6 text-capitalize">
+                                        <!-- ask Modal -->
+                                        <div class="modal fade" id="askStaticBackdrop2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header m-0">
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body m-0 py-2">
+                                                        <div class="container-xl m-0 p-0 text-center">
+                                                            <h2 class="text-capitalize text-dark text-center my-4">ask a
+                                                                question</h2>
+                                                            <form>
+                                                                <input type="text" name="userName" id="userName"
+                                                                    placeholder="Your Name*"
+                                                                    class="ask-input inputs w-100 border border-2 rounded-pill p-2 text-dark"
+                                                                    required>
+                                                                <input type="email" name="userEmail" id="userEmail"
+                                                                    placeholder="Your Email*"
+                                                                    class="ask-input inputs w-100 border border-2 rounded-pill my-4 p-2 text-dark"
+                                                                    required>
+                                                                <textarea class="w-100 border border-2 rounded-3 p-2"
+                                                                    name="msg" id="userMSG" rows="8"
+                                                                    placeholder="Your Message*" required></textarea>
+                                                                <button type="submit"
+                                                                    class="btn btn-dark text-center text-gray text-capitalize">send
+                                                                    my message</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  Model -->
+                                        <a class="compare-link text-decoration-none fs-6 text-capitalize" type="button"
+                                            data-bs-toggle="modal" href="#shareStaticBackdrop3" title="share">
                                             <i class="fa-solid fa-share-nodes"></i> share
                                         </a>
+                                        <!--share Modal -->
+                                        <div class="modal fade " id="shareStaticBackdrop3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header m-0">
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body m-0 py-2">
+                                                        <div class="container-xl m-0 p-0">
+                                                            <p class="text-capitalize text-dark fw-bold my-2">copy link
+                                                            </p>
+                                                            <span class="copy-container-input-span">
+                                                                <input id="copy-url" type="url"
+                                                                    class="border border-2 rounded-pill py-2 px-4"
+                                                                    value="https://abdosadory.github.io/supergear/wishlistPage.html"
+                                                                    readonly>
+                                                            </span>
+                                                            <p class="text-capitalize text-dark fw-bold mt-4 mb-2">share
+                                                            </p>
+                                                            <div class="newsletter-icons my-2">
+                                                                <i class="fa-brands fa-pinterest-p fs-5 me-4"></i>
+                                                                <i class="fa-brands fa-facebook-f fs-5 me-4"></i>
+                                                                <i class="fa-brands fa-instagram fs-5 me-4"></i>
+                                                                <i class="fa-brands fa-twitter fs-5 me-4"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- estimatedDelivery -->
                                     <div class=" prodcutDetails-estimatedDelivery-container mb-2">
@@ -1808,7 +1979,8 @@
                     </a>
                 </div>
                 <div class="col m-0 p-0 border-end border-1">
-                    <a href="#" class="text-decoration-none text-dark">
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+                        aria-controls="offcanvasRight" class="text-decoration-none text-dark">
                         <p class="m-0 px-0 py-3">
                             <svg class="bottom-nav-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1820,7 +1992,8 @@
                     </a>
                 </div>
                 <div class="col m-0 p-0">
-                    <a href="#" class="text-decoration-none text-dark">
+                    <a class="text-decoration-none text-dark" type="button" data-bs-toggle="offcanvas"
+                        href="#offcanvasRight" aria-controls="offcanvasRight">
                         <p class="m-0 px-0 py-3">
                             <svg class="bottom-nav-icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

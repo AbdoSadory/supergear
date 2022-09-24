@@ -161,6 +161,7 @@ export let wishlistElements = {};
 export let elementsLength;
 export let productsInCard = {};
 export let recentlyProducts = {};
+export let cartProducts = {};
 
 const exportWishlistProductsFromLocalStorage = () => {
   let localStorageDataLength = JSON.parse(localStorage.getItem("User_Wishlist"))
@@ -182,15 +183,26 @@ export const exportRecentlyProductsFromLocalStorage = () => {
   )
     ? Object.keys(JSON.parse(localStorage.getItem("recently_products"))).length
     : 0;
-  // console.log(localStorageDataLength);
   if (localStorageDataLength != 0) {
     let storedRecentlyProducts = localStorage.getItem("recently_products");
     recentlyProducts = { ...JSON.parse(storedRecentlyProducts) };
-    // console.log(recentlyProducts);
   } else {
     console.log(`There's no recentlyProducts in localStorage`);
   }
 };
+
+export const exportCartProductsFromLocalStorage = () => {
+  let localStorageDataLength = JSON.parse(localStorage.getItem("cart_products"))
+    ? Object.keys(JSON.parse(localStorage.getItem("cart_products"))).length
+    : 0;
+  if (localStorageDataLength !== 0) {
+    let storedCartProducts = localStorage.getItem("cart_products");
+    cartProducts = { ...JSON.parse(storedCartProducts) };
+  } else {
+    console.log(`There's no cart Products in localStorage`);
+  }
+};
+
 const bottomNavWishlistbtn = document.querySelector(
   ".bottom-nav .container-fluid .col:nth-child(3) a p"
 );
@@ -228,7 +240,8 @@ export const wishlistCounter = (wishlistElementsObject) => {
 };
 exportWishlistProductsFromLocalStorage();
 exportRecentlyProductsFromLocalStorage();
+exportCartProductsFromLocalStorage();
 bottomNavWishlistbtnNumber(wishlistElements);
-bottomNavaddToCardbtnNumber(wishlistElements);
-headeraddToCardCounter(wishlistElements);
 wishlistCounter(wishlistElements);
+headeraddToCardCounter(cartProducts);
+bottomNavaddToCardbtnNumber(cartProducts);

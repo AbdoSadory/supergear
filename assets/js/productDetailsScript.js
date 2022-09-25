@@ -105,6 +105,9 @@ const activeAddToCart = () => {
   }
 };
 const buyNowBtns = document.getElementsByClassName("buyNow-btn");
+for (const buyNowBtn of buyNowBtns) {
+  buyNowBtn.href = "checkoutPage.html";
+}
 const deactiveBuyNowBtn = () => {
   for (const buyNowBtn of buyNowBtns) {
     buyNowBtn.disabled = true;

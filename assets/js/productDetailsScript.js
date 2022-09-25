@@ -493,7 +493,7 @@ const ProductDetailsProductsCard = (productObject, parentSwiper) => {
       productObject.amount,
       productObject.relatedProducts,
       productObject.note,
-      productObject.colors,
+      productObject.color,
       productObject.size
     );
     saveElementIDToRecentlyProductToLocalStorage(productObject.id);

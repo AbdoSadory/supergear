@@ -8,13 +8,17 @@ import {
   cartProducts,
   headeraddToCardCounter,
   bottomNavaddToCardbtnNumber,
+  salaryCalculations,
+  firstPageMarker,
 } from "./script.js";
+
 import {
   removeWishlistElementFromLocalStorage,
   saveElementToWishlistToLocalStorage,
   renderWishlistPopUp,
   saveElementToProductDetailsToLocalStorage,
   saveElementIDToRecentlyProductToLocalStorage,
+  secondPageMarker,
 } from "./shopePageScript.js";
 exportCartProductsFromLocalStorage();
 const prodcutDetailsContentContainer = document.querySelector(
@@ -129,9 +133,7 @@ const recentlyViewedContainer = document.getElementById(
   "recentlyViewed-container"
 );
 const cardProductsContainer = document.getElementById("card-products");
-const subtotalPara = document.getElementById("subtotal");
-const totalPara = document.getElementById("total");
-
+cardProductsContainer.innerHTML = "";
 document.title = productDetails.title;
 swiperWrapperSideBad.innerHTML = `
 <div class="swiper-slide rounded-3 swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" role="group" aria-label="1 / 2" style="width: 43.5px; margin-right: 20px;">
@@ -600,8 +602,7 @@ if (Object.keys(recentlyProducts).length) {
     there're no products recently
   </p>;`;
 }
-
-const cartOffcanvasProductCard = (
+export const cartOffcanvasProductCard = (
   productId,
   productImgPath,
   productTitle,
@@ -788,7 +789,9 @@ const cartOffcanvasProductCard = (
   counter.appendChild(quantityCounter);
   counter.appendChild(quantityPlus);
 
-  cardProductDetailsQuantityCounterContainer.appendChild(counter);
+  if (!firstPageMarker && !secondPageMarker) {
+    cardProductDetailsQuantityCounterContainer.appendChild(counter);
+  }
   cardProductDetailsRemoveBtnContainer.appendChild(removeBtn);
 
   cardProductDetailsCounterContainer.appendChild(
@@ -804,7 +807,7 @@ const cartOffcanvasProductCard = (
   rowDiv.appendChild(cardProductImgContainer);
   rowDiv.appendChild(cardProductDetailsContainer);
   parentDiv.appendChild(rowDiv);
-  cardProductsContainer.appendChild(parentDiv);
+  cardProductsContainer ? cardProductsContainer.appendChild(parentDiv) : null;
 };
 
 const addProductToCart = (
@@ -852,22 +855,6 @@ for (const addToCardBtn of addToCardBtns) {
     }
   });
 }
-
-const salaryCalculations = (productsInCart) => {
-  let subtotal = 0;
-  let shipping = Object.keys(productsInCart).length == 0 ? 0 : 10;
-  let total = 0;
-  for (const cartProduct in productsInCart) {
-    let amount = productsInCart[cartProduct].amount;
-    let price = productsInCart[cartProduct].price;
-    let cost = (amount * price).toFixed(2);
-    subtotal = subtotal + +cost;
-  }
-  total = subtotal + shipping;
-  subtotalPara.textContent = subtotal;
-  totalPara.textContent = total;
-  console.log(total);
-};
 
 if (Object.keys(cartProducts).length > 0) {
   for (const cartProduct in cartProducts) {

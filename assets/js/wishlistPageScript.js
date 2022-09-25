@@ -3,15 +3,19 @@ import {
   bottomNavWishlistbtnNumber,
   wishlistCounter,
   headeraddToCardCounter,
+  shopDataFromJSONFile,
 } from "./script.js";
+import { saveElementToProductDetailsToLocalStorage } from "./shopePageScript.js";
 
 const wishlistContentDiv = document.getElementById("wishlist-content");
+
 let elementsFromLocalStorage = { ...wishlistElements };
 
 const renderWishlistPageProductCard = (wishlistFromLocalStorage) => {
   let wishlistKeys = Object.keys(wishlistFromLocalStorage);
   wishlistContentDiv.innerHTML = null;
   for (const elementKey in wishlistFromLocalStorage) {
+    // console.log(wishlistFromLocalStorage[elementKey]);
     wishlistPageProdcutCard(wishlistFromLocalStorage[elementKey]);
   }
 };
@@ -77,7 +81,30 @@ const wishlistPageProdcutCard = (storedWishlistelement) => {
     "fs-5",
     "m-0"
   );
-  contentRowCardDetailsTitle.innerHTML = `<a href="#" class="text-decoration-none text-dark">${storedWishlistelement.title}</a>`;
+  contentRowCardDetailsTitle.innerHTML = `<a href="productDetails.html" class="text-decoration-none text-dark">${storedWishlistelement.title}</a>`;
+  contentRowCardDetailsTitle.addEventListener("click", () => {
+    saveElementToProductDetailsToLocalStorage(
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].id,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].frontImg,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].backImg,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].title,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].oldPrice,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].price,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].category,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].description,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
+        .additionalInfo,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].aboutBrand,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].reviews,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].questions,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].amount,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
+        .relatedProducts,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].note,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].color,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].size
+    );
+  });
 
   const contentRowCardDetailsOldPrice = document.createElement("span");
   contentRowCardDetailsOldPrice.classList.add(
@@ -110,7 +137,7 @@ const wishlistPageProdcutCard = (storedWishlistelement) => {
   selectColDiv.classList.add("col-3", "m-0", "p-0");
   const selectDiv = document.createElement("div");
   selectDiv.classList.add("w-100", "text-center", "m-0", "p-0");
-  const selectButton = document.createElement("button");
+  const selectButton = document.createElement("a");
   selectButton.classList.add(
     "wishlist-card-select",
     "btn",
@@ -120,9 +147,33 @@ const wishlistPageProdcutCard = (storedWishlistelement) => {
     "py-2",
     "px-4"
   );
+  selectButton.href = "productDetails.html";
   selectButton.id = "select";
   selectButton.type = "button";
   selectButton.textContent = "select options";
+  selectButton.addEventListener("click", () => {
+    saveElementToProductDetailsToLocalStorage(
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].id,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].frontImg,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].backImg,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].title,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].oldPrice,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].price,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].category,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].description,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
+        .additionalInfo,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].aboutBrand,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].reviews,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].questions,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].amount,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
+        .relatedProducts,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].note,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].color,
+      shopDataFromJSONFile.products[storedWishlistelement.id - 1].size
+    );
+  });
   //////////////////////////////
   contentRowCardImageDiv.appendChild(contentRowCardImage);
   contentRowCardDetailsDiv.appendChild(contentRowCardDetailsTitle);

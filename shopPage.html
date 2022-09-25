@@ -28,6 +28,7 @@
         <!-- Project Local CSS Style -->
         <link rel="stylesheet" href="assets/style/style.css" />
         <link rel="stylesheet" href="assets/style/shopPageStyle.css" />
+        <link rel="stylesheet" href="assets/style/productDetailsStyle.css" />
         <link rel="stylesheet" href="assets/style/media.css">
         <link rel="stylesheet" href="assets/style/shopPageMedia.css">
     </head>
@@ -854,24 +855,159 @@
                                     aria-label="Close"></button>
                             </div>
                             <!-- body -->
-                            <div class="offcanvas-body text-center">
-                                <p class="text-dark fw-bold font-15px">🔥 These products are limited, checkout within
+                            <div class="offcanvas-body card-offcanvas-body m-0 p-0 text-center">
+                                <p class="text-dark fw-bold font-15px mx-0">🔥 These products are limited, checkout
+                                    within
                                     00m 00s
                                 </p>
-                                <p class="text-dark fw-bold font-15px">Buy $200.00 more to enjoy <span
+                                <p class="text-dark fw-bold font-15px mx-0">Buy $200.00 more to enjoy <span
                                         class="fw-bolder">FREE
                                         Shipping</span></p>
-                                <div class="yellow-star w-100"></div>
-                                <div class="offcanvas-right-img w-75 m-auto p-0">
-                                    <img src="assets/images/navbar/empty-cart.png" class="w-100" alt="empty">
+                                <div class="yellow-star w-100 mx-0"></div>
+                                <!-- card-products -->
+                                <div class="card-products w-100 m-0 my-3 p-0" id="card-products"></div>
+                                <!-- card-footer -->
+                                <div class="card-footer w-100 m-0 p-0">
+                                    <div class="card-footer-nav-container w-100">
+                                        <div class="w-100">
+                                            <nav class="w-100 m-0p-0">
+                                                <div class="nav nav-tabs justify-content-center" id="nav-tab2"
+                                                    role="tablist">
+                                                    <a class="nav-link text-capitalize active  text-decoration-none"
+                                                        id="nav-note-tab" data-bs-toggle="tab" href="#nav-note"
+                                                        role="tab" aria-controls="nav-note" aria-selected="true">
+                                                        <i class="fa-solid fa-pen"></i>
+                                                        <p class="m-0 p-0 text-capitalize">note</p>
+                                                    </a>
+
+                                                    <a class="nav-link  text-capitalize text-decoration-none"
+                                                        id="nav-shipping-tab" data-bs-toggle="tab" href="#nav-shipping"
+                                                        role="tab" aria-controls="nav-shipping" aria-selected="false">
+                                                        <i class="fa-solid fa-truck"></i>
+                                                        <p class="m-0 p-0 text-capitalize">shipping</p>
+                                                    </a>
+
+                                                    <a class="nav-link text-capitalize text-decoration-none"
+                                                        id="nav-coupon-tab" data-bs-toggle="tab" href="#nav-coupon"
+                                                        role="tab" aria-controls="nav-coupon" aria-selected="false">
+                                                        <svg class="" width="22" fill="currentColor"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 14">
+                                                            <path fill="currentColor"
+                                                                d="M15.2812 3.875c.2344 0 .4336.08203.5977.24609.1641.16407.2461.36328.2461.59766v5.0625c0 .23435-.082.43355-.2461.59765-.1641.1641-.3633.2461-.5977.2461H5.71875c-.23437 0-.43359-.082-.59766-.2461-.16406-.1641-.24609-.3633-.24609-.59765v-5.0625c0-.23438.08203-.43359.24609-.59766.16407-.16406.36329-.24609.59766-.24609h9.56245zM15 9.5V5H6v4.5h9zm4.5-3.375c-.3047 0-.5742.11719-.8086.35156-.2109.21094-.3164.46875-.3164.77344s.1055.57422.3164.80859c.2344.21094.5039.31641.8086.31641h1.125v3.9375c0 .4687-.1641.8672-.4922 1.1953-.3281.3281-.7266.4922-1.1953.4922H2.0625c-.46875 0-.86719-.1641-1.195312-.4922C.539062 13.1797.375 12.7812.375 12.3125V8.375H1.5c.30469 0 .5625-.10547.77344-.31641.23437-.23437.35156-.5039.35156-.80859s-.11719-.5625-.35156-.77344C2.0625 6.24219 1.80469 6.125 1.5 6.125H.375V2.1875c0-.46875.164062-.86719.492188-1.195312C1.19531.664063 1.59375.5 2.0625.5h16.875c.4687 0 .8672.164063 1.1953.492188.3281.328122.4922.726562.4922 1.195312V6.125H19.5zm0 3.375c-.6094 0-1.1367-.22266-1.582-.66797-.4453-.44531-.668-.97265-.668-1.58203s.2227-1.13672.668-1.58203C18.3633 5.22266 18.8906 5 19.5 5V2.1875c0-.16406-.0586-.29297-.1758-.38672-.0937-.11719-.2226-.17578-.3867-.17578H2.0625c-.16406 0-.30469.05859-.42188.17578-.09374.09375-.14062.22266-.14062.38672V5c.60938 0 1.13672.22266 1.58203.66797.44531.44531.66797.97265.66797 1.58203s-.22266 1.13672-.66797 1.58203C2.63672 9.27734 2.10938 9.5 1.5 9.5v2.8125c0 .1641.04688.3047.14062.4219.11719.0937.25782.1406.42188.1406h16.875c.1641 0 .293-.0469.3867-.1406.1172-.1172.1758-.2578.1758-.4219V9.5z">
+                                                            </path>
+                                                        </svg>
+                                                        <p class="m-0 p-0 text-capitalize">coupon</p>
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content text-start p-2" id="nav-tab-Content">
+                                                <div class="tab-pane fade show active" id="nav-note" role="tabpanel"
+                                                    aria-labelledby="nav-note-tab" tabindex="0">
+                                                    <h3 class="fs-5">Add note for seller</h3>
+                                                    <form method="get">
+                                                        <textarea name="note" id="cart-note" class="w-100 p-2" rows="5"
+                                                            placeholder="Your Note"></textarea>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">send</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="nav-shipping" role="tabpanel"
+                                                    aria-labelledby="nav-shipping-tab" tabindex="0">
+                                                    <h3 class="fs-5">Estimate shipping rates</h3>
+                                                    <form method="get">
+                                                        <select class="form-select rounded-pill m-0 my-2 p-2 text-dark"
+                                                            name="userCountry" id="userCountry"
+                                                            aria-label="Default select example">
+                                                            <option value="EGY" selected="">Egypt</option>
+                                                            <option value="USA">USA</option>
+                                                            <option value="KSA">KSA</option>
+                                                        </select>
+                                                        <input type="text" name="userCity" id="userCity"
+                                                            placeholder="Your City"
+                                                            class="city-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <input type="text" name="userPostcode/ZIP" id="userPostcode/ZIP"
+                                                            placeholder="Your Postcode/ZIP"
+                                                            class="zip-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">calculate
+                                                                Shipping</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="nav-coupon" role="tabpanel"
+                                                    aria-labelledby="nav-coupon-tab" tabindex="0">
+                                                    <h3 class="fs-5">Select or input Coupon</h3>
+                                                    <p class="fs-6 m-0 my-1">If you have a coupon code, please apply it
+                                                        below.
+                                                    </p>
+                                                    <form method="get">
+                                                        <input type="text" name="useCoupon" id="useCoupon"
+                                                            placeholder="Your Coupon"
+                                                            class="coupon-input inputs w-100 border border-2 rounded-pill m-0 my-2 p-2 text-dark"
+                                                            required>
+                                                        <div class="w-100 text-center">
+                                                            <button type="submit"
+                                                                class="btn btn-dark text-center text-gray text-capitalize">send</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer-pill m-0 my-3 p-0 px-2">
+                                        <div class="card-footer-numbers w-100 m-0 p-0 border-bottom border-2">
+                                            <div class=" card-footer-subtotal-container">
+                                                <div class="row justify-content-between align-items-center">
+                                                    <div class="card-footer-subtotal col align-self-center">
+                                                        <p class="text-start text-capitalize m-0 p-0">subtotal</p>
+                                                    </div>
+                                                    <div class="card-footer-subtotal-value col ">
+                                                        <p class="text-start text-capitalize m-0 p-0 text-end"
+                                                            id="subtotal">- - -</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer-shipping-container">
+                                                <div class="row justify-content-between align-items-center">
+                                                    <div class="card-footer-shipping col align-self-center">
+                                                        <p class="text-start text-capitalize m-0 p-0">shipping</p>
+                                                    </div>
+                                                    <div class="card-footer-shipping-value col ">
+                                                        <p class="text-start text-capitalize m-0 p-0 text-end">flat
+                                                            rate:<span>$10</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer-result w-100 m-0 p-0 ">
+                                            <div class="card-footer-total-container">
+                                                <div class="row justify-content-between align-items-center">
+                                                    <div class="card-footer-total col align-self-center">
+                                                        <p class="text-start text-capitalize m-0 p-0">total</p>
+                                                    </div>
+                                                    <div class="card-footer-total-value col ">
+                                                        <p class="text-start text-capitalize fw-bold m-0 p-0 text-end"
+                                                            id="total">- - -</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer-buyNow-container m-0 mb-1 p-0 fs-6">
+                                        <button
+                                            class="buyNow-btn w-100 m-0 py-2 text-capitalize fw-bold rounded-pill">buy
+                                            now</button>
+                                    </div>
                                 </div>
-                                <p class="fw-bold fs-6">
-                                    Your cart is currently empty.
-                                </p>
-                                <p class="text-gray fw-bold font-15px">
-                                    You may check out all the available products and buy some in the shop. </p>
-                                <a href="#" class="btn btn-dark py-2 px-3 text-uppercase rounded-pill"> return to
-                                    shop</a>
+
                             </div>
                         </div>
                     </div>
@@ -1098,7 +1234,7 @@
         <main class="mainPage p-0 m-0 w-100">
             <div class="container-xl m-auto py-0 px-3">
                 <section class="treeRoute w-100 m-0 my-3 p-0 ">
-                    <h2 class="d-none">treeRoute</h2>
+                    <h2 class="d-none" id="secondPage">treeRoute</h2>
                     <ul class="list-unstyled text-capitalize fw-bold">
                         <li class="d-inline me-3">
                             <a href="index.html" class="text-decoration-none text-dark font-15px">home</a>

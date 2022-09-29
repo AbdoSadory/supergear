@@ -1,4 +1,3 @@
-// import { addquantity } from "./productDetailsScript.js";
 import jsonData from "../data/products.json" assert { type: "json" };
 export const shopDataFromJSONFile = jsonData;
 

@@ -10,7 +10,8 @@ import productModel from "./dataModel/productModel.js";
 //=======================================================
 //=======================Variables=======================
 //=======================================================
-const productsNumber = shopDataFromJSONFile.products.length;
+const JSONProductData = shopDataFromJSONFile.products;
+const productsNumber = JSONProductData.length;
 export const secondPageMarker = document.getElementById("secondPage");
 
 const shopCurrentResultsSpanTag = document.querySelector(
@@ -59,11 +60,11 @@ let shopCardResultsContentImgs =
 //=======================Functions=======================
 //=======================================================
 
-function renderShopProductsResults(prodcutsFromJSONFile) {
+const renderShopProductsResults = (prodcutsFromJSONFile) => {
   // JSON file data
   const shopProducts = prodcutsFromJSONFile;
   //for render cards from json file
-  for (let productIndex = 0; productIndex < 4; productIndex++) {
+  for (let productIndex = 0; productIndex < 5; productIndex++) {
     shopCurrentResultsSpanTag
       ? (shopCurrentResultsSpanTag.innerHTML = productIndex + 1)
       : null;
@@ -90,7 +91,7 @@ function renderShopProductsResults(prodcutsFromJSONFile) {
     );
     shopProductCard(productObject);
   }
-}
+};
 
 const shopProductCard = (productObject) => {
   const parentColDiv = document.createElement("div");
@@ -369,7 +370,7 @@ const shopProductCard = (productObject) => {
     : null;
 };
 
-function renderMoreCards(prodcutsFromJSONFile) {
+const renderMoreCards = (prodcutsFromJSONFile) => {
   const shopProducts = prodcutsFromJSONFile;
   for (
     let productIndex = 0;
@@ -407,11 +408,11 @@ function renderMoreCards(prodcutsFromJSONFile) {
     }
     numbersOfCardInFilterResultContainer++;
   }
-}
+};
 
 const loadMoreCards = () => {
   if (numbersOfCardInFilterResultContainer < productsNumber) {
-    renderMoreCards(shopDataFromJSONFile.products);
+    renderMoreCards(JSONProductData);
   }
 };
 
@@ -506,25 +507,23 @@ const popUpProdcutCard = (storedWishlistelement) => {
   contentRowCardDetailsTitle.innerHTML = `<a href="productDetails.html" class="text-decoration-none text-dark">${storedWishlistelement.title}</a>`;
   contentRowCardDetailsTitle.addEventListener("click", () => {
     saveElementToProductDetailsToLocalStorage(
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].id,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].frontImg,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].backImg,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].title,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].oldPrice,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].price,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].category,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].description,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
-        .additionalInfo,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].aboutBrand,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].reviews,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].questions,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].amount,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
-        .relatedProducts,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].note,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].color,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].size
+      JSONProductData[storedWishlistelement.id - 1].id,
+      JSONProductData[storedWishlistelement.id - 1].frontImg,
+      JSONProductData[storedWishlistelement.id - 1].backImg,
+      JSONProductData[storedWishlistelement.id - 1].title,
+      JSONProductData[storedWishlistelement.id - 1].oldPrice,
+      JSONProductData[storedWishlistelement.id - 1].price,
+      JSONProductData[storedWishlistelement.id - 1].category,
+      JSONProductData[storedWishlistelement.id - 1].description,
+      JSONProductData[storedWishlistelement.id - 1].additionalInfo,
+      JSONProductData[storedWishlistelement.id - 1].aboutBrand,
+      JSONProductData[storedWishlistelement.id - 1].reviews,
+      JSONProductData[storedWishlistelement.id - 1].questions,
+      JSONProductData[storedWishlistelement.id - 1].amount,
+      JSONProductData[storedWishlistelement.id - 1].relatedProducts,
+      JSONProductData[storedWishlistelement.id - 1].note,
+      JSONProductData[storedWishlistelement.id - 1].color,
+      JSONProductData[storedWishlistelement.id - 1].size
     );
   });
 
@@ -575,25 +574,23 @@ const popUpProdcutCard = (storedWishlistelement) => {
   selectButton.textContent = "select";
   selectButton.addEventListener("click", () => {
     saveElementToProductDetailsToLocalStorage(
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].id,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].frontImg,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].backImg,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].title,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].oldPrice,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].price,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].category,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].description,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
-        .additionalInfo,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].aboutBrand,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].reviews,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].questions,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].amount,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1]
-        .relatedProducts,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].note,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].color,
-      shopDataFromJSONFile.products[storedWishlistelement.id - 1].size
+      JSONProductData[storedWishlistelement.id - 1].id,
+      JSONProductData[storedWishlistelement.id - 1].frontImg,
+      JSONProductData[storedWishlistelement.id - 1].backImg,
+      JSONProductData[storedWishlistelement.id - 1].title,
+      JSONProductData[storedWishlistelement.id - 1].oldPrice,
+      JSONProductData[storedWishlistelement.id - 1].price,
+      JSONProductData[storedWishlistelement.id - 1].category,
+      JSONProductData[storedWishlistelement.id - 1].description,
+      JSONProductData[storedWishlistelement.id - 1].additionalInfo,
+      JSONProductData[storedWishlistelement.id - 1].aboutBrand,
+      JSONProductData[storedWishlistelement.id - 1].reviews,
+      JSONProductData[storedWishlistelement.id - 1].questions,
+      JSONProductData[storedWishlistelement.id - 1].amount,
+      JSONProductData[storedWishlistelement.id - 1].relatedProducts,
+      JSONProductData[storedWishlistelement.id - 1].note,
+      JSONProductData[storedWishlistelement.id - 1].color,
+      JSONProductData[storedWishlistelement.id - 1].size
     );
   });
   //////////////////////////////
@@ -780,7 +777,7 @@ const shopCartAlignment = (alginmentTypeFromHTML) => {
   }
 };
 
-renderShopProductsResults(shopDataFromJSONFile.products);
+renderShopProductsResults(JSONProductData);
 renderPopUpProductCard(wishlistElements);
 loadMoreButton ? loadMoreButton.addEventListener("click", loadMoreCards) : null;
 closePopUpMsg

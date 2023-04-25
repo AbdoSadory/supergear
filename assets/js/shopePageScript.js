@@ -716,7 +716,6 @@ export const renderWishlistPopUp = () => {
   popup.classList.toggle("d-none");
 };
 
-// console.log(screen.width <= 991);
 const shopCartAlignment = (alginmentTypeFromHTML) => {
   shopCardalginmentType = alginmentTypeFromHTML;
 

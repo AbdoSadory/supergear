@@ -189,9 +189,7 @@ export const exportRecentlyProductsFromLocalStorage = () => {
   if (localStorageDataLength != 0) {
     let storedRecentlyProducts = localStorage.getItem('recently_products')
     recentlyProducts = { ...JSON.parse(storedRecentlyProducts) }
-  } else {
-    console.log(`There's no recentlyProducts in localStorage`)
-  }
+  } 
 }
 
 export const exportCartProductsFromLocalStorage = () => {
@@ -201,9 +199,7 @@ export const exportCartProductsFromLocalStorage = () => {
   if (localStorageDataLength !== 0) {
     let storedCartProducts = localStorage.getItem('cart_products')
     cartProducts = { ...JSON.parse(storedCartProducts) }
-  } else {
-    console.log(`There's no cart Products in localStorage`)
-  }
+  } 
 }
 
 const bottomNavWishlistbtn = document.querySelector(
@@ -452,7 +448,7 @@ export const salaryCalculations = (productsInCart) => {
   total = subtotal + shipping
   subtotalPara ? (subtotalPara.textContent = subtotal) : null
   totalPara ? (totalPara.textContent = total) : null
-  console.log(total)
+
 }
 exportWishlistProductsFromLocalStorage()
 exportRecentlyProductsFromLocalStorage()
